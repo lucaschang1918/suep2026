@@ -1,0 +1,9 @@
+<toolSet name="External Tools">
+  <tool name="CMake_commands dev_ws pubsub scripts" showInMainMenu="false" showInEditor="false" showInProject="false" showInSearchPopup="false" disabled="false" useConsole="true" showConsoleOnStdOut="false" showConsoleOnStdErr="false" synchronizeAfterRun="true">
+    <exec>
+      <option name="COMMAND" value="$USER_HOME$/suep2026/dev_ws/src/rm_auto_aim/armor_detector/cmake_commands.bat" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$USER_HOME$/suep2026/dev_ws/build/armor_detector" />
+    </exec>
+  </tool>
+</toolSet>

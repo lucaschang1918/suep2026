@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CLionExternalBuildManager">
+    <target id="611b9e25-eb30-4406-88d5-c44a3e048e55" name="CMake_commands_dev_pubsub" defaultType="TOOL">
+      <configuration id="75b91701-061e-42b4-ba1e-d74d649681dd" name="CMake_commands_dev_pubsub">
+        <build type="TOOL">
+          <tool actionId="Tool_External Tools_CMake_commands dev_ws pubsub scripts" />
+        </build>
+      </configuration>
+    </target>
+  </component>
+</project>
