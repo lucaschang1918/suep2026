@@ -162,7 +162,8 @@ namespace rm_auto_aim {
 
     // Subscriber with tf2 message_filter
     // tf2 relevant
-    tf2_buffer_ = std::make_shared<tf2_ros::Buffer>(this->get_clock());
+    tf2_buffer_ = std::make_shared<tf2_ros::Buffer>(this->get_clock(),
+      tf2::durationFromSec(5.0));
     // Create the timer interface before call to waitForTransform,
     // to avoid a tf2_ros::CreateTimerInterfaceException exception
     auto timer_interface = std::make_shared<tf2_ros::CreateTimerROS>(
@@ -172,9 +173,11 @@ namespace rm_auto_aim {
     // subscriber and filter
     armors_sub_.subscribe(this, "/detector/armors", rmw_qos_profile_sensor_data);
     target_frame_ = this->declare_parameter("target_frame", "odom");
+    std::chrono::milliseconds wait_duration(150);
     tf2_filter_ = std::make_shared<tf2_filter>(
-      armors_sub_, *tf2_buffer_, target_frame_, 100, this->get_node_logging_interface(),
+      armors_sub_, *tf2_buffer_, target_frame_, 120, this->get_node_logging_interface(),
       this->get_node_clock_interface(), std::chrono::duration<int>(1));
+      // this->get_node_clock_interface(), std::chrono::duration<int>(1));
     // Register a callback with tf2_ros::MessageFilter to be called when transforms are available
     tf2_filter_->registerCallback(&ArmorTrackerNode::armorsCallback, this);
 
