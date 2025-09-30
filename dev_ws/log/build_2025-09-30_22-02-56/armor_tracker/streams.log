@@ -1,0 +1,40 @@
+[0.017s] Invoking command in '/home/rm_autoaim/suep2026/dev_ws/build/armor_tracker': CMAKE_PREFIX_PATH=/home/rm_autoaim/suep2026/dev_ws/install/auto_aim_interfaces:/home/rm_autoaim/suep2026/dev_ws/install/rm_gimbal_description:/home/rm_autoaim/suep2026/dev_ws/install/hik_camera:/home/rm_autoaim/suep2026/dev_ws/install/armor_tracker:/home/rm_autoaim/suep2026/dev_ws/install/armor_detector:/opt/ros/humble LD_LIBRARY_PATH=/home/rm_autoaim/suep2026/dev_ws/install/auto_aim_interfaces/lib:/home/rm_autoaim/suep2026/dev_ws/install/hik_camera/lib:/home/rm_autoaim/suep2026/dev_ws/install/armor_tracker/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/opt/MVS/lib/64:/opt/MVS/lib/32 /usr/bin/cmake --build /home/rm_autoaim/suep2026/dev_ws/build/armor_tracker -- -j8 -l8
+[0.130s] [ 16%] [32mBuilding CXX object CMakeFiles/armor_tracker.dir/src/tracker.cpp.o[0m
+[6.373s] [ 33%] [32mBuilding CXX object CMakeFiles/armor_tracker.dir/src/tracker_node.cpp.o[0m
+[25.267s] [ 50%] [32m[1mLinking CXX shared library libarmor_tracker.so[0m
+[27.174s] [ 66%] Built target armor_tracker
+[27.213s] [100%] Built target armor_tracker_node
+[27.231s] Invoked command in '/home/rm_autoaim/suep2026/dev_ws/build/armor_tracker' returned '0': CMAKE_PREFIX_PATH=/home/rm_autoaim/suep2026/dev_ws/install/auto_aim_interfaces:/home/rm_autoaim/suep2026/dev_ws/install/rm_gimbal_description:/home/rm_autoaim/suep2026/dev_ws/install/hik_camera:/home/rm_autoaim/suep2026/dev_ws/install/armor_tracker:/home/rm_autoaim/suep2026/dev_ws/install/armor_detector:/opt/ros/humble LD_LIBRARY_PATH=/home/rm_autoaim/suep2026/dev_ws/install/auto_aim_interfaces/lib:/home/rm_autoaim/suep2026/dev_ws/install/hik_camera/lib:/home/rm_autoaim/suep2026/dev_ws/install/armor_tracker/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/opt/MVS/lib/64:/opt/MVS/lib/32 /usr/bin/cmake --build /home/rm_autoaim/suep2026/dev_ws/build/armor_tracker -- -j8 -l8
+[27.233s] Invoking command in '/home/rm_autoaim/suep2026/dev_ws/build/armor_tracker': CMAKE_PREFIX_PATH=/home/rm_autoaim/suep2026/dev_ws/install/auto_aim_interfaces:/home/rm_autoaim/suep2026/dev_ws/install/rm_gimbal_description:/home/rm_autoaim/suep2026/dev_ws/install/hik_camera:/home/rm_autoaim/suep2026/dev_ws/install/armor_tracker:/home/rm_autoaim/suep2026/dev_ws/install/armor_detector:/opt/ros/humble LD_LIBRARY_PATH=/home/rm_autoaim/suep2026/dev_ws/install/auto_aim_interfaces/lib:/home/rm_autoaim/suep2026/dev_ws/install/hik_camera/lib:/home/rm_autoaim/suep2026/dev_ws/install/armor_tracker/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/opt/MVS/lib/64:/opt/MVS/lib/32 /usr/bin/cmake --install /home/rm_autoaim/suep2026/dev_ws/build/armor_tracker
+[27.243s] -- Install configuration: ""
+[27.243s] -- Up-to-date: /home/rm_autoaim/suep2026/dev_ws/install/armor_tracker/lib/armor_tracker/armor_tracker_node
+[27.243s] -- Up-to-date: /home/rm_autoaim/suep2026/dev_ws/install/armor_tracker/share/armor_tracker/environment/library_path.sh
+[27.243s] -- Up-to-date: /home/rm_autoaim/suep2026/dev_ws/install/armor_tracker/share/armor_tracker/environment/library_path.dsv
+[27.245s] -- Installing: /home/rm_autoaim/suep2026/dev_ws/install/armor_tracker/lib/libarmor_tracker.so
+[27.258s] -- Set runtime path of "/home/rm_autoaim/suep2026/dev_ws/install/armor_tracker/lib/libarmor_tracker.so" to ""
+[27.259s] -- Up-to-date: /home/rm_autoaim/suep2026/dev_ws/install/armor_tracker/include
+[27.259s] -- Up-to-date: /home/rm_autoaim/suep2026/dev_ws/install/armor_tracker/include/armor_tracker
+[27.259s] -- Up-to-date: /home/rm_autoaim/suep2026/dev_ws/install/armor_tracker/include/armor_tracker/tracker.hpp
+[27.259s] -- Up-to-date: /home/rm_autoaim/suep2026/dev_ws/install/armor_tracker/include/armor_tracker/tracker_node.hpp
+[27.259s] -- Up-to-date: /home/rm_autoaim/suep2026/dev_ws/install/armor_tracker/include/armor_tracker/extended_kalman_filter.hpp
+[27.259s] -- Up-to-date: /home/rm_autoaim/suep2026/dev_ws/install/armor_tracker/lib/armor_tracker/armor_tracker_node
+[27.259s] -- Up-to-date: /home/rm_autoaim/suep2026/dev_ws/install/armor_tracker/share/ament_index/resource_index/package_run_dependencies/armor_tracker
+[27.259s] -- Up-to-date: /home/rm_autoaim/suep2026/dev_ws/install/armor_tracker/share/ament_index/resource_index/parent_prefix_path/armor_tracker
+[27.259s] -- Up-to-date: /home/rm_autoaim/suep2026/dev_ws/install/armor_tracker/share/armor_tracker/environment/ament_prefix_path.sh
+[27.260s] -- Up-to-date: /home/rm_autoaim/suep2026/dev_ws/install/armor_tracker/share/armor_tracker/environment/ament_prefix_path.dsv
+[27.260s] -- Up-to-date: /home/rm_autoaim/suep2026/dev_ws/install/armor_tracker/share/armor_tracker/environment/path.sh
+[27.260s] -- Up-to-date: /home/rm_autoaim/suep2026/dev_ws/install/armor_tracker/share/armor_tracker/environment/path.dsv
+[27.260s] -- Up-to-date: /home/rm_autoaim/suep2026/dev_ws/install/armor_tracker/share/armor_tracker/local_setup.bash
+[27.260s] -- Up-to-date: /home/rm_autoaim/suep2026/dev_ws/install/armor_tracker/share/armor_tracker/local_setup.sh
+[27.260s] -- Up-to-date: /home/rm_autoaim/suep2026/dev_ws/install/armor_tracker/share/armor_tracker/local_setup.zsh
+[27.260s] -- Up-to-date: /home/rm_autoaim/suep2026/dev_ws/install/armor_tracker/share/armor_tracker/local_setup.dsv
+[27.261s] -- Installing: /home/rm_autoaim/suep2026/dev_ws/install/armor_tracker/share/armor_tracker/package.dsv
+[27.261s] -- Up-to-date: /home/rm_autoaim/suep2026/dev_ws/install/armor_tracker/share/ament_index/resource_index/packages/armor_tracker
+[27.261s] -- Up-to-date: /home/rm_autoaim/suep2026/dev_ws/install/armor_tracker/share/ament_index/resource_index/rclcpp_components/armor_tracker
+[27.261s] -- Up-to-date: /home/rm_autoaim/suep2026/dev_ws/install/armor_tracker/share/armor_tracker/cmake/ament_cmake_export_include_directories-extras.cmake
+[27.261s] -- Up-to-date: /home/rm_autoaim/suep2026/dev_ws/install/armor_tracker/share/armor_tracker/cmake/ament_cmake_export_libraries-extras.cmake
+[27.261s] -- Up-to-date: /home/rm_autoaim/suep2026/dev_ws/install/armor_tracker/share/armor_tracker/cmake/ament_cmake_export_dependencies-extras.cmake
+[27.261s] -- Up-to-date: /home/rm_autoaim/suep2026/dev_ws/install/armor_tracker/share/armor_tracker/cmake/armor_trackerConfig.cmake
+[27.261s] -- Up-to-date: /home/rm_autoaim/suep2026/dev_ws/install/armor_tracker/share/armor_tracker/cmake/armor_trackerConfig-version.cmake
+[27.262s] -- Up-to-date: /home/rm_autoaim/suep2026/dev_ws/install/armor_tracker/share/armor_tracker/package.xml
+[27.266s] Invoked command in '/home/rm_autoaim/suep2026/dev_ws/build/armor_tracker' returned '0': CMAKE_PREFIX_PATH=/home/rm_autoaim/suep2026/dev_ws/install/auto_aim_interfaces:/home/rm_autoaim/suep2026/dev_ws/install/rm_gimbal_description:/home/rm_autoaim/suep2026/dev_ws/install/hik_camera:/home/rm_autoaim/suep2026/dev_ws/install/armor_tracker:/home/rm_autoaim/suep2026/dev_ws/install/armor_detector:/opt/ros/humble LD_LIBRARY_PATH=/home/rm_autoaim/suep2026/dev_ws/install/auto_aim_interfaces/lib:/home/rm_autoaim/suep2026/dev_ws/install/hik_camera/lib:/home/rm_autoaim/suep2026/dev_ws/install/armor_tracker/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/opt/MVS/lib/64:/opt/MVS/lib/32 /usr/bin/cmake --install /home/rm_autoaim/suep2026/dev_ws/build/armor_tracker

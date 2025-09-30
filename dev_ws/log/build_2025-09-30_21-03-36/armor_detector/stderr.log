@@ -1,0 +1,5 @@
+[01m[K/home/rm_autoaim/suep2026/dev_ws/src/rm_auto_aim/armor_detector/src/number_classifier.cpp:[m[K In lambda function:
+[01m[K/home/rm_autoaim/suep2026/dev_ws/src/rm_auto_aim/armor_detector/src/number_classifier.cpp:136:17:[m[K [01;35m[Kwarning: [m[Kcontrol reaches end of non-void function [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreturn-type-Wreturn-type]8;;[m[K]
+  136 |                 [01;35m[K}[m[K
+      |                 [01;35m[K^[m[K
+/usr/bin/ld: warning: libtbb.so.2, needed by /usr/lib/x86_64-linux-gnu/libopencv_core.so.4.5.4d, may conflict with libtbb.so.12

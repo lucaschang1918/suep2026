@@ -1,0 +1,9 @@
+[01m[K/home/rm_autoaim/suep2026/dev_ws/src/rm_auto_aim/armor_detector/src/number_classifier.cpp:[m[K In lambda function:
+[01m[K/home/rm_autoaim/suep2026/dev_ws/src/rm_auto_aim/armor_detector/src/number_classifier.cpp:136:17:[m[K [01;35m[Kwarning: [m[Kcontrol reaches end of non-void function [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreturn-type-Wreturn-type]8;;[m[K]
+  136 |                 [01;35m[K}[m[K
+      |                 [01;35m[K^[m[K
+/usr/bin/ld: 找不到 -larmor_tracker: 没有那个文件或目录
+collect2: error: ld returned 1 exit status
+gmake[2]: *** [CMakeFiles/armor_detector_node.dir/build.make:406：armor_detector_node] 错误 1
+gmake[1]: *** [CMakeFiles/Makefile2:137：CMakeFiles/armor_detector_node.dir/all] 错误 2
+gmake: *** [Makefile:146：all] 错误 2

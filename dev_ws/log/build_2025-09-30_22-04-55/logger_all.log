@@ -1,0 +1,433 @@
+[0.208s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.208s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=8, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x7874a1d1bcd0>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7874a1d1b7c0>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7874a1d1b7c0>>)
+[0.418s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.418s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.419s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.419s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.419s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.420s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.421s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/rm_autoaim/suep2026/dev_ws'
+[0.421s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.421s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.422s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.422s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.422s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.422s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.422s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.422s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.422s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.446s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.446s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.446s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.447s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.447s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.447s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.447s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.448s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.448s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.448s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.448s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.448s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.448s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.448s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.449s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.449s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.449s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.449s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.449s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.449s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.449s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.449s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.449s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.449s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.449s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.449s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.449s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.449s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.450s] Level 1:colcon.colcon_core.package_identification:_identify(src/hik_camera) by extensions ['ignore', 'ignore_ament_install']
+[0.450s] Level 1:colcon.colcon_core.package_identification:_identify(src/hik_camera) by extension 'ignore'
+[0.450s] Level 1:colcon.colcon_core.package_identification:_identify(src/hik_camera) by extension 'ignore_ament_install'
+[0.450s] Level 1:colcon.colcon_core.package_identification:_identify(src/hik_camera) by extensions ['colcon_pkg']
+[0.450s] Level 1:colcon.colcon_core.package_identification:_identify(src/hik_camera) by extension 'colcon_pkg'
+[0.450s] Level 1:colcon.colcon_core.package_identification:_identify(src/hik_camera) by extensions ['colcon_meta']
+[0.450s] Level 1:colcon.colcon_core.package_identification:_identify(src/hik_camera) by extension 'colcon_meta'
+[0.450s] Level 1:colcon.colcon_core.package_identification:_identify(src/hik_camera) by extensions ['ros']
+[0.450s] Level 1:colcon.colcon_core.package_identification:_identify(src/hik_camera) by extension 'ros'
+[0.455s] DEBUG:colcon.colcon_core.package_identification:Package 'src/hik_camera' with type 'ros.ament_cmake' and name 'hik_camera'
+[0.455s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim) by extensions ['ignore', 'ignore_ament_install']
+[0.455s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim) by extension 'ignore'
+[0.455s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim) by extension 'ignore_ament_install'
+[0.456s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim) by extensions ['colcon_pkg']
+[0.456s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim) by extension 'colcon_pkg'
+[0.456s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim) by extensions ['colcon_meta']
+[0.456s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim) by extension 'colcon_meta'
+[0.456s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim) by extensions ['ros']
+[0.456s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim) by extension 'ros'
+[0.456s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim) by extensions ['cmake', 'python']
+[0.456s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim) by extension 'cmake'
+[0.456s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim) by extension 'python'
+[0.456s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim) by extensions ['python_setup_py']
+[0.456s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim) by extension 'python_setup_py'
+[0.456s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim/armor_detector) by extensions ['ignore', 'ignore_ament_install']
+[0.456s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim/armor_detector) by extension 'ignore'
+[0.456s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim/armor_detector) by extension 'ignore_ament_install'
+[0.456s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim/armor_detector) by extensions ['colcon_pkg']
+[0.456s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim/armor_detector) by extension 'colcon_pkg'
+[0.456s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim/armor_detector) by extensions ['colcon_meta']
+[0.456s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim/armor_detector) by extension 'colcon_meta'
+[0.456s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim/armor_detector) by extensions ['ros']
+[0.456s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim/armor_detector) by extension 'ros'
+[0.457s] DEBUG:colcon.colcon_core.package_identification:Package 'src/rm_auto_aim/armor_detector' with type 'ros.ament_cmake' and name 'armor_detector'
+[0.457s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim/armor_tracker) by extensions ['ignore', 'ignore_ament_install']
+[0.457s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim/armor_tracker) by extension 'ignore'
+[0.458s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim/armor_tracker) by extension 'ignore_ament_install'
+[0.458s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim/armor_tracker) by extensions ['colcon_pkg']
+[0.458s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim/armor_tracker) by extension 'colcon_pkg'
+[0.458s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim/armor_tracker) by extensions ['colcon_meta']
+[0.458s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim/armor_tracker) by extension 'colcon_meta'
+[0.458s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim/armor_tracker) by extensions ['ros']
+[0.458s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim/armor_tracker) by extension 'ros'
+[0.460s] DEBUG:colcon.colcon_core.package_identification:Package 'src/rm_auto_aim/armor_tracker' with type 'ros.ament_cmake' and name 'armor_tracker'
+[0.460s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim/auto_aim_interfaces) by extensions ['ignore', 'ignore_ament_install']
+[0.461s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim/auto_aim_interfaces) by extension 'ignore'
+[0.461s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim/auto_aim_interfaces) by extension 'ignore_ament_install'
+[0.461s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim/auto_aim_interfaces) by extensions ['colcon_pkg']
+[0.461s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim/auto_aim_interfaces) by extension 'colcon_pkg'
+[0.461s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim/auto_aim_interfaces) by extensions ['colcon_meta']
+[0.461s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim/auto_aim_interfaces) by extension 'colcon_meta'
+[0.461s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim/auto_aim_interfaces) by extensions ['ros']
+[0.461s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim/auto_aim_interfaces) by extension 'ros'
+[0.462s] DEBUG:colcon.colcon_core.package_identification:Package 'src/rm_auto_aim/auto_aim_interfaces' with type 'ros.ament_cmake' and name 'auto_aim_interfaces'
+[0.462s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_gimbal_description) by extensions ['ignore', 'ignore_ament_install']
+[0.462s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_gimbal_description) by extension 'ignore'
+[0.462s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_gimbal_description) by extension 'ignore_ament_install'
+[0.462s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_gimbal_description) by extensions ['colcon_pkg']
+[0.462s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_gimbal_description) by extension 'colcon_pkg'
+[0.463s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_gimbal_description) by extensions ['colcon_meta']
+[0.463s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_gimbal_description) by extension 'colcon_meta'
+[0.463s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_gimbal_description) by extensions ['ros']
+[0.463s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_gimbal_description) by extension 'ros'
+[0.463s] DEBUG:colcon.colcon_core.package_identification:Package 'src/rm_gimbal_description' with type 'ros.ament_cmake' and name 'rm_gimbal_description'
+[0.463s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.464s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.464s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.464s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.464s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.494s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.494s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.497s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 5 installed packages in /home/rm_autoaim/suep2026/dev_ws/install
+[0.500s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 275 installed packages in /opt/ros/humble
+[0.525s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.574s] Level 5:colcon.colcon_core.verb:set package 'auto_aim_interfaces' build argument 'cmake_args' from command line to 'None'
+[0.574s] Level 5:colcon.colcon_core.verb:set package 'auto_aim_interfaces' build argument 'cmake_target' from command line to 'None'
+[0.574s] Level 5:colcon.colcon_core.verb:set package 'auto_aim_interfaces' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.574s] Level 5:colcon.colcon_core.verb:set package 'auto_aim_interfaces' build argument 'cmake_clean_cache' from command line to 'False'
+[0.574s] Level 5:colcon.colcon_core.verb:set package 'auto_aim_interfaces' build argument 'cmake_clean_first' from command line to 'False'
+[0.574s] Level 5:colcon.colcon_core.verb:set package 'auto_aim_interfaces' build argument 'cmake_force_configure' from command line to 'False'
+[0.574s] Level 5:colcon.colcon_core.verb:set package 'auto_aim_interfaces' build argument 'ament_cmake_args' from command line to 'None'
+[0.574s] Level 5:colcon.colcon_core.verb:set package 'auto_aim_interfaces' build argument 'catkin_cmake_args' from command line to 'None'
+[0.574s] Level 5:colcon.colcon_core.verb:set package 'auto_aim_interfaces' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.575s] DEBUG:colcon.colcon_core.verb:Building package 'auto_aim_interfaces' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/rm_autoaim/suep2026/dev_ws/build/auto_aim_interfaces', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/rm_autoaim/suep2026/dev_ws/install/auto_aim_interfaces', 'merge_install': False, 'path': '/home/rm_autoaim/suep2026/dev_ws/src/rm_auto_aim/auto_aim_interfaces', 'symlink_install': False, 'test_result_base': None}
+[0.575s] Level 5:colcon.colcon_core.verb:set package 'hik_camera' build argument 'cmake_args' from command line to 'None'
+[0.575s] Level 5:colcon.colcon_core.verb:set package 'hik_camera' build argument 'cmake_target' from command line to 'None'
+[0.575s] Level 5:colcon.colcon_core.verb:set package 'hik_camera' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.575s] Level 5:colcon.colcon_core.verb:set package 'hik_camera' build argument 'cmake_clean_cache' from command line to 'False'
+[0.575s] Level 5:colcon.colcon_core.verb:set package 'hik_camera' build argument 'cmake_clean_first' from command line to 'False'
+[0.576s] Level 5:colcon.colcon_core.verb:set package 'hik_camera' build argument 'cmake_force_configure' from command line to 'False'
+[0.576s] Level 5:colcon.colcon_core.verb:set package 'hik_camera' build argument 'ament_cmake_args' from command line to 'None'
+[0.576s] Level 5:colcon.colcon_core.verb:set package 'hik_camera' build argument 'catkin_cmake_args' from command line to 'None'
+[0.576s] Level 5:colcon.colcon_core.verb:set package 'hik_camera' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.576s] DEBUG:colcon.colcon_core.verb:Building package 'hik_camera' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/rm_autoaim/suep2026/dev_ws/build/hik_camera', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/rm_autoaim/suep2026/dev_ws/install/hik_camera', 'merge_install': False, 'path': '/home/rm_autoaim/suep2026/dev_ws/src/hik_camera', 'symlink_install': False, 'test_result_base': None}
+[0.577s] Level 5:colcon.colcon_core.verb:set package 'rm_gimbal_description' build argument 'cmake_args' from command line to 'None'
+[0.577s] Level 5:colcon.colcon_core.verb:set package 'rm_gimbal_description' build argument 'cmake_target' from command line to 'None'
+[0.577s] Level 5:colcon.colcon_core.verb:set package 'rm_gimbal_description' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.577s] Level 5:colcon.colcon_core.verb:set package 'rm_gimbal_description' build argument 'cmake_clean_cache' from command line to 'False'
+[0.577s] Level 5:colcon.colcon_core.verb:set package 'rm_gimbal_description' build argument 'cmake_clean_first' from command line to 'False'
+[0.577s] Level 5:colcon.colcon_core.verb:set package 'rm_gimbal_description' build argument 'cmake_force_configure' from command line to 'False'
+[0.577s] Level 5:colcon.colcon_core.verb:set package 'rm_gimbal_description' build argument 'ament_cmake_args' from command line to 'None'
+[0.577s] Level 5:colcon.colcon_core.verb:set package 'rm_gimbal_description' build argument 'catkin_cmake_args' from command line to 'None'
+[0.577s] Level 5:colcon.colcon_core.verb:set package 'rm_gimbal_description' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.577s] DEBUG:colcon.colcon_core.verb:Building package 'rm_gimbal_description' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/rm_autoaim/suep2026/dev_ws/build/rm_gimbal_description', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/rm_autoaim/suep2026/dev_ws/install/rm_gimbal_description', 'merge_install': False, 'path': '/home/rm_autoaim/suep2026/dev_ws/src/rm_gimbal_description', 'symlink_install': False, 'test_result_base': None}
+[0.578s] Level 5:colcon.colcon_core.verb:set package 'armor_detector' build argument 'cmake_args' from command line to 'None'
+[0.578s] Level 5:colcon.colcon_core.verb:set package 'armor_detector' build argument 'cmake_target' from command line to 'None'
+[0.578s] Level 5:colcon.colcon_core.verb:set package 'armor_detector' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.578s] Level 5:colcon.colcon_core.verb:set package 'armor_detector' build argument 'cmake_clean_cache' from command line to 'False'
+[0.578s] Level 5:colcon.colcon_core.verb:set package 'armor_detector' build argument 'cmake_clean_first' from command line to 'False'
+[0.578s] Level 5:colcon.colcon_core.verb:set package 'armor_detector' build argument 'cmake_force_configure' from command line to 'False'
+[0.578s] Level 5:colcon.colcon_core.verb:set package 'armor_detector' build argument 'ament_cmake_args' from command line to 'None'
+[0.578s] Level 5:colcon.colcon_core.verb:set package 'armor_detector' build argument 'catkin_cmake_args' from command line to 'None'
+[0.578s] Level 5:colcon.colcon_core.verb:set package 'armor_detector' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.578s] DEBUG:colcon.colcon_core.verb:Building package 'armor_detector' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/rm_autoaim/suep2026/dev_ws/build/armor_detector', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/rm_autoaim/suep2026/dev_ws/install/armor_detector', 'merge_install': False, 'path': '/home/rm_autoaim/suep2026/dev_ws/src/rm_auto_aim/armor_detector', 'symlink_install': False, 'test_result_base': None}
+[0.578s] Level 5:colcon.colcon_core.verb:set package 'armor_tracker' build argument 'cmake_args' from command line to 'None'
+[0.578s] Level 5:colcon.colcon_core.verb:set package 'armor_tracker' build argument 'cmake_target' from command line to 'None'
+[0.579s] Level 5:colcon.colcon_core.verb:set package 'armor_tracker' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.579s] Level 5:colcon.colcon_core.verb:set package 'armor_tracker' build argument 'cmake_clean_cache' from command line to 'False'
+[0.579s] Level 5:colcon.colcon_core.verb:set package 'armor_tracker' build argument 'cmake_clean_first' from command line to 'False'
+[0.579s] Level 5:colcon.colcon_core.verb:set package 'armor_tracker' build argument 'cmake_force_configure' from command line to 'False'
+[0.579s] Level 5:colcon.colcon_core.verb:set package 'armor_tracker' build argument 'ament_cmake_args' from command line to 'None'
+[0.579s] Level 5:colcon.colcon_core.verb:set package 'armor_tracker' build argument 'catkin_cmake_args' from command line to 'None'
+[0.579s] Level 5:colcon.colcon_core.verb:set package 'armor_tracker' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.579s] DEBUG:colcon.colcon_core.verb:Building package 'armor_tracker' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/rm_autoaim/suep2026/dev_ws/build/armor_tracker', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/rm_autoaim/suep2026/dev_ws/install/armor_tracker', 'merge_install': False, 'path': '/home/rm_autoaim/suep2026/dev_ws/src/rm_auto_aim/armor_tracker', 'symlink_install': False, 'test_result_base': None}
+[0.579s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.581s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.581s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/rm_autoaim/suep2026/dev_ws/src/rm_auto_aim/auto_aim_interfaces' with build type 'ament_cmake'
+[0.582s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/rm_autoaim/suep2026/dev_ws/src/rm_auto_aim/auto_aim_interfaces'
+[0.585s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.585s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.585s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.591s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/rm_autoaim/suep2026/dev_ws/src/hik_camera' with build type 'ament_cmake'
+[0.591s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/rm_autoaim/suep2026/dev_ws/src/hik_camera'
+[0.591s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.592s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.599s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/rm_autoaim/suep2026/dev_ws/src/rm_gimbal_description' with build type 'ament_cmake'
+[0.599s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/rm_autoaim/suep2026/dev_ws/src/rm_gimbal_description'
+[0.599s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.600s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.618s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/rm_autoaim/suep2026/dev_ws/build/auto_aim_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/rm_autoaim/suep2026/dev_ws/build/auto_aim_interfaces -- -j8 -l8
+[0.630s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/rm_autoaim/suep2026/dev_ws/build/hik_camera': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/rm_autoaim/suep2026/dev_ws/build/hik_camera -- -j8 -l8
+[0.638s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/rm_autoaim/suep2026/dev_ws/build/rm_gimbal_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/rm_autoaim/suep2026/dev_ws/build/rm_gimbal_description -- -j8 -l8
+[0.703s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/rm_autoaim/suep2026/dev_ws/build/rm_gimbal_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/rm_autoaim/suep2026/dev_ws/build/rm_gimbal_description -- -j8 -l8
+[0.720s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/rm_autoaim/suep2026/dev_ws/build/rm_gimbal_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/rm_autoaim/suep2026/dev_ws/build/rm_gimbal_description
+[0.732s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(rm_gimbal_description)
+[0.735s] Level 1:colcon.colcon_core.environment:checking '/home/rm_autoaim/suep2026/dev_ws/install/rm_gimbal_description' for CMake module files
+[0.735s] Level 1:colcon.colcon_core.environment:checking '/home/rm_autoaim/suep2026/dev_ws/install/rm_gimbal_description' for CMake config files
+[0.736s] Level 1:colcon.colcon_core.shell:create_environment_hook('rm_gimbal_description', 'cmake_prefix_path')
+[0.736s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rm_autoaim/suep2026/dev_ws/install/rm_gimbal_description/share/rm_gimbal_description/hook/cmake_prefix_path.ps1'
+[0.733s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/rm_autoaim/suep2026/dev_ws/build/rm_gimbal_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/rm_autoaim/suep2026/dev_ws/build/rm_gimbal_description
+[0.737s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/rm_autoaim/suep2026/dev_ws/install/rm_gimbal_description/share/rm_gimbal_description/hook/cmake_prefix_path.dsv'
+[0.737s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rm_autoaim/suep2026/dev_ws/install/rm_gimbal_description/share/rm_gimbal_description/hook/cmake_prefix_path.sh'
+[0.738s] Level 1:colcon.colcon_core.environment:checking '/home/rm_autoaim/suep2026/dev_ws/install/rm_gimbal_description/bin'
+[0.739s] Level 1:colcon.colcon_core.environment:checking '/home/rm_autoaim/suep2026/dev_ws/install/rm_gimbal_description/lib/pkgconfig/rm_gimbal_description.pc'
+[0.739s] Level 1:colcon.colcon_core.environment:checking '/home/rm_autoaim/suep2026/dev_ws/install/rm_gimbal_description/lib/python3.10/site-packages'
+[0.739s] Level 1:colcon.colcon_core.environment:checking '/home/rm_autoaim/suep2026/dev_ws/install/rm_gimbal_description/bin'
+[0.739s] INFO:colcon.colcon_core.shell:Creating package script '/home/rm_autoaim/suep2026/dev_ws/install/rm_gimbal_description/share/rm_gimbal_description/package.ps1'
+[0.741s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/rm_autoaim/suep2026/dev_ws/install/rm_gimbal_description/share/rm_gimbal_description/package.dsv'
+[0.741s] INFO:colcon.colcon_core.shell:Creating package script '/home/rm_autoaim/suep2026/dev_ws/install/rm_gimbal_description/share/rm_gimbal_description/package.sh'
+[0.742s] INFO:colcon.colcon_core.shell:Creating package script '/home/rm_autoaim/suep2026/dev_ws/install/rm_gimbal_description/share/rm_gimbal_description/package.bash'
+[0.743s] INFO:colcon.colcon_core.shell:Creating package script '/home/rm_autoaim/suep2026/dev_ws/install/rm_gimbal_description/share/rm_gimbal_description/package.zsh'
+[0.744s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/rm_autoaim/suep2026/dev_ws/install/rm_gimbal_description/share/colcon-core/packages/rm_gimbal_description)
+[0.745s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(rm_gimbal_description)
+[0.745s] Level 1:colcon.colcon_core.environment:checking '/home/rm_autoaim/suep2026/dev_ws/install/rm_gimbal_description' for CMake module files
+[0.745s] Level 1:colcon.colcon_core.environment:checking '/home/rm_autoaim/suep2026/dev_ws/install/rm_gimbal_description' for CMake config files
+[0.746s] Level 1:colcon.colcon_core.shell:create_environment_hook('rm_gimbal_description', 'cmake_prefix_path')
+[0.746s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rm_autoaim/suep2026/dev_ws/install/rm_gimbal_description/share/rm_gimbal_description/hook/cmake_prefix_path.ps1'
+[0.746s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/rm_autoaim/suep2026/dev_ws/install/rm_gimbal_description/share/rm_gimbal_description/hook/cmake_prefix_path.dsv'
+[0.747s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rm_autoaim/suep2026/dev_ws/install/rm_gimbal_description/share/rm_gimbal_description/hook/cmake_prefix_path.sh'
+[0.747s] Level 1:colcon.colcon_core.environment:checking '/home/rm_autoaim/suep2026/dev_ws/install/rm_gimbal_description/bin'
+[0.747s] Level 1:colcon.colcon_core.environment:checking '/home/rm_autoaim/suep2026/dev_ws/install/rm_gimbal_description/lib/pkgconfig/rm_gimbal_description.pc'
+[0.748s] Level 1:colcon.colcon_core.environment:checking '/home/rm_autoaim/suep2026/dev_ws/install/rm_gimbal_description/lib/python3.10/site-packages'
+[0.748s] Level 1:colcon.colcon_core.environment:checking '/home/rm_autoaim/suep2026/dev_ws/install/rm_gimbal_description/bin'
+[0.748s] INFO:colcon.colcon_core.shell:Creating package script '/home/rm_autoaim/suep2026/dev_ws/install/rm_gimbal_description/share/rm_gimbal_description/package.ps1'
+[0.749s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/rm_autoaim/suep2026/dev_ws/install/rm_gimbal_description/share/rm_gimbal_description/package.dsv'
+[0.749s] INFO:colcon.colcon_core.shell:Creating package script '/home/rm_autoaim/suep2026/dev_ws/install/rm_gimbal_description/share/rm_gimbal_description/package.sh'
+[0.750s] INFO:colcon.colcon_core.shell:Creating package script '/home/rm_autoaim/suep2026/dev_ws/install/rm_gimbal_description/share/rm_gimbal_description/package.bash'
+[0.750s] INFO:colcon.colcon_core.shell:Creating package script '/home/rm_autoaim/suep2026/dev_ws/install/rm_gimbal_description/share/rm_gimbal_description/package.zsh'
+[0.751s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/rm_autoaim/suep2026/dev_ws/install/rm_gimbal_description/share/colcon-core/packages/rm_gimbal_description)
+[0.803s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/rm_autoaim/suep2026/dev_ws/build/hik_camera' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/rm_autoaim/suep2026/dev_ws/build/hik_camera -- -j8 -l8
+[0.804s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/rm_autoaim/suep2026/dev_ws/build/hik_camera': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/rm_autoaim/suep2026/dev_ws/build/hik_camera
+[0.819s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(hik_camera)
+[0.819s] Level 1:colcon.colcon_core.environment:checking '/home/rm_autoaim/suep2026/dev_ws/install/hik_camera' for CMake module files
+[0.821s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/rm_autoaim/suep2026/dev_ws/build/hik_camera' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/rm_autoaim/suep2026/dev_ws/build/hik_camera
+[0.821s] Level 1:colcon.colcon_core.environment:checking '/home/rm_autoaim/suep2026/dev_ws/install/hik_camera' for CMake config files
+[0.821s] Level 1:colcon.colcon_core.shell:create_environment_hook('hik_camera', 'cmake_prefix_path')
+[0.822s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rm_autoaim/suep2026/dev_ws/install/hik_camera/share/hik_camera/hook/cmake_prefix_path.ps1'
+[0.822s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/rm_autoaim/suep2026/dev_ws/install/hik_camera/share/hik_camera/hook/cmake_prefix_path.dsv'
+[0.823s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rm_autoaim/suep2026/dev_ws/install/hik_camera/share/hik_camera/hook/cmake_prefix_path.sh'
+[0.824s] Level 1:colcon.colcon_core.environment:checking '/home/rm_autoaim/suep2026/dev_ws/install/hik_camera/lib'
+[0.825s] Level 1:colcon.colcon_core.shell:create_environment_hook('hik_camera', 'ld_library_path_lib')
+[0.825s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rm_autoaim/suep2026/dev_ws/install/hik_camera/share/hik_camera/hook/ld_library_path_lib.ps1'
+[0.828s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/rm_autoaim/suep2026/dev_ws/install/hik_camera/share/hik_camera/hook/ld_library_path_lib.dsv'
+[0.829s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rm_autoaim/suep2026/dev_ws/install/hik_camera/share/hik_camera/hook/ld_library_path_lib.sh'
+[0.830s] Level 1:colcon.colcon_core.environment:checking '/home/rm_autoaim/suep2026/dev_ws/install/hik_camera/bin'
+[0.830s] Level 1:colcon.colcon_core.environment:checking '/home/rm_autoaim/suep2026/dev_ws/install/hik_camera/lib/pkgconfig/hik_camera.pc'
+[0.830s] Level 1:colcon.colcon_core.environment:checking '/home/rm_autoaim/suep2026/dev_ws/install/hik_camera/lib/python3.10/site-packages'
+[0.830s] Level 1:colcon.colcon_core.environment:checking '/home/rm_autoaim/suep2026/dev_ws/install/hik_camera/bin'
+[0.833s] INFO:colcon.colcon_core.shell:Creating package script '/home/rm_autoaim/suep2026/dev_ws/install/hik_camera/share/hik_camera/package.ps1'
+[0.834s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/rm_autoaim/suep2026/dev_ws/install/hik_camera/share/hik_camera/package.dsv'
+[0.835s] INFO:colcon.colcon_core.shell:Creating package script '/home/rm_autoaim/suep2026/dev_ws/install/hik_camera/share/hik_camera/package.sh'
+[0.835s] INFO:colcon.colcon_core.shell:Creating package script '/home/rm_autoaim/suep2026/dev_ws/install/hik_camera/share/hik_camera/package.bash'
+[0.838s] INFO:colcon.colcon_core.shell:Creating package script '/home/rm_autoaim/suep2026/dev_ws/install/hik_camera/share/hik_camera/package.zsh'
+[0.839s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/rm_autoaim/suep2026/dev_ws/install/hik_camera/share/colcon-core/packages/hik_camera)
+[0.840s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(hik_camera)
+[0.841s] Level 1:colcon.colcon_core.environment:checking '/home/rm_autoaim/suep2026/dev_ws/install/hik_camera' for CMake module files
+[0.842s] Level 1:colcon.colcon_core.environment:checking '/home/rm_autoaim/suep2026/dev_ws/install/hik_camera' for CMake config files
+[0.843s] Level 1:colcon.colcon_core.shell:create_environment_hook('hik_camera', 'cmake_prefix_path')
+[0.843s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rm_autoaim/suep2026/dev_ws/install/hik_camera/share/hik_camera/hook/cmake_prefix_path.ps1'
+[0.844s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/rm_autoaim/suep2026/dev_ws/install/hik_camera/share/hik_camera/hook/cmake_prefix_path.dsv'
+[0.845s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rm_autoaim/suep2026/dev_ws/install/hik_camera/share/hik_camera/hook/cmake_prefix_path.sh'
+[0.846s] Level 1:colcon.colcon_core.environment:checking '/home/rm_autoaim/suep2026/dev_ws/install/hik_camera/lib'
+[0.846s] Level 1:colcon.colcon_core.shell:create_environment_hook('hik_camera', 'ld_library_path_lib')
+[0.847s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rm_autoaim/suep2026/dev_ws/install/hik_camera/share/hik_camera/hook/ld_library_path_lib.ps1'
+[0.847s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/rm_autoaim/suep2026/dev_ws/install/hik_camera/share/hik_camera/hook/ld_library_path_lib.dsv'
+[0.848s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rm_autoaim/suep2026/dev_ws/install/hik_camera/share/hik_camera/hook/ld_library_path_lib.sh'
+[0.848s] Level 1:colcon.colcon_core.environment:checking '/home/rm_autoaim/suep2026/dev_ws/install/hik_camera/bin'
+[0.848s] Level 1:colcon.colcon_core.environment:checking '/home/rm_autoaim/suep2026/dev_ws/install/hik_camera/lib/pkgconfig/hik_camera.pc'
+[0.849s] Level 1:colcon.colcon_core.environment:checking '/home/rm_autoaim/suep2026/dev_ws/install/hik_camera/lib/python3.10/site-packages'
+[0.849s] Level 1:colcon.colcon_core.environment:checking '/home/rm_autoaim/suep2026/dev_ws/install/hik_camera/bin'
+[0.849s] INFO:colcon.colcon_core.shell:Creating package script '/home/rm_autoaim/suep2026/dev_ws/install/hik_camera/share/hik_camera/package.ps1'
+[0.850s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/rm_autoaim/suep2026/dev_ws/install/hik_camera/share/hik_camera/package.dsv'
+[0.851s] INFO:colcon.colcon_core.shell:Creating package script '/home/rm_autoaim/suep2026/dev_ws/install/hik_camera/share/hik_camera/package.sh'
+[0.852s] INFO:colcon.colcon_core.shell:Creating package script '/home/rm_autoaim/suep2026/dev_ws/install/hik_camera/share/hik_camera/package.bash'
+[0.852s] INFO:colcon.colcon_core.shell:Creating package script '/home/rm_autoaim/suep2026/dev_ws/install/hik_camera/share/hik_camera/package.zsh'
+[0.853s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/rm_autoaim/suep2026/dev_ws/install/hik_camera/share/colcon-core/packages/hik_camera)
+[1.823s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/rm_autoaim/suep2026/dev_ws/build/auto_aim_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/rm_autoaim/suep2026/dev_ws/build/auto_aim_interfaces -- -j8 -l8
+[1.824s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/rm_autoaim/suep2026/dev_ws/build/auto_aim_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/rm_autoaim/suep2026/dev_ws/build/auto_aim_interfaces
+[1.912s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(auto_aim_interfaces)
+[1.912s] Level 1:colcon.colcon_core.environment:checking '/home/rm_autoaim/suep2026/dev_ws/install/auto_aim_interfaces' for CMake module files
+[1.913s] Level 1:colcon.colcon_core.environment:checking '/home/rm_autoaim/suep2026/dev_ws/install/auto_aim_interfaces' for CMake config files
+[1.913s] Level 1:colcon.colcon_core.shell:create_environment_hook('auto_aim_interfaces', 'cmake_prefix_path')
+[1.913s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rm_autoaim/suep2026/dev_ws/install/auto_aim_interfaces/share/auto_aim_interfaces/hook/cmake_prefix_path.ps1'
+[1.914s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/rm_autoaim/suep2026/dev_ws/install/auto_aim_interfaces/share/auto_aim_interfaces/hook/cmake_prefix_path.dsv'
+[1.914s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rm_autoaim/suep2026/dev_ws/install/auto_aim_interfaces/share/auto_aim_interfaces/hook/cmake_prefix_path.sh'
+[1.917s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/rm_autoaim/suep2026/dev_ws/build/auto_aim_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/rm_autoaim/suep2026/dev_ws/build/auto_aim_interfaces
+[1.917s] Level 1:colcon.colcon_core.environment:checking '/home/rm_autoaim/suep2026/dev_ws/install/auto_aim_interfaces/lib'
+[1.918s] Level 1:colcon.colcon_core.shell:create_environment_hook('auto_aim_interfaces', 'ld_library_path_lib')
+[1.918s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rm_autoaim/suep2026/dev_ws/install/auto_aim_interfaces/share/auto_aim_interfaces/hook/ld_library_path_lib.ps1'
+[1.919s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/rm_autoaim/suep2026/dev_ws/install/auto_aim_interfaces/share/auto_aim_interfaces/hook/ld_library_path_lib.dsv'
+[1.919s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rm_autoaim/suep2026/dev_ws/install/auto_aim_interfaces/share/auto_aim_interfaces/hook/ld_library_path_lib.sh'
+[1.920s] Level 1:colcon.colcon_core.environment:checking '/home/rm_autoaim/suep2026/dev_ws/install/auto_aim_interfaces/bin'
+[1.920s] Level 1:colcon.colcon_core.environment:checking '/home/rm_autoaim/suep2026/dev_ws/install/auto_aim_interfaces/lib/pkgconfig/auto_aim_interfaces.pc'
+[1.920s] Level 1:colcon.colcon_core.environment:checking '/home/rm_autoaim/suep2026/dev_ws/install/auto_aim_interfaces/lib/python3.10/site-packages'
+[1.920s] Level 1:colcon.colcon_core.environment:checking '/home/rm_autoaim/suep2026/dev_ws/install/auto_aim_interfaces/bin'
+[1.920s] INFO:colcon.colcon_core.shell:Creating package script '/home/rm_autoaim/suep2026/dev_ws/install/auto_aim_interfaces/share/auto_aim_interfaces/package.ps1'
+[1.921s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/rm_autoaim/suep2026/dev_ws/install/auto_aim_interfaces/share/auto_aim_interfaces/package.dsv'
+[1.921s] INFO:colcon.colcon_core.shell:Creating package script '/home/rm_autoaim/suep2026/dev_ws/install/auto_aim_interfaces/share/auto_aim_interfaces/package.sh'
+[1.922s] INFO:colcon.colcon_core.shell:Creating package script '/home/rm_autoaim/suep2026/dev_ws/install/auto_aim_interfaces/share/auto_aim_interfaces/package.bash'
+[1.922s] INFO:colcon.colcon_core.shell:Creating package script '/home/rm_autoaim/suep2026/dev_ws/install/auto_aim_interfaces/share/auto_aim_interfaces/package.zsh'
+[1.922s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/rm_autoaim/suep2026/dev_ws/install/auto_aim_interfaces/share/colcon-core/packages/auto_aim_interfaces)
+[1.923s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(auto_aim_interfaces)
+[1.923s] Level 1:colcon.colcon_core.environment:checking '/home/rm_autoaim/suep2026/dev_ws/install/auto_aim_interfaces' for CMake module files
+[1.924s] Level 1:colcon.colcon_core.environment:checking '/home/rm_autoaim/suep2026/dev_ws/install/auto_aim_interfaces' for CMake config files
+[1.925s] Level 1:colcon.colcon_core.shell:create_environment_hook('auto_aim_interfaces', 'cmake_prefix_path')
+[1.925s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rm_autoaim/suep2026/dev_ws/install/auto_aim_interfaces/share/auto_aim_interfaces/hook/cmake_prefix_path.ps1'
+[1.926s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/rm_autoaim/suep2026/dev_ws/install/auto_aim_interfaces/share/auto_aim_interfaces/hook/cmake_prefix_path.dsv'
+[1.927s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rm_autoaim/suep2026/dev_ws/install/auto_aim_interfaces/share/auto_aim_interfaces/hook/cmake_prefix_path.sh'
+[1.928s] Level 1:colcon.colcon_core.environment:checking '/home/rm_autoaim/suep2026/dev_ws/install/auto_aim_interfaces/lib'
+[1.928s] Level 1:colcon.colcon_core.shell:create_environment_hook('auto_aim_interfaces', 'ld_library_path_lib')
+[1.928s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rm_autoaim/suep2026/dev_ws/install/auto_aim_interfaces/share/auto_aim_interfaces/hook/ld_library_path_lib.ps1'
+[1.929s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/rm_autoaim/suep2026/dev_ws/install/auto_aim_interfaces/share/auto_aim_interfaces/hook/ld_library_path_lib.dsv'
+[1.929s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rm_autoaim/suep2026/dev_ws/install/auto_aim_interfaces/share/auto_aim_interfaces/hook/ld_library_path_lib.sh'
+[1.930s] Level 1:colcon.colcon_core.environment:checking '/home/rm_autoaim/suep2026/dev_ws/install/auto_aim_interfaces/bin'
+[1.930s] Level 1:colcon.colcon_core.environment:checking '/home/rm_autoaim/suep2026/dev_ws/install/auto_aim_interfaces/lib/pkgconfig/auto_aim_interfaces.pc'
+[1.930s] Level 1:colcon.colcon_core.environment:checking '/home/rm_autoaim/suep2026/dev_ws/install/auto_aim_interfaces/lib/python3.10/site-packages'
+[1.930s] Level 1:colcon.colcon_core.environment:checking '/home/rm_autoaim/suep2026/dev_ws/install/auto_aim_interfaces/bin'
+[1.930s] INFO:colcon.colcon_core.shell:Creating package script '/home/rm_autoaim/suep2026/dev_ws/install/auto_aim_interfaces/share/auto_aim_interfaces/package.ps1'
+[1.931s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/rm_autoaim/suep2026/dev_ws/install/auto_aim_interfaces/share/auto_aim_interfaces/package.dsv'
+[1.931s] INFO:colcon.colcon_core.shell:Creating package script '/home/rm_autoaim/suep2026/dev_ws/install/auto_aim_interfaces/share/auto_aim_interfaces/package.sh'
+[1.932s] INFO:colcon.colcon_core.shell:Creating package script '/home/rm_autoaim/suep2026/dev_ws/install/auto_aim_interfaces/share/auto_aim_interfaces/package.bash'
+[1.933s] INFO:colcon.colcon_core.shell:Creating package script '/home/rm_autoaim/suep2026/dev_ws/install/auto_aim_interfaces/share/auto_aim_interfaces/package.zsh'
+[1.934s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/rm_autoaim/suep2026/dev_ws/install/auto_aim_interfaces/share/colcon-core/packages/auto_aim_interfaces)
+[1.934s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/rm_autoaim/suep2026/dev_ws/src/rm_auto_aim/armor_detector' with build type 'ament_cmake'
+[1.934s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/rm_autoaim/suep2026/dev_ws/src/rm_auto_aim/armor_detector'
+[1.935s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.935s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.940s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/rm_autoaim/suep2026/dev_ws/src/rm_auto_aim/armor_tracker' with build type 'ament_cmake'
+[1.940s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/rm_autoaim/suep2026/dev_ws/src/rm_auto_aim/armor_tracker'
+[1.940s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.941s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.980s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/rm_autoaim/suep2026/dev_ws/build/armor_detector': CMAKE_PREFIX_PATH=/home/rm_autoaim/suep2026/dev_ws/install/auto_aim_interfaces:/home/rm_autoaim/suep2026/dev_ws/install/rm_gimbal_description:/home/rm_autoaim/suep2026/dev_ws/install/hik_camera:/home/rm_autoaim/suep2026/dev_ws/install/armor_tracker:/home/rm_autoaim/suep2026/dev_ws/install/armor_detector:/opt/ros/humble LD_LIBRARY_PATH=/home/rm_autoaim/suep2026/dev_ws/install/auto_aim_interfaces/lib:/home/rm_autoaim/suep2026/dev_ws/install/hik_camera/lib:/home/rm_autoaim/suep2026/dev_ws/install/armor_tracker/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/opt/MVS/lib/64:/opt/MVS/lib/32 /usr/bin/cmake --build /home/rm_autoaim/suep2026/dev_ws/build/armor_detector -- -j8 -l8
+[2.001s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/rm_autoaim/suep2026/dev_ws/build/armor_tracker': CMAKE_PREFIX_PATH=/home/rm_autoaim/suep2026/dev_ws/install/auto_aim_interfaces:/home/rm_autoaim/suep2026/dev_ws/install/rm_gimbal_description:/home/rm_autoaim/suep2026/dev_ws/install/hik_camera:/home/rm_autoaim/suep2026/dev_ws/install/armor_tracker:/home/rm_autoaim/suep2026/dev_ws/install/armor_detector:/opt/ros/humble LD_LIBRARY_PATH=/home/rm_autoaim/suep2026/dev_ws/install/auto_aim_interfaces/lib:/home/rm_autoaim/suep2026/dev_ws/install/hik_camera/lib:/home/rm_autoaim/suep2026/dev_ws/install/armor_tracker/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/opt/MVS/lib/64:/opt/MVS/lib/32 /usr/bin/cmake --build /home/rm_autoaim/suep2026/dev_ws/build/armor_tracker -- -j8 -l8
+[2.116s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/rm_autoaim/suep2026/dev_ws/build/armor_detector' returned '0': CMAKE_PREFIX_PATH=/home/rm_autoaim/suep2026/dev_ws/install/auto_aim_interfaces:/home/rm_autoaim/suep2026/dev_ws/install/rm_gimbal_description:/home/rm_autoaim/suep2026/dev_ws/install/hik_camera:/home/rm_autoaim/suep2026/dev_ws/install/armor_tracker:/home/rm_autoaim/suep2026/dev_ws/install/armor_detector:/opt/ros/humble LD_LIBRARY_PATH=/home/rm_autoaim/suep2026/dev_ws/install/auto_aim_interfaces/lib:/home/rm_autoaim/suep2026/dev_ws/install/hik_camera/lib:/home/rm_autoaim/suep2026/dev_ws/install/armor_tracker/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/opt/MVS/lib/64:/opt/MVS/lib/32 /usr/bin/cmake --build /home/rm_autoaim/suep2026/dev_ws/build/armor_detector -- -j8 -l8
+[2.119s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/rm_autoaim/suep2026/dev_ws/build/armor_detector': CMAKE_PREFIX_PATH=/home/rm_autoaim/suep2026/dev_ws/install/auto_aim_interfaces:/home/rm_autoaim/suep2026/dev_ws/install/rm_gimbal_description:/home/rm_autoaim/suep2026/dev_ws/install/hik_camera:/home/rm_autoaim/suep2026/dev_ws/install/armor_tracker:/home/rm_autoaim/suep2026/dev_ws/install/armor_detector:/opt/ros/humble LD_LIBRARY_PATH=/home/rm_autoaim/suep2026/dev_ws/install/auto_aim_interfaces/lib:/home/rm_autoaim/suep2026/dev_ws/install/hik_camera/lib:/home/rm_autoaim/suep2026/dev_ws/install/armor_tracker/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/opt/MVS/lib/64:/opt/MVS/lib/32 /usr/bin/cmake --install /home/rm_autoaim/suep2026/dev_ws/build/armor_detector
+[2.132s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(armor_detector)
+[2.133s] Level 1:colcon.colcon_core.environment:checking '/home/rm_autoaim/suep2026/dev_ws/install/armor_detector' for CMake module files
+[2.134s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/rm_autoaim/suep2026/dev_ws/build/armor_detector' returned '0': CMAKE_PREFIX_PATH=/home/rm_autoaim/suep2026/dev_ws/install/auto_aim_interfaces:/home/rm_autoaim/suep2026/dev_ws/install/rm_gimbal_description:/home/rm_autoaim/suep2026/dev_ws/install/hik_camera:/home/rm_autoaim/suep2026/dev_ws/install/armor_tracker:/home/rm_autoaim/suep2026/dev_ws/install/armor_detector:/opt/ros/humble LD_LIBRARY_PATH=/home/rm_autoaim/suep2026/dev_ws/install/auto_aim_interfaces/lib:/home/rm_autoaim/suep2026/dev_ws/install/hik_camera/lib:/home/rm_autoaim/suep2026/dev_ws/install/armor_tracker/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/opt/MVS/lib/64:/opt/MVS/lib/32 /usr/bin/cmake --install /home/rm_autoaim/suep2026/dev_ws/build/armor_detector
+[2.135s] Level 1:colcon.colcon_core.environment:checking '/home/rm_autoaim/suep2026/dev_ws/install/armor_detector' for CMake config files
+[2.135s] Level 1:colcon.colcon_core.shell:create_environment_hook('armor_detector', 'cmake_prefix_path')
+[2.135s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rm_autoaim/suep2026/dev_ws/install/armor_detector/share/armor_detector/hook/cmake_prefix_path.ps1'
+[2.136s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/rm_autoaim/suep2026/dev_ws/install/armor_detector/share/armor_detector/hook/cmake_prefix_path.dsv'
+[2.137s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rm_autoaim/suep2026/dev_ws/install/armor_detector/share/armor_detector/hook/cmake_prefix_path.sh'
+[2.138s] Level 1:colcon.colcon_core.environment:checking '/home/rm_autoaim/suep2026/dev_ws/install/armor_detector/lib'
+[2.138s] Level 1:colcon.colcon_core.environment:checking '/home/rm_autoaim/suep2026/dev_ws/install/armor_detector/bin'
+[2.138s] Level 1:colcon.colcon_core.environment:checking '/home/rm_autoaim/suep2026/dev_ws/install/armor_detector/lib/pkgconfig/armor_detector.pc'
+[2.138s] Level 1:colcon.colcon_core.environment:checking '/home/rm_autoaim/suep2026/dev_ws/install/armor_detector/lib/python3.10/site-packages'
+[2.139s] Level 1:colcon.colcon_core.environment:checking '/home/rm_autoaim/suep2026/dev_ws/install/armor_detector/bin'
+[2.139s] INFO:colcon.colcon_core.shell:Creating package script '/home/rm_autoaim/suep2026/dev_ws/install/armor_detector/share/armor_detector/package.ps1'
+[2.141s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/rm_autoaim/suep2026/dev_ws/install/armor_detector/share/armor_detector/package.dsv'
+[2.143s] INFO:colcon.colcon_core.shell:Creating package script '/home/rm_autoaim/suep2026/dev_ws/install/armor_detector/share/armor_detector/package.sh'
+[2.143s] INFO:colcon.colcon_core.shell:Creating package script '/home/rm_autoaim/suep2026/dev_ws/install/armor_detector/share/armor_detector/package.bash'
+[2.144s] INFO:colcon.colcon_core.shell:Creating package script '/home/rm_autoaim/suep2026/dev_ws/install/armor_detector/share/armor_detector/package.zsh'
+[2.144s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/rm_autoaim/suep2026/dev_ws/install/armor_detector/share/colcon-core/packages/armor_detector)
+[2.145s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(armor_detector)
+[2.145s] Level 1:colcon.colcon_core.environment:checking '/home/rm_autoaim/suep2026/dev_ws/install/armor_detector' for CMake module files
+[2.146s] Level 1:colcon.colcon_core.environment:checking '/home/rm_autoaim/suep2026/dev_ws/install/armor_detector' for CMake config files
+[2.146s] Level 1:colcon.colcon_core.shell:create_environment_hook('armor_detector', 'cmake_prefix_path')
+[2.146s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rm_autoaim/suep2026/dev_ws/install/armor_detector/share/armor_detector/hook/cmake_prefix_path.ps1'
+[2.148s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/rm_autoaim/suep2026/dev_ws/install/armor_detector/share/armor_detector/hook/cmake_prefix_path.dsv'
+[2.149s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rm_autoaim/suep2026/dev_ws/install/armor_detector/share/armor_detector/hook/cmake_prefix_path.sh'
+[2.150s] Level 1:colcon.colcon_core.environment:checking '/home/rm_autoaim/suep2026/dev_ws/install/armor_detector/lib'
+[2.150s] Level 1:colcon.colcon_core.environment:checking '/home/rm_autoaim/suep2026/dev_ws/install/armor_detector/bin'
+[2.150s] Level 1:colcon.colcon_core.environment:checking '/home/rm_autoaim/suep2026/dev_ws/install/armor_detector/lib/pkgconfig/armor_detector.pc'
+[2.150s] Level 1:colcon.colcon_core.environment:checking '/home/rm_autoaim/suep2026/dev_ws/install/armor_detector/lib/python3.10/site-packages'
+[2.151s] Level 1:colcon.colcon_core.environment:checking '/home/rm_autoaim/suep2026/dev_ws/install/armor_detector/bin'
+[2.151s] INFO:colcon.colcon_core.shell:Creating package script '/home/rm_autoaim/suep2026/dev_ws/install/armor_detector/share/armor_detector/package.ps1'
+[2.152s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/rm_autoaim/suep2026/dev_ws/install/armor_detector/share/armor_detector/package.dsv'
+[2.153s] INFO:colcon.colcon_core.shell:Creating package script '/home/rm_autoaim/suep2026/dev_ws/install/armor_detector/share/armor_detector/package.sh'
+[2.154s] INFO:colcon.colcon_core.shell:Creating package script '/home/rm_autoaim/suep2026/dev_ws/install/armor_detector/share/armor_detector/package.bash'
+[2.155s] INFO:colcon.colcon_core.shell:Creating package script '/home/rm_autoaim/suep2026/dev_ws/install/armor_detector/share/armor_detector/package.zsh'
+[2.156s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/rm_autoaim/suep2026/dev_ws/install/armor_detector/share/colcon-core/packages/armor_detector)
+[22.912s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/rm_autoaim/suep2026/dev_ws/build/armor_tracker' returned '0': CMAKE_PREFIX_PATH=/home/rm_autoaim/suep2026/dev_ws/install/auto_aim_interfaces:/home/rm_autoaim/suep2026/dev_ws/install/rm_gimbal_description:/home/rm_autoaim/suep2026/dev_ws/install/hik_camera:/home/rm_autoaim/suep2026/dev_ws/install/armor_tracker:/home/rm_autoaim/suep2026/dev_ws/install/armor_detector:/opt/ros/humble LD_LIBRARY_PATH=/home/rm_autoaim/suep2026/dev_ws/install/auto_aim_interfaces/lib:/home/rm_autoaim/suep2026/dev_ws/install/hik_camera/lib:/home/rm_autoaim/suep2026/dev_ws/install/armor_tracker/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/opt/MVS/lib/64:/opt/MVS/lib/32 /usr/bin/cmake --build /home/rm_autoaim/suep2026/dev_ws/build/armor_tracker -- -j8 -l8
+[22.913s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/rm_autoaim/suep2026/dev_ws/build/armor_tracker': CMAKE_PREFIX_PATH=/home/rm_autoaim/suep2026/dev_ws/install/auto_aim_interfaces:/home/rm_autoaim/suep2026/dev_ws/install/rm_gimbal_description:/home/rm_autoaim/suep2026/dev_ws/install/hik_camera:/home/rm_autoaim/suep2026/dev_ws/install/armor_tracker:/home/rm_autoaim/suep2026/dev_ws/install/armor_detector:/opt/ros/humble LD_LIBRARY_PATH=/home/rm_autoaim/suep2026/dev_ws/install/auto_aim_interfaces/lib:/home/rm_autoaim/suep2026/dev_ws/install/hik_camera/lib:/home/rm_autoaim/suep2026/dev_ws/install/armor_tracker/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/opt/MVS/lib/64:/opt/MVS/lib/32 /usr/bin/cmake --install /home/rm_autoaim/suep2026/dev_ws/build/armor_tracker
+[22.936s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(armor_tracker)
+[22.936s] Level 1:colcon.colcon_core.environment:checking '/home/rm_autoaim/suep2026/dev_ws/install/armor_tracker' for CMake module files
+[22.937s] Level 1:colcon.colcon_core.environment:checking '/home/rm_autoaim/suep2026/dev_ws/install/armor_tracker' for CMake config files
+[22.937s] Level 1:colcon.colcon_core.shell:create_environment_hook('armor_tracker', 'cmake_prefix_path')
+[22.937s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rm_autoaim/suep2026/dev_ws/install/armor_tracker/share/armor_tracker/hook/cmake_prefix_path.ps1'
+[22.938s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/rm_autoaim/suep2026/dev_ws/install/armor_tracker/share/armor_tracker/hook/cmake_prefix_path.dsv'
+[22.938s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rm_autoaim/suep2026/dev_ws/install/armor_tracker/share/armor_tracker/hook/cmake_prefix_path.sh'
+[22.941s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/rm_autoaim/suep2026/dev_ws/build/armor_tracker' returned '0': CMAKE_PREFIX_PATH=/home/rm_autoaim/suep2026/dev_ws/install/auto_aim_interfaces:/home/rm_autoaim/suep2026/dev_ws/install/rm_gimbal_description:/home/rm_autoaim/suep2026/dev_ws/install/hik_camera:/home/rm_autoaim/suep2026/dev_ws/install/armor_tracker:/home/rm_autoaim/suep2026/dev_ws/install/armor_detector:/opt/ros/humble LD_LIBRARY_PATH=/home/rm_autoaim/suep2026/dev_ws/install/auto_aim_interfaces/lib:/home/rm_autoaim/suep2026/dev_ws/install/hik_camera/lib:/home/rm_autoaim/suep2026/dev_ws/install/armor_tracker/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/opt/MVS/lib/64:/opt/MVS/lib/32 /usr/bin/cmake --install /home/rm_autoaim/suep2026/dev_ws/build/armor_tracker
+[22.942s] Level 1:colcon.colcon_core.environment:checking '/home/rm_autoaim/suep2026/dev_ws/install/armor_tracker/lib'
+[22.942s] Level 1:colcon.colcon_core.shell:create_environment_hook('armor_tracker', 'ld_library_path_lib')
+[22.942s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rm_autoaim/suep2026/dev_ws/install/armor_tracker/share/armor_tracker/hook/ld_library_path_lib.ps1'
+[22.943s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/rm_autoaim/suep2026/dev_ws/install/armor_tracker/share/armor_tracker/hook/ld_library_path_lib.dsv'
+[22.943s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rm_autoaim/suep2026/dev_ws/install/armor_tracker/share/armor_tracker/hook/ld_library_path_lib.sh'
+[22.944s] Level 1:colcon.colcon_core.environment:checking '/home/rm_autoaim/suep2026/dev_ws/install/armor_tracker/bin'
+[22.944s] Level 1:colcon.colcon_core.environment:checking '/home/rm_autoaim/suep2026/dev_ws/install/armor_tracker/lib/pkgconfig/armor_tracker.pc'
+[22.944s] Level 1:colcon.colcon_core.environment:checking '/home/rm_autoaim/suep2026/dev_ws/install/armor_tracker/lib/python3.10/site-packages'
+[22.944s] Level 1:colcon.colcon_core.environment:checking '/home/rm_autoaim/suep2026/dev_ws/install/armor_tracker/bin'
+[22.945s] INFO:colcon.colcon_core.shell:Creating package script '/home/rm_autoaim/suep2026/dev_ws/install/armor_tracker/share/armor_tracker/package.ps1'
+[22.946s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/rm_autoaim/suep2026/dev_ws/install/armor_tracker/share/armor_tracker/package.dsv'
+[22.948s] INFO:colcon.colcon_core.shell:Creating package script '/home/rm_autoaim/suep2026/dev_ws/install/armor_tracker/share/armor_tracker/package.sh'
+[22.949s] INFO:colcon.colcon_core.shell:Creating package script '/home/rm_autoaim/suep2026/dev_ws/install/armor_tracker/share/armor_tracker/package.bash'
+[22.950s] INFO:colcon.colcon_core.shell:Creating package script '/home/rm_autoaim/suep2026/dev_ws/install/armor_tracker/share/armor_tracker/package.zsh'
+[22.950s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/rm_autoaim/suep2026/dev_ws/install/armor_tracker/share/colcon-core/packages/armor_tracker)
+[22.951s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(armor_tracker)
+[22.951s] Level 1:colcon.colcon_core.environment:checking '/home/rm_autoaim/suep2026/dev_ws/install/armor_tracker' for CMake module files
+[22.952s] Level 1:colcon.colcon_core.environment:checking '/home/rm_autoaim/suep2026/dev_ws/install/armor_tracker' for CMake config files
+[22.952s] Level 1:colcon.colcon_core.shell:create_environment_hook('armor_tracker', 'cmake_prefix_path')
+[22.953s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rm_autoaim/suep2026/dev_ws/install/armor_tracker/share/armor_tracker/hook/cmake_prefix_path.ps1'
+[22.953s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/rm_autoaim/suep2026/dev_ws/install/armor_tracker/share/armor_tracker/hook/cmake_prefix_path.dsv'
+[22.954s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rm_autoaim/suep2026/dev_ws/install/armor_tracker/share/armor_tracker/hook/cmake_prefix_path.sh'
+[22.954s] Level 1:colcon.colcon_core.environment:checking '/home/rm_autoaim/suep2026/dev_ws/install/armor_tracker/lib'
+[22.954s] Level 1:colcon.colcon_core.shell:create_environment_hook('armor_tracker', 'ld_library_path_lib')
+[22.955s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rm_autoaim/suep2026/dev_ws/install/armor_tracker/share/armor_tracker/hook/ld_library_path_lib.ps1'
+[22.955s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/rm_autoaim/suep2026/dev_ws/install/armor_tracker/share/armor_tracker/hook/ld_library_path_lib.dsv'
+[22.956s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rm_autoaim/suep2026/dev_ws/install/armor_tracker/share/armor_tracker/hook/ld_library_path_lib.sh'
+[22.957s] Level 1:colcon.colcon_core.environment:checking '/home/rm_autoaim/suep2026/dev_ws/install/armor_tracker/bin'
+[22.957s] Level 1:colcon.colcon_core.environment:checking '/home/rm_autoaim/suep2026/dev_ws/install/armor_tracker/lib/pkgconfig/armor_tracker.pc'
+[22.958s] Level 1:colcon.colcon_core.environment:checking '/home/rm_autoaim/suep2026/dev_ws/install/armor_tracker/lib/python3.10/site-packages'
+[22.958s] Level 1:colcon.colcon_core.environment:checking '/home/rm_autoaim/suep2026/dev_ws/install/armor_tracker/bin'
+[22.959s] INFO:colcon.colcon_core.shell:Creating package script '/home/rm_autoaim/suep2026/dev_ws/install/armor_tracker/share/armor_tracker/package.ps1'
+[22.961s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/rm_autoaim/suep2026/dev_ws/install/armor_tracker/share/armor_tracker/package.dsv'
+[22.962s] INFO:colcon.colcon_core.shell:Creating package script '/home/rm_autoaim/suep2026/dev_ws/install/armor_tracker/share/armor_tracker/package.sh'
+[22.963s] INFO:colcon.colcon_core.shell:Creating package script '/home/rm_autoaim/suep2026/dev_ws/install/armor_tracker/share/armor_tracker/package.bash'
+[22.965s] INFO:colcon.colcon_core.shell:Creating package script '/home/rm_autoaim/suep2026/dev_ws/install/armor_tracker/share/armor_tracker/package.zsh'
+[22.965s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/rm_autoaim/suep2026/dev_ws/install/armor_tracker/share/colcon-core/packages/armor_tracker)
+[22.966s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[22.966s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[22.966s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[22.966s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[22.976s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[22.976s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[22.976s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[22.995s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[22.995s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/rm_autoaim/suep2026/dev_ws/install/local_setup.ps1'
+[22.997s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/rm_autoaim/suep2026/dev_ws/install/_local_setup_util_ps1.py'
+[22.998s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/rm_autoaim/suep2026/dev_ws/install/setup.ps1'
+[23.000s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/rm_autoaim/suep2026/dev_ws/install/local_setup.sh'
+[23.001s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/rm_autoaim/suep2026/dev_ws/install/_local_setup_util_sh.py'
+[23.002s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/rm_autoaim/suep2026/dev_ws/install/setup.sh'
+[23.003s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/rm_autoaim/suep2026/dev_ws/install/local_setup.bash'
+[23.004s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/rm_autoaim/suep2026/dev_ws/install/setup.bash'
+[23.006s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/rm_autoaim/suep2026/dev_ws/install/local_setup.zsh'
+[23.006s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/rm_autoaim/suep2026/dev_ws/install/setup.zsh'
