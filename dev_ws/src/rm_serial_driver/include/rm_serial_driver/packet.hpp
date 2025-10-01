@@ -15,7 +15,7 @@ namespace rm_serial_driver {
         uint8_t detect_color: 1;
         uint8_t task_mode: 2;
         // bool reset_tracker :1;
-        // uint8_t is_play:1;
+        // uint8_t is_play: 1;
         // bool chang_target : 5;
         uint8_t reserved: 5;
         float roll;
@@ -24,7 +24,7 @@ namespace rm_serial_driver {
         float aim_x;
         float aim_y;
         float aim_z;
-        // uint16_t game_time ;
+        // uint16_t game_time;
         // uint32_t timestamp;
         uint16_t checksum = 0;
     }__attribute__((packed));
@@ -58,6 +58,14 @@ namespace rm_serial_driver {
     inline ReceiverPacket fromVector(const std::vector<uint8_t> *data) {
         ReceiverPacket packet;
         std::copy(data->begin(), data->end(), reinterpret_cast<uint8_t *>(&packet));
+        return packet;
+    }
+
+    inline std::vector<uint8_t> toVector(const SendPacket &data) {
+        std::vector<uint8_t> packet(sizeof(SendPacket));
+        std::copy(
+            reinterpret_cast<const uint8_t *>(&data),
+            reinterpret_cast<const uint8_t *>(&data) + sizeof(SendPacket), packet.begin());
         return packet;
     }
 }

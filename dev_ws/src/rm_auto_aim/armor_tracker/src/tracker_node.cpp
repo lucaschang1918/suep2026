@@ -1,6 +1,6 @@
 
 
-#include "armor_tracker/tracker_node.hpp"
+#include "../include/armor_tracker/tracker_node.hpp"
 
 // STD
 #include <cmath>
@@ -18,6 +18,7 @@ namespace rm_auto_aim {
     // Tracker
     double max_match_distance = this->declare_parameter("tracker.max_match_distance", 0.15);
     double max_match_yaw_diff_ = this->declare_parameter("tracker.max_match_yaw_diff", 1.0);
+
     tracker_ = std::make_unique<Tracker>(max_match_distance, max_match_yaw_diff_);
     tracker_->tracking_thres = this->declare_parameter("tracker.tracking_thres", 5);
     lost_time_thres_ = this->declare_parameter("tracker.lost_time_thres", 0.3);
@@ -124,6 +125,8 @@ namespace rm_auto_aim {
     // update_R - measurement noise covariance matrix
     r_xyz_factor = declare_parameter("ekf.r_xyz_factor", 0.05);
     r_yaw = declare_parameter("ekf.r_yaw", 0.02);
+
+
     auto u_r = [this](const Eigen::VectorXd &z) {
       Eigen::DiagonalMatrix<double, 4> r;
       double x = r_xyz_factor;
@@ -139,6 +142,7 @@ namespace rm_auto_aim {
     using std::placeholders::_1;
     using std::placeholders::_2;
     using std::placeholders::_3;
+
     reset_tracker_srv_ = this->create_service<std_srvs::srv::Trigger>(
       "/tracker/reset", [this](
     const std_srvs::srv::Trigger::Request::SharedPtr,
@@ -162,14 +166,15 @@ namespace rm_auto_aim {
 
     // Subscriber with tf2 message_filter
     // tf2 relevant
-    tf2_buffer_ = std::make_shared<tf2_ros::Buffer>(this->get_clock(),
-      tf2::durationFromSec(5.0));
+    tf2_buffer_ = std::make_shared<tf2_ros::Buffer>(this->get_clock());
     // Create the timer interface before call to waitForTransform,
     // to avoid a tf2_ros::CreateTimerInterfaceException exception
     auto timer_interface = std::make_shared<tf2_ros::CreateTimerROS>(
       this->get_node_base_interface(), this->get_node_timers_interface());
+
     tf2_buffer_->setCreateTimerInterface(timer_interface);
     tf2_listener_ = std::make_shared<tf2_ros::TransformListener>(*tf2_buffer_);
+
     // subscriber and filter
     armors_sub_.subscribe(this, "/detector/armors", rmw_qos_profile_sensor_data);
     target_frame_ = this->declare_parameter("target_frame", "odom");
@@ -219,6 +224,8 @@ namespace rm_auto_aim {
   }
 
   void ArmorTrackerNode::armorsCallback(const auto_aim_interfaces::msg::Armors::SharedPtr armors_msg) {
+
+    RCLCPP_INFO(get_logger(),"armorsCallback start ");
     // Tranform armor position from image frame to world coordinate
     for (auto &armor: armors_msg->armors) {
       geometry_msgs::msg::PoseStamped ps;

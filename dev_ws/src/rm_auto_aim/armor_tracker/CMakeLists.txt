@@ -32,11 +32,7 @@ add_library(${PROJECT_NAME} SHARED
         src/extended_kalman_filter.cpp
         src/tracker.cpp
         src/tracker_node.cpp
-        ../../rm_serial_driver/src/crc.cpp
-        ../../rm_serial_driver/src/rm_serial_driver.cpp
-        ../../rm_serial_driver/include/rm_serial_driver/rm_serial_driver.hpp
-        ../../rm_serial_driver/include/rm_serial_driver/crc.hpp
-        ../../rm_serial_driver/include/rm_serial_driver/packet.hpp
+
 )
 
 # --- 依赖 ---
