@@ -2,7 +2,7 @@
 // Created by rm_autoaim on 2025/9/14.
 //
 
-#include "../include/pnp_solver.hpp"
+#include "pnp_solver.hpp"
 #include <opencv2/calib3d.hpp>
 #include <vector>
 

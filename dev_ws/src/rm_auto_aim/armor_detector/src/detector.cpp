@@ -2,7 +2,7 @@
 // Created by rm_autoaim on 2025/9/14.
 //
 
-#include "../include/detector.hpp"
+#include "detector.hpp"
 // OpenCV
 #include <opencv2/core.hpp>
 #include <opencv2/core/base.hpp>
@@ -17,7 +17,10 @@
 #include <mutex>
 #include <oneapi/tbb/detail/_config.h>
 
+//Openvion
 #include <openvino/openvino.hpp>
+
+//Interface
 #include "auto_aim_interfaces/msg/debug_armors.hpp"
 
 

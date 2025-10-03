@@ -1,5 +1,5 @@
 
-#include "../include/detector_node.hpp"
+#include "detector_node.hpp"
 
 #include <ranges>
 #include <tf2_geometry_msgs/tf2_geometry_msgs.hpp>
@@ -7,8 +7,8 @@
 
 
 namespace rm_auto_aim {
-    ArmorDetectorNode::ArmorDetectorNode()
-        : Node("armor_detector") {
+    ArmorDetectorNode::ArmorDetectorNode(const rclcpp::NodeOptions &options)
+        : Node("armor_detector", options) {
         RCLCPP_INFO(this->get_logger(), "Start DetectorNode");
 
         detector_ = initDetector();
@@ -161,7 +161,6 @@ namespace rm_auto_aim {
             }
 
             armors_pub_->publish(armors_msg_);
-
 
 
             publishMarkers();
@@ -320,10 +319,10 @@ namespace rm_auto_aim {
 } // namespace rm_auto_aim
 
 
-int main(int argc, char *argv[]) {
-    rclcpp::init(argc, argv);
-    auto node = std::make_shared<rm_auto_aim::ArmorDetectorNode>();
-    rclcpp::spin(node);
-    rclcpp::shutdown();
-}
+#include "rclcpp_components/register_node_macro.hpp"
+
+// Register the component with class_loader.
+// This acts as a sort of entry point, allowing the component to be discoverable when its library
+// is being loaded into a running process.
+RCLCPP_COMPONENTS_REGISTER_NODE(rm_auto_aim::ArmorDetectorNode)
 

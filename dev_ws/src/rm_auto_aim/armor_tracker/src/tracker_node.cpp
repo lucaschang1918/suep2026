@@ -1,7 +1,7 @@
 
 
-#include "../include/armor_tracker/tracker_node.hpp"
-
+#include "tracker_node.hpp"
+#include "extended_kalman_filter.hpp"
 // STD
 #include <cmath>
 #include <memory>
@@ -133,6 +133,7 @@ namespace rm_auto_aim {
       r.diagonal() << abs(x * z[0]), abs(x * z[1]), abs(x * z[2]), r_yaw;
       return r;
     };
+
     // P - error estimate covariance matrix
     Eigen::DiagonalMatrix<double, 9> p0;
     p0.setIdentity();
@@ -182,7 +183,7 @@ namespace rm_auto_aim {
     tf2_filter_ = std::make_shared<tf2_filter>(
       armors_sub_, *tf2_buffer_, target_frame_, 120, this->get_node_logging_interface(),
       this->get_node_clock_interface(), std::chrono::duration<int>(1));
-      // this->get_node_clock_interface(), std::chrono::duration<int>(1));
+    // this->get_node_clock_interface(), std::chrono::duration<int>(1));
     // Register a callback with tf2_ros::MessageFilter to be called when transforms are available
     tf2_filter_->registerCallback(&ArmorTrackerNode::armorsCallback, this);
 
@@ -223,91 +224,105 @@ namespace rm_auto_aim {
     marker_pub_ = this->create_publisher<visualization_msgs::msg::MarkerArray>("/tracker/marker", 10);
   }
 
-  void ArmorTrackerNode::armorsCallback(const auto_aim_interfaces::msg::Armors::SharedPtr armors_msg) {
+  void ArmorTrackerNode::armorsCallback(const auto_aim_interfaces::msg::Armors::SharedPtr armors_msg)
+{
+  // Tranform armor position from image frame to world coordinate
+  for (auto & armor : armors_msg->armors) {
+    geometry_msgs::msg::PoseStamped ps;
+    ps.header = armors_msg->header;
+    ps.pose = armor.pose;
+    try {
+      armor.pose = tf2_buffer_->transform(ps, target_frame_).pose;
 
-    RCLCPP_INFO(get_logger(),"armorsCallback start ");
-    // Tranform armor position from image frame to world coordinate
-    for (auto &armor: armors_msg->armors) {
-      geometry_msgs::msg::PoseStamped ps;
-      ps.header = armors_msg->header;
-      ps.pose = armor.pose;
-      try {
-        armor.pose = tf2_buffer_->transform(ps, target_frame_).pose;
-      } catch (const tf2::ExtrapolationException &ex) {
-        RCLCPP_ERROR(get_logger(), "Error while transforming %s", ex.what());
-        return;
-      }
+      // armorsCallback 中，在 tf2_buffer_->transform 之后
+      RCLCPP_INFO(
+        get_logger(),
+        "Transformed Armor: x=%.3f, y=%.3f, z=%.3f. Frame: %s",
+        armor.pose.position.x,
+        armor.pose.position.y,
+        armor.pose.position.z,
+        target_frame_.c_str() // 确认是 odom
+      );
+
+
+    } catch (const tf2::ExtrapolationException & ex) {
+      RCLCPP_ERROR(get_logger(), "Error while transforming %s", ex.what());
+      return;
     }
-
-    // Filter abnormal armors
-    armors_msg->armors.erase(
-      std::remove_if(
-        armors_msg->armors.begin(), armors_msg->armors.end(),
-        [this](const auto_aim_interfaces::msg::Armor &armor) {
-          return abs(armor.pose.position.z) > 1.2 ||
-                 Eigen::Vector2d(armor.pose.position.x, armor.pose.position.y).norm() >
-                 max_armor_distance_;
-        }),
-      armors_msg->armors.end());
-
-    // Init message
-    auto_aim_interfaces::msg::TrackerInfo info_msg;
-    auto_aim_interfaces::msg::Target target_msg;
-    rclcpp::Time time = armors_msg->header.stamp;
-    target_msg.header.stamp = time;
-    target_msg.header.frame_id = target_frame_;
-
-    // Update tracker
-    if (tracker_->tracker_state == Tracker::LOST) {
-      tracker_->init(armors_msg);
-      target_msg.tracking = false;
-    } else {
-      dt_ = (time - last_time_).seconds();
-      tracker_->lost_thres = static_cast<int>(lost_time_thres_ / dt_);
-
-      tracker_->update(armors_msg);
-
-      // Publish Info
-      info_msg.position_diff = tracker_->info_position_diff;
-      info_msg.yaw_diff = tracker_->info_yaw_diff;
-      info_msg.position.x = tracker_->measurement(0);
-      info_msg.position.y = tracker_->measurement(1);
-      info_msg.position.z = tracker_->measurement(2);
-      info_msg.yaw = tracker_->measurement(3);
-      info_pub_->publish(info_msg);
-
-      if (tracker_->tracker_state == Tracker::DETECTING) {
-        target_msg.tracking = false;
-      } else if (
-        tracker_->tracker_state == Tracker::TRACKING ||
-        tracker_->tracker_state == Tracker::TEMP_LOST) {
-        target_msg.tracking = true;
-        // Fill target message
-        const auto &state = tracker_->target_state;
-        target_msg.id = tracker_->tracked_id;  //贴纸信息
-        target_msg.armors_num = static_cast<int>(tracker_->tracked_armors_num);
-        target_msg.position.x = state(0);
-        target_msg.velocity.x = state(1);
-        target_msg.position.y = state(2);
-        target_msg.velocity.y = state(3);
-        target_msg.position.z = state(4);
-        target_msg.velocity.z = state(5);
-        target_msg.yaw = state(6);
-        target_msg.v_yaw = state(7);
-        target_msg.radius_1 = state(8);
-        target_msg.radius_2 = tracker_->another_r;
-        target_msg.dz = tracker_->dz;
-      } else if (tracker_->tracker_state == Tracker::CHANGE_TARGET) {
-        target_msg.tracking = false;
-      }
-    }
-
-    last_time_ = time;
-
-    target_pub_->publish(target_msg);
-
-    publishMarkers(target_msg);
   }
+
+  // Filter abnormal armors
+  armors_msg->armors.erase(
+    std::remove_if(
+      armors_msg->armors.begin(), armors_msg->armors.end(),
+      [this](const auto_aim_interfaces::msg::Armor & armor) {
+        return abs(armor.pose.position.z) > 1.2 ||
+               Eigen::Vector2d(armor.pose.position.x, armor.pose.position.y).norm() >
+                 max_armor_distance_;
+      }),
+    armors_msg->armors.end());
+
+  // Init message
+  auto_aim_interfaces::msg::TrackerInfo info_msg;
+  auto_aim_interfaces::msg::Target target_msg;
+  rclcpp::Time time = armors_msg->header.stamp;
+  target_msg.header.stamp = time;
+  target_msg.header.frame_id = target_frame_;
+
+  // Update tracker
+  if (tracker_->tracker_state == Tracker::LOST) {
+
+    tracker_->init(armors_msg);
+    target_msg.tracking = false;
+  } else {
+
+    dt_ = (time - last_time_).seconds();
+    tracker_->lost_thres = static_cast<int>(lost_time_thres_ / dt_);
+
+    tracker_->update(armors_msg);
+
+    // Publish Info
+    info_msg.position_diff = tracker_->info_position_diff;
+    info_msg.yaw_diff = tracker_->info_yaw_diff;
+    info_msg.position.x = tracker_->measurement(0);
+    info_msg.position.y = tracker_->measurement(1);
+    info_msg.position.z = tracker_->measurement(2);
+    info_msg.yaw = tracker_->measurement(3);
+    info_pub_->publish(info_msg);
+
+    if (tracker_->tracker_state == Tracker::DETECTING) {
+      target_msg.tracking = false;
+    } else if (
+      tracker_->tracker_state == Tracker::TRACKING ||
+      tracker_->tracker_state == Tracker::TEMP_LOST) {
+      target_msg.tracking = true;
+      // Fill target message
+      const auto & state = tracker_->target_state;
+      target_msg.id = tracker_->tracked_id;
+      target_msg.armors_num = static_cast<int>(tracker_->tracked_armors_num);
+      target_msg.position.x = state(0);
+      target_msg.velocity.x = state(1);
+      target_msg.position.y = state(2);
+      target_msg.velocity.y = state(3);
+      target_msg.position.z = state(4);
+      target_msg.velocity.z = state(5);
+      target_msg.yaw = state(6);
+      target_msg.v_yaw = state(7);
+      target_msg.radius_1 = state(8);
+      target_msg.radius_2 = tracker_->another_r;
+      target_msg.dz = tracker_->dz;
+    } else if (tracker_->tracker_state == Tracker::CHANGE_TARGET) {
+      target_msg.tracking = false;
+    }
+  }
+
+  last_time_ = time;
+
+  target_pub_->publish(target_msg);
+
+  publishMarkers(target_msg);
+}
+
 
   void ArmorTrackerNode::publishMarkers(const auto_aim_interfaces::msg::Target &target_msg) {
     position_marker_.header = target_msg.header;

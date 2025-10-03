@@ -17,9 +17,9 @@
 #include <string>
 #include <vector>
 
-#include "../include/rm_serial_driver/rm_serial_driver.hpp"
-#include "../include/rm_serial_driver/packet.hpp"
-#include  "../include/rm_serial_driver/crc.hpp"
+#include "rm_serial_driver.hpp"
+#include "packet.hpp"
+#include  "crc.hpp"
 
 namespace rm_serial_driver {
     RMSerialDriver::RMSerialDriver(const rclcpp::NodeOptions &options) : Node("rm_serial_driver", options),

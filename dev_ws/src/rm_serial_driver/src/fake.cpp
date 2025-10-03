@@ -1,31 +1,36 @@
-//
-// FakeSerialDriver.cpp
-//
-#include <tf2_ros/transform_broadcaster.h>
-#include <geometry_msgs/msg/transform_stamped.hpp>
-#include <rclcpp/rclcpp.hpp>
-#include <std_msgs/msg/float64.hpp>
-#include <std_msgs/msg/string.hpp>
-#include <visualization_msgs/msg/marker.hpp>
-#include <tf2_geometry_msgs/tf2_geometry_msgs.hpp>
-#include "auto_aim_interfaces/msg/target.hpp"
-#include "auto_aim_interfaces/msg/time_info.hpp"
 
-class FakeSerialDriver : public rclcpp::Node {
-public:
-    FakeSerialDriver() : Node("fake_serial_driver") {
-        RCLCPP_INFO(this->get_logger(),"Fake serial driver start");
 
+#include "fake.hpp"
+
+namespace rm_serial_driver {
+    FakeSerialDriver::FakeSerialDriver(const rclcpp::NodeOptions &options)
+        : Node("fake_serial_driver", options) {
+        RCLCPP_INFO(this->get_logger(), "Fake serial driver start");
+
+        //TF broadcaster
         timestamp_offset_ = this->declare_parameter("timestamp_offset", 0.0);
 
         tf_broadcaster_ = std::make_unique<tf2_ros::TransformBroadcaster>(*this);
 
-        // Pubs
+        //create publisher
         task_pub_ = this->create_publisher<std_msgs::msg::String>("/task_mode", 10);
+
         latency_pub_ = this->create_publisher<std_msgs::msg::Float64>("/latency", 10);
+
         marker_pub_ = this->create_publisher<visualization_msgs::msg::Marker>("/aiming_point", 10);
+
         aim_time_info_pub_ = this->create_publisher<auto_aim_interfaces::msg::TimeInfo>("/time_info/aim", 10);
+        //      buff_time_info_pub_ =
+        // this->create_publisher<buff_interfaces::msg::TimeInfo>("/time_info/buff", 10);
         record_controller_pub_ = this->create_publisher<std_msgs::msg::String>("/record_controller", 10);
+
+        detector_param_client_ = std::make_shared<rclcpp::AsyncParametersClient>(this, "armor_detector");
+
+        reset_tracker_client_ = this->create_client<std_srvs::srv::Trigger>("/tracker/reset");
+
+        change_target_client_ = this->create_client<std_srvs::srv::Trigger>("/tracker/change");
+
+        receive_thread_ = std::thread(&FakeSerialDriver::receiveData, this);
 
         // Marker 初始化
         aiming_point_.header.frame_id = "odom";
@@ -37,123 +42,135 @@ public:
         aiming_point_.color.g = 1.0;
         aiming_point_.color.b = 1.0;
         aiming_point_.color.a = 1.0;
-        aiming_point_.lifetime = rclcpp::Duration::from_seconds(0.1);
+        aiming_point_.lifetime = rclcpp::Duration::from_seconds(0.5);
 
-        // 定时器模拟 MCU / 任务命令
-        timer_task_ = this->create_wall_timer(
-            std::chrono::seconds(2),
-            std::bind(&FakeSerialDriver::publishFakeTask, this));
+        aim_sub_.subscribe(this, "/tracker/target", rclcpp::SensorDataQoS().get_rmw_qos_profile());
+        aim_time_info_sub_.subscribe(this, "/time_info/aim");
 
-        // 定时器生成 fake target 数据
-        timer_target_ = this->create_wall_timer(
-            std::chrono::milliseconds(100),
-            std::bind(&FakeSerialDriver::publishFakeTarget, this));
+
+        //将数据回传mcu
+        aim_sync_ = std::make_unique<AimSync>(aim_syncpolicy(500), aim_sub_, aim_time_info_sub_);
+        aim_sync_->registerCallback(
+            std::bind(&FakeSerialDriver::sendArmorData, this,
+                      std::placeholders::_1, std::placeholders::_2));
     }
 
-private:
-    void publishFakeTarget() {
-    auto now = this->now();
 
-    // --- 发布 fake target ---
-    auto target = auto_aim_interfaces::msg::Target();
-    target.header.stamp = now;
-    target.position.x = 1.0;
-    target.position.y = 0.5;
-    target.position.z = 0.2;
-    target.tracking = true;
-    target.id = "1";
-    target.armors_num = 1;
-    target.yaw = 0.0;
-    target.v_yaw = 0.0;
-    target.velocity.x = 0.0;
-    target.velocity.y = 0.0;
-    target.velocity.z = 0.0;
-    target.radius_1 = 0.1;
-    target.radius_2 = 0.1;
-    target.dz = 0.0;
+    void FakeSerialDriver::receiveData() {
+        rclcpp::Rate loop_rate(25); // 示例：限制为 100 Hz
+        while (rclcpp::ok()) {
+            //模拟接受数据
+            rm_serial_driver::ReceiverPacket packet;
+            set_fake_receiver_packet_random(packet, rm_auto_aim::RED);
 
-    // --- 发布 TimeInfo ---
-    auto time_info = auto_aim_interfaces::msg::TimeInfo();
-    time_info.header.stamp = now;
-    time_info.time = 0;
-    aim_time_info_pub_->publish(time_info);
+            std_msgs::msg::String task;
+            task.data = "aim";
+            task_pub_->publish(task);
 
-    // --- 发布 Marker ---
-    aiming_point_.header.stamp = now;
-    aiming_point_.pose.position.x = target.position.x;
-    aiming_point_.pose.position.y = target.position.y;
-    aiming_point_.pose.position.z = target.position.z;
-    marker_pub_->publish(aiming_point_);
 
-    // --- 发布 Latency ---
-    std_msgs::msg::Float64 latency_msg;
-    latency_msg.data = (this->now() - time_info.header.stamp).seconds();
-    latency_pub_->publish(latency_msg);
+            geometry_msgs::msg::TransformStamped t;
+            timestamp_offset_ = this->get_parameter("timestamp_offset").as_double();
+            t.header.stamp = this->now() - rclcpp::Duration::from_seconds(timestamp_offset_);
+            t.header.frame_id = "odom";
+            t.child_frame_id = "gimbal_link";
+            tf2::Quaternion q;
+            q.setRPY(packet.roll, packet.pitch, packet.yaw);
+            t.transform.rotation = tf2::toMsg(q);
+            tf_broadcaster_->sendTransform(t);
+            // RCLCPP_INFO(this->get_logger(), "yaw=%f", packet.yaw);
+            // RCLCPP_INFO(this->get_logger(), "pitch=%f", packet.pitch);
+            // RCLCPP_INFO(this->get_logger(), "roll=%f", packet.roll);
 
-    // --- 发布完整 TF 链 ---
-    geometry_msgs::msg::TransformStamped t;
+            auto_aim_interfaces::msg::TimeInfo aim_time_info;
+            aim_time_info.header = t.header;
+            aim_time_info_pub_->publish(aim_time_info);
 
-    // 1. odom -> gimbal_link
-    t.header.stamp = now;
-    t.header.frame_id = "odom";
-    t.child_frame_id = "gimbal_link";
-    t.transform.translation.x = 0.0;
-    t.transform.translation.y = 0.0;
-    t.transform.translation.z = 0.0;
-    tf2::Quaternion q1;
-    q1.setRPY(0, 0, 0);  // floating joint 可设为0
-    t.transform.rotation = tf2::toMsg(q1);
-    tf_broadcaster_->sendTransform(t);
+            aiming_point_.header.stamp = this->now();
+            aiming_point_.pose.position.x = packet.aim_x;
+            aiming_point_.pose.position.y = packet.aim_y;
+            aiming_point_.pose.position.z = packet.aim_z;
+            marker_pub_->publish(aiming_point_);
 
-    // 2. gimbal_link -> camera_link
-    t.header.frame_id = "gimbal_link";
-    t.child_frame_id = "camera_link";
-    t.transform.translation.x = 0.0;
-    t.transform.translation.y = 0.0;
-    t.transform.translation.z = 0.0;
-    tf2::Quaternion q2;
-    q2.setRPY(0, 0, 0);  // 对应 xacro arg xyz/rpy，可修改
-    t.transform.rotation = tf2::toMsg(q2);
-    tf_broadcaster_->sendTransform(t);
+            loop_rate.sleep();
+        }
+    }
 
-    // 3. camera_link -> camera_optical_frame
-    t.header.frame_id = "camera_link";
-    t.child_frame_id = "camera_optical_frame";
-    t.transform.translation.x = 0.0;
-    t.transform.translation.y = 0.0;
-    t.transform.translation.z = 0.0;
-    tf2::Quaternion q3;
-    q3.setRPY(-M_PI/2, 0, -M_PI/2);  // 对齐 URDF
-    t.transform.rotation = tf2::toMsg(q3);
-    tf_broadcaster_->sendTransform(t);
+
+    // ----------------------------------------------------------------------
+
+    void FakeSerialDriver::set_fake_receiver_packet_random(
+        rm_serial_driver::ReceiverPacket &packet,
+        uint8_t target_color) {
+        // --- 1. 分布定义（定义随机数的合理范围）---
+
+        // --- 2. 赋值 ---
+
+        // 包头和颜色
+        packet.header = 0x5A;
+        packet.detect_color = (target_color > 0) ? 1 : 0;
+        packet.task_mode = 0;
+        packet.reserved = 0;
+
+        // 云台姿态 (Roll 设为 0.0，保持稳定)
+        packet.roll = 0.0f;
+        packet.pitch = 0;
+        packet.yaw = 0;
+
+        // 目标瞄准坐标
+        packet.aim_x = 2;
+        packet.aim_y = 0;
+        packet.aim_z = 0;
+
+        // 校验和
+        packet.checksum = 0;
+    }
+
+    void FakeSerialDriver::sendArmorData(const auto_aim_interfaces::msg::Target::ConstSharedPtr msg,
+                                         const auto_aim_interfaces::msg::TimeInfo::ConstSharedPtr time_info) {
+        const static std::map<std::string, uint8_t> id_unit8_map{
+            {"", 0}, {"outpost", 0}, {"1", 1}, {"2", 2},
+            {"3", 3}, {"4", 4}, {"5", 5}, {"guard", 6}, {"base", 7}
+        };
+        try {
+            rm_serial_driver::SendPacket packet;
+            packet.state = msg->tracking ? 1 : 0;
+            packet.id = id_unit8_map.at(msg->id);
+            packet.armors_num = msg->armors_num;
+            packet.x = msg->position.x;
+            packet.y = msg->position.y;
+            packet.z = msg->position.z;
+            packet.yaw = msg->yaw;
+            packet.vx = msg->velocity.x;
+            packet.vy = msg->velocity.y;
+            packet.vz = msg->velocity.z;
+            packet.v_yaw = msg->v_yaw;
+            packet.r1 = msg->radius_1;
+            packet.r2 = msg->radius_2;
+            packet.dz = msg->dz;
+
+            crc16::Append_CRC16_Check_Sum(reinterpret_cast<uint8_t *>(&packet), sizeof(packet));
+
+            std::vector<uint8_t> data = toVector(packet);
+
+            // serial_driver_->port()->send(data);
+
+            std_msgs::msg::Float64 latency;
+            latency.data = (this->now() - msg->header.stamp).seconds() * 1000.0;
+
+            //RCLCPP_DEBUG_STREAM(get_logger(), "Total latency: " + std::to_string(latency.data) + "ms");
+
+            //RCLCPP_INFO(get_logger(), "\n\nDEBUG Total latency: %f ms \n\n", latency.data);
+
+            latency_pub_->publish(latency);
+        } catch (const std::exception &ex) {
+            RCLCPP_ERROR(get_logger(), "Error while sending data: %s", ex.what());
+            // reopenPort();
+        }
+    }
 }
 
 
+#include "rclcpp_components/register_node_macro.hpp"
 
-    void publishFakeTask() {
-        std_msgs::msg::String msg;
-        msg.data = "aim";
-        task_pub_->publish(msg);
-    }
+RCLCPP_COMPONENTS_REGISTER_NODE(rm_serial_driver::FakeSerialDriver)
 
-    double timestamp_offset_;
-    std::unique_ptr<tf2_ros::TransformBroadcaster> tf_broadcaster_;
-
-    visualization_msgs::msg::Marker aiming_point_;
-
-    rclcpp::Publisher<std_msgs::msg::String>::SharedPtr task_pub_;
-    rclcpp::Publisher<std_msgs::msg::Float64>::SharedPtr latency_pub_;
-    rclcpp::Publisher<visualization_msgs::msg::Marker>::SharedPtr marker_pub_;
-    rclcpp::Publisher<auto_aim_interfaces::msg::TimeInfo>::SharedPtr aim_time_info_pub_;
-    rclcpp::Publisher<std_msgs::msg::String>::SharedPtr record_controller_pub_;
-
-    rclcpp::TimerBase::SharedPtr timer_task_;
-    rclcpp::TimerBase::SharedPtr timer_target_;
-};
-
-int main(int argc, char* argv[]) {
-    rclcpp::init(argc, argv);
-    rclcpp::spin(std::make_shared<FakeSerialDriver>());
-    rclcpp::shutdown();
-    return 0;
-}

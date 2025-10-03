@@ -1,21 +1,12 @@
-#include "../hikSDK/include/MvCameraControl.h"
-
-// Standard
-#include <chrono>
-#include <memory>
-#include <string>
-#include <thread>
-
+#include "MvCameraControl.h"
 // ROS
-#include </opt/ros/humble/include/camera_calibration_parsers/camera_calibration_parsers/parse.hpp>
-#include </opt/ros/humble/include/camera_info_manager/camera_info_manager/camera_info_manager.hpp>
+#include <camera_info_manager/camera_info_manager.hpp>
 #include <image_transport/image_transport.hpp>
 #include <rclcpp/logging.hpp>
 #include <rclcpp/rclcpp.hpp>
 #include <rclcpp/utilities.hpp>
 #include <sensor_msgs/msg/camera_info.hpp>
 #include <sensor_msgs/msg/image.hpp>
-#include "opencv2/opencv.hpp"
 
 namespace hik_camera
 {
@@ -26,7 +17,7 @@ public:
   {
     RCLCPP_INFO(this->get_logger(), "Starting HikCameraNode!");
 
-    MV_CC_DEVICE_INFO_LIST device_list{};
+    MV_CC_DEVICE_INFO_LIST device_list;
     // enum device
     nRet = MV_CC_EnumDevices(MV_USB_DEVICE, &device_list);
     RCLCPP_INFO(this->get_logger(), "Found camera count = %d", device_list.nDeviceNum);
@@ -42,10 +33,9 @@ public:
 
     MV_CC_OpenDevice(camera_handle_);
 
-    // Get camera information
+    // Get camera infomation
     MV_CC_GetImageInfo(camera_handle_, &img_info_);
-    // reserve/allocate image buffer so data() is valid when used as destination
-    image_msg_.data.resize(img_info_.nHeightMax * img_info_.nWidthMax * 3);
+    image_msg_.data.reserve(img_info_.nHeightMax * img_info_.nWidthMax * 3);
 
     // Init convert param
     convert_param_.nWidth = img_info_.nWidthValue;
@@ -58,21 +48,15 @@ public:
 
     declareParameters();
 
-    // 设置 Bayer 转换质量为高质量模式
-    // MV_CC_SetBayerCvtQuality(camera_handle_, 2);
-
     MV_CC_StartGrabbing(camera_handle_);
 
     // Load camera info
     camera_name_ = this->declare_parameter("camera_name", "narrow_stereo");
-    auto camera_info_url = this->declare_parameter("camera_info_url", "package://hik_camera/config/camera_info.yaml");
-
-    // Use a shared_ptr for camera_info_manager and construct with (Node*, name, url)
-    camera_info_manager_ = std::make_shared<camera_info_manager::CameraInfoManager>(
-      this, camera_name_, camera_info_url);
-
+    camera_info_manager_ =
+      std::make_unique<camera_info_manager::CameraInfoManager>(this, camera_name_);
+    auto camera_info_url =
+      this->declare_parameter("camera_info_url", "package://hik_camera/config/camera_info.yaml");
     if (camera_info_manager_->validateURL(camera_info_url)) {
-      // load into the manager and get message
       camera_info_manager_->loadCameraInfo(camera_info_url);
       camera_info_msg_ = camera_info_manager_->getCameraInfo();
     } else {
@@ -83,50 +67,23 @@ public:
       std::bind(&HikCameraNode::parametersCallback, this, std::placeholders::_1));
 
     capture_thread_ = std::thread{[this]() -> void {
-      MV_FRAME_OUT out_frame{};
+      MV_FRAME_OUT out_frame;
 
       RCLCPP_INFO(this->get_logger(), "Publishing image!");
 
       image_msg_.header.frame_id = "camera_optical_frame";
       image_msg_.encoding = "rgb8";
 
-
-
       while (rclcpp::ok()) {
         nRet = MV_CC_GetImageBuffer(camera_handle_, &out_frame, 1000);
         if (MV_OK == nRet) {
-          // ensure image_msg_ buffer is sized to hold converted data
-          size_t required_size = static_cast<size_t>(convert_param_.nWidth) * static_cast<size_t>(convert_param_.nHeight) * 3;
-          if (image_msg_.data.size() < required_size) {
-            image_msg_.data.resize(required_size);
-          }
-
           convert_param_.pDstBuffer = image_msg_.data.data();
-          convert_param_.nDstBufferSize = static_cast<unsigned int>(image_msg_.data.size());
+          convert_param_.nDstBufferSize = image_msg_.data.size();
           convert_param_.pSrcData = out_frame.pBufAddr;
           convert_param_.nSrcDataLen = out_frame.stFrameInfo.nFrameLen;
           convert_param_.enSrcPixelType = out_frame.stFrameInfo.enPixelType;
 
           MV_CC_ConvertPixelType(camera_handle_, &convert_param_);
-
-          // ====== OpenCV 显示 ======
-          // cv::namedWindow("HikCamera Preview", cv::WINDOW_NORMAL);
-          // cv::resizeWindow("HikCamera Preview", 640, 640);
-          // cv::Mat img(out_frame.stFrameInfo.nHeight,
-          //             out_frame.stFrameInfo.nWidth,
-          //             CV_8UC3,
-          //             image_msg_.data.data());
-          //
-          //
-          // cv::imshow("HikCamera Preview", img);
-          // int k = cv::waitKey(1);
-          // if (k == 27) {
-          //   rclcpp::shutdown();
-          //   return;
-          // } // ESC 退出
-          // else if (k == 'q') cv::waitKey(0); // 按 p 暂停
-          // =========================
-
 
           image_msg_.header.stamp = this->now();
           image_msg_.height = out_frame.stFrameInfo.nHeight;
@@ -179,7 +136,7 @@ private:
     MV_CC_GetFloatValue(camera_handle_, "ExposureTime", &f_value);
     param_desc.integer_range[0].from_value = f_value.fMin;
     param_desc.integer_range[0].to_value = f_value.fMax;
-    double exposure_time = this->declare_parameter("exposure_time", 2000, param_desc);
+    double exposure_time = this->declare_parameter("exposure_time", 1000, param_desc);
     MV_CC_SetFloatValue(camera_handle_, "ExposureTime", exposure_time);
     RCLCPP_INFO(this->get_logger(), "Exposure time: %f", exposure_time);
 
@@ -219,46 +176,27 @@ private:
     return result;
   }
 
-  sensor_msgs::msg::CameraInfo loadCameraInfo(const std::string & camera_name,
-                                            const std::string & url)
-  {
-    sensor_msgs::msg::CameraInfo cam_info;
-    std::string camera_name_out;
-
-    if (camera_calibration_parsers::readCalibration(url, camera_name_out, cam_info)) {
-      RCLCPP_INFO(rclcpp::get_logger("hik_camera"),
-                  "Loaded camera calibration for %s from %s",
-                  camera_name.c_str(), url.c_str());
-    } else {
-      RCLCPP_WARN(rclcpp::get_logger("hik_camera"),
-                  "Failed to load camera calibration from %s", url.c_str());
-    }
-
-    return cam_info;
-  }
-
   sensor_msgs::msg::Image image_msg_;
 
   image_transport::CameraPublisher camera_pub_;
 
   int nRet = MV_OK;
-  void * camera_handle_ = nullptr;
-  MV_IMAGE_BASIC_INFO img_info_{};
+  void * camera_handle_;
+  MV_IMAGE_BASIC_INFO img_info_;
 
-  MV_CC_PIXEL_CONVERT_PARAM convert_param_{};
+  MV_CC_PIXEL_CONVERT_PARAM convert_param_;
 
   std::string camera_name_;
-  std::shared_ptr<camera_info_manager::CameraInfoManager> camera_info_manager_;
+  std::unique_ptr<camera_info_manager::CameraInfoManager> camera_info_manager_;
   sensor_msgs::msg::CameraInfo camera_info_msg_;
 
   int fail_conut_ = 0;
   std::thread capture_thread_;
 
-  rclcpp::node_interfaces::OnSetParametersCallbackHandle::SharedPtr params_callback_handle_;
+  OnSetParametersCallbackHandle::SharedPtr params_callback_handle_;
 };
 }  // namespace hik_camera
 
 #include "rclcpp_components/register_node_macro.hpp"
 
 RCLCPP_COMPONENTS_REGISTER_NODE(hik_camera::HikCameraNode)
-

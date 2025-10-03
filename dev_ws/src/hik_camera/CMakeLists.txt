@@ -7,34 +7,33 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 add_definitions(-Wall -Werror)
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
-find_package(ament_cmake_auto REQUIRED)
-find_package(rclcpp REQUIRED)
-find_package(sensor_msgs REQUIRED)
+#Opencv
 find_package(cv_bridge REQUIRED)
-find_package(ament_index_cpp REQUIRED)
 find_package(OpenCV REQUIRED)
-find_package(camera_info_manager REQUIRED)  # ✅ 正确声明
 
+#Ros
+find_package(ament_cmake_auto REQUIRED)
 ament_auto_find_build_dependencies()
 
 ament_auto_add_library(${PROJECT_NAME} SHARED
         src/hik_camera_node.cpp
 )
 
-target_include_directories(${PROJECT_NAME}
-        PUBLIC
-        $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/hikSDK/include>
-        $<INSTALL_INTERFACE:include>
-)
-
-# 链接依赖
 ament_target_dependencies(${PROJECT_NAME}
         rclcpp
         sensor_msgs
         cv_bridge
         ament_index_cpp
         OpenCV
-        camera_info_manager   # ✅ 链接 camera_info_manager
+        camera_info_manager
+)
+
+target_include_directories(
+        ${PROJECT_NAME}
+        PUBLIC
+
+        $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/hikSDK/include>
+        $<INSTALL_INTERFACE:include>
 )
 
 if(CMAKE_SYSTEM_PROCESSOR MATCHES "x86_64")

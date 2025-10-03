@@ -2,17 +2,13 @@
 // Created by rm_autoaim on 2025/9/14.
 //
 
-#include "../include/number_classifier.hpp"
+#include "number_classifier.hpp"
 #include "armor.hpp"
 //opencv
 #include <opencv2/opencv.hpp>
 #include <opencv2/core/mat.hpp>
 #include <opencv2/core/types.hpp>
 #include <opencv2/dnn.hpp>
-#include <opencv2/highgui.hpp>
-#include <opencv2/imgcodecs.hpp>
-#include <opencv2/opencv.hpp>
-
 //stl
 #include <algorithm>
 #include <cstddef>
