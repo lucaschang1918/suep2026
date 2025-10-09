@@ -23,6 +23,7 @@
 #include  "../include/rm_serial_driver/crc.hpp"
 #include <random> // 核心随机数库
 #include <chrono> // 用于生成更好的随机数种子
+#include <serial_driver/serial_driver.hpp>
 
 #include "../../rm_auto_aim/armor_detector/include/armor.hpp"
 
@@ -42,6 +43,12 @@ namespace rm_serial_driver {
         typedef message_filters::Synchronizer<aim_syncpolicy> AimSync;
 
     private:
+
+        void getParams();
+
+        void reopenPort();
+
+
         void receiveData();
 
         void set_fake_receiver_packet_random(
@@ -50,6 +57,16 @@ namespace rm_serial_driver {
 
         void sendArmorData(const auto_aim_interfaces::msg::Target::ConstSharedPtr msg,
                            const auto_aim_interfaces::msg::TimeInfo::ConstSharedPtr time_info);
+
+
+        //Serial port
+        std::unique_ptr<IoContext> owned_ctx_;
+        std::string device_name_;
+        std::unique_ptr<drivers::serial_driver::SerialPortConfig> device_config_;
+        std::unique_ptr<drivers::serial_driver::SerialDriver> serial_driver_;
+
+        bool initial_set_param_ = false;
+        uint8_t previous_receive_color_ = 0;
 
 
         double timestamp_offset_;
@@ -73,8 +90,6 @@ namespace rm_serial_driver {
 
 
         std::thread receive_thread_;
-
-
 
         std::shared_ptr<AimSync> aim_sync_;
 

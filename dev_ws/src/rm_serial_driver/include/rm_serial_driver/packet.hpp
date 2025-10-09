@@ -8,6 +8,7 @@
 #include <algorithm>
 #include <cstdint>
 #include <vector>
+#include  <cmath>
 
 namespace rm_serial_driver {
     struct ReceiverPacket {
@@ -31,10 +32,10 @@ namespace rm_serial_driver {
 
     struct SendPacket {
         uint8_t header = 0xA5;
-        bool state: 1;
+        bool state: 1;          //
         uint8_t id: 3;
         uint8_t armors_num: 3;
-        uint8_t reserved: 1;
+        // uint8_t reserved: 1;
         float x;
         float y;
         float z;
@@ -51,7 +52,7 @@ namespace rm_serial_driver {
         // uint32_t cap_timestamp;
         // uint16_t t_offset;
 
-        uint16_t chechsum = 0;
+        // uint16_t chechsum = 0;
     }__attribute__((packed));
 
 
