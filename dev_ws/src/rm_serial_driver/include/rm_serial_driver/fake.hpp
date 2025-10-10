@@ -44,12 +44,16 @@ namespace rm_serial_driver {
 
     private:
 
+
+
         void getParams();
 
         void reopenPort();
 
 
         void receiveData();
+
+        void setParam(const rclcpp::Parameter &param) ;
 
         void set_fake_receiver_packet_random(
             rm_serial_driver::ReceiverPacket &packet,
@@ -87,6 +91,11 @@ namespace rm_serial_driver {
 
         message_filters::Subscriber<auto_aim_interfaces::msg::Target> aim_sub_;
         message_filters::Subscriber<auto_aim_interfaces::msg::TimeInfo> aim_time_info_sub_;
+
+
+        using ResultFuturePtr = std::shared_future<std::vector<rcl_interfaces::msg::SetParametersResult> >;
+
+        ResultFuturePtr set_param_future_;
 
 
         std::thread receive_thread_;

@@ -188,16 +188,11 @@ namespace rm_serial_driver {
 //正常运行使用
 #if 0
     void FakeSerialDriver::receiveData() {
-        rclcpp::Rate loop_rate(25); // 示例：限制为 100 Hz
 
         std::vector<uint8_t> header(1);
         std::vector<uint8_t> data;
         data.reserve(sizeof(ReceiverPacket));
-
         while (rclcpp::ok()) {
-            //模拟接受数据
-            rm_serial_driver::ReceiverPacket packet_fake;
-            set_fake_receiver_packet_random(packet_fake, rm_auto_aim::RED);
 
             try {
                 serial_driver_->port()->receive(header);
@@ -214,10 +209,10 @@ namespace rm_serial_driver {
 
                     if (crc_ok) {
                         if (!initial_set_param_ || packet.detect_color != previous_receive_color_) {
-                            set_parameter(rclcpp::Parameter("detect_color", packet.detect_color));
+                            setParam(rclcpp::Parameter("detect_color", packet.detect_color));
                             previous_receive_color_ = packet.detect_color;
                         }
-                        RCLCPP_INFO(get_logger(), "CRC OK");
+                        // RCLCPP_INFO(get_logger(), "CRC OK");
 
                         std_msgs::msg::String task;
                         task.data = "aim";
@@ -233,9 +228,9 @@ namespace rm_serial_driver {
                         q.setRPY(packet.roll, packet.pitch, packet.yaw);
                         t.transform.rotation = tf2::toMsg(q);
                         tf_broadcaster_->sendTransform(t);
-                        // RCLCPP_INFO(this->get_logger(), "yaw=%f", packet.yaw);
-                        // RCLCPP_INFO(this->get_logger(), "pitch=%f", packet.pitch);
-                        // RCLCPP_INFO(this->get_logger(), "roll=%f", packet.roll);
+                        RCLCPP_INFO(this->get_logger(), "yaw=%f", packet.yaw);
+                        RCLCPP_INFO(this->get_logger(), "pitch=%f", packet.pitch);
+                        RCLCPP_INFO(this->get_logger(), "roll=%f", packet.roll);
 
                         auto_aim_interfaces::msg::TimeInfo aim_time_info;
                         aim_time_info.header = t.header;
@@ -247,7 +242,7 @@ namespace rm_serial_driver {
                         aiming_point_.pose.position.z = packet.aim_z;
                         marker_pub_->publish(aiming_point_);
 
-                        loop_rate.sleep();
+
                     }
                 }
             } catch (const std::exception &ex) {
@@ -263,6 +258,8 @@ namespace rm_serial_driver {
 
     // ----------------------------------------------------------------------
 
+
+
     void FakeSerialDriver::set_fake_receiver_packet_random(
         rm_serial_driver::ReceiverPacket &packet,
         uint8_t target_color) {
@@ -274,7 +271,7 @@ namespace rm_serial_driver {
         packet.header = 0x5A;
         packet.detect_color = (target_color > 0) ? 1 : 0;
         packet.task_mode = 0;
-        packet.reserved = 0;
+        // packet.reserved = 0;
 
         // 云台姿态 (Roll 设为 0.0，保持稳定)
         packet.roll = 0.0f;
@@ -305,6 +302,29 @@ namespace rm_serial_driver {
                 reopenPort();
             }
         }
+    }
+
+    void FakeSerialDriver::setParam(const rclcpp::Parameter &param) {
+        if (!detector_param_client_->service_is_ready()) {
+            RCLCPP_WARN(get_logger(), "Service not ready, skipping parameter set");
+            return;
+        }
+        if (
+            !set_param_future_.valid() ||
+            set_param_future_.wait_for(std::chrono::seconds(0)) == std::future_status::ready) {
+            RCLCPP_INFO(get_logger(), "Setting detect_color to %ld...", param.as_int());
+            set_param_future_ = detector_param_client_->set_parameters(
+                {param}, [this,param](const ResultFuturePtr &results) {
+                    for (const auto &result: results.get()) {
+                        if (!result.successful) {
+                            RCLCPP_ERROR(get_logger(), "Failed to set parameter: %s", result.reason.c_str());
+                            return;
+                        }
+                    }
+                    RCLCPP_INFO(get_logger(), "Successfully set detect_color to %ld!", param.as_int());
+                    initial_set_param_ = true;
+                });
+            }
     }
 
     void FakeSerialDriver::sendArmorData(const auto_aim_interfaces::msg::Target::ConstSharedPtr msg,

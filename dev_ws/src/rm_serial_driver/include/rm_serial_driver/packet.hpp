@@ -12,19 +12,20 @@
 
 namespace rm_serial_driver {
     struct ReceiverPacket {
+
         uint8_t header = 0x5A;
         uint8_t detect_color: 1;
         uint8_t task_mode: 2;
         // bool reset_tracker :1;
         // uint8_t is_play: 1;
         // bool chang_target : 5;
-        uint8_t reserved: 5;
-        float roll;
-        float pitch;
-        float yaw;
         float aim_x;
         float aim_y;
         float aim_z;
+
+        float roll;
+        float pitch;
+        float yaw;
         // uint16_t game_time;
         // uint32_t timestamp;
         uint16_t checksum = 0;

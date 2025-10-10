@@ -122,6 +122,9 @@ namespace rm_serial_driver {
             try {
                 serial_driver_->port()->receive(header);
 
+
+
+
                 if (header[0] == 0x5A) {
                     data.resize(sizeof(ReceiverPacket) - 1);
                     serial_driver_->port()->receive(data);
@@ -136,7 +139,7 @@ namespace rm_serial_driver {
                             setParam(rclcpp::Parameter("detect_color", packet.detect_color));
                             previous_receive_color_ = packet.detect_color;
                         }
-                        RCLCPP_INFO(this->get_logger(), "CRC OK");
+                        // RCLCPP_INFO(this->get_logger(), "CRC OK");
 
                         std_msgs::msg::String task;
                         std::string theory_task;
@@ -157,19 +160,21 @@ namespace rm_serial_driver {
 
                         theory_task = "aim";
 
-                        if (packet.task_mode == 0) {
-                            task.data = theory_task;
-                        } else if (packet.task_mode == 1) {
-                            task.data = "aim";
-                        } else if (packet.task_mode == 2) {
-                            if (theory_task == "aim") {
-                                task.data = "auto";
-                            } else {
-                                task.data = theory_task;
-                            }
-                        } else {
-                            task.data = "aim";
-                        }
+                        // if (packet.task_mode == 0) {
+                        //     task.data = theory_task;
+                        // } else if (packet.task_mode == 1) {
+                        //     task.data = "aim";
+                        // } else if (packet.task_mode == 2) {
+                        //     if (theory_task == "aim") {
+                        //         task.data = "auto";
+                        //     } else {
+                        //         task.data = theory_task;
+                        //     }
+                        // } else {
+                        //     task.data = "aim";
+                        // }
+
+                        task.data = "aim";
 
                         task_pub_->publish(task);
 
@@ -191,9 +196,10 @@ namespace rm_serial_driver {
                         q.setRPY(packet.roll, packet.pitch, packet.yaw);
                         t.transform.rotation = tf2::toMsg(q);
                         tf_broadcaster_->sendTransform(t);
-                        // RCLCPP_INFO(this->get_logger(), "yaw=%f", packet.yaw);
-                        // RCLCPP_INFO(this->get_logger(), "pitch=%f", packet.pitch);
-                        // RCLCPP_INFO(this->get_logger(), "roll=%f", packet.roll);
+
+                        // RCLCPP_INFO(this->get_logger(), "yaw=%f", packet.yaw * KDL::rad2deg);
+                        // RCLCPP_INFO(this->get_logger(), "pitch=%f", packet.pitch* KDL::rad2deg);
+                        // RCLCPP_INFO(this->get_logger(), "roll=%f", packet.roll* KDL::rad2deg);
 
                         auto_aim_interfaces::msg::TimeInfo aim_time_info;
                         // buff_interfaces::msg::TimeInfo buff_time_info;
@@ -214,6 +220,10 @@ namespace rm_serial_driver {
                             aiming_point_.pose.position.z = packet.aim_z;
                             marker_pub_->publish(aiming_point_);
                         }
+
+
+
+
                     } else {
                         RCLCPP_ERROR(get_logger(), "CRC error");
                     }
@@ -257,7 +267,7 @@ namespace rm_serial_driver {
 
             std::vector<uint8_t> data = toVector(packet);
 
-            serial_driver_->port()->send(data);
+            // serial_driver_->port()->send(data);
 
             std_msgs::msg::Float64 latency;
             latency.data = (this->now() - msg->header.stamp).seconds() * 1000.0;
