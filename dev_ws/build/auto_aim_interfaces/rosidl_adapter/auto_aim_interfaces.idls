@@ -1,0 +1,9 @@
+/home/rm_autoaim/suep2026/dev_ws/build/auto_aim_interfaces/rosidl_adapter/auto_aim_interfaces:msg/Armor.idl
+/home/rm_autoaim/suep2026/dev_ws/build/auto_aim_interfaces/rosidl_adapter/auto_aim_interfaces:msg/Armors.idl
+/home/rm_autoaim/suep2026/dev_ws/build/auto_aim_interfaces/rosidl_adapter/auto_aim_interfaces:msg/Target.idl
+/home/rm_autoaim/suep2026/dev_ws/build/auto_aim_interfaces/rosidl_adapter/auto_aim_interfaces:msg/DebugLight.idl
+/home/rm_autoaim/suep2026/dev_ws/build/auto_aim_interfaces/rosidl_adapter/auto_aim_interfaces:msg/DebugLights.idl
+/home/rm_autoaim/suep2026/dev_ws/build/auto_aim_interfaces/rosidl_adapter/auto_aim_interfaces:msg/DebugArmor.idl
+/home/rm_autoaim/suep2026/dev_ws/build/auto_aim_interfaces/rosidl_adapter/auto_aim_interfaces:msg/DebugArmors.idl
+/home/rm_autoaim/suep2026/dev_ws/build/auto_aim_interfaces/rosidl_adapter/auto_aim_interfaces:msg/TrackerInfo.idl
+/home/rm_autoaim/suep2026/dev_ws/build/auto_aim_interfaces/rosidl_adapter/auto_aim_interfaces:msg/TimeInfo.idl

@@ -1,0 +1,64 @@
+[0.042s] Invoking command in '/home/rm_autoaim/suep2026/dev_ws/build/rm_serial_driver': CMAKE_PREFIX_PATH=/home/rm_autoaim/suep2026/dev_ws/install/auto_aim_interfaces:/home/rm_autoaim/suep2026/dev_ws/install/rm_vision_bringup:/home/rm_autoaim/suep2026/dev_ws/install/rm_serial_driver:/home/rm_autoaim/suep2026/dev_ws/install/rm_gimbal_description:/home/rm_autoaim/suep2026/dev_ws/install/hik_camera:/home/rm_autoaim/suep2026/dev_ws/install/armor_tracker:/home/rm_autoaim/suep2026/dev_ws/install/armor_detector:/opt/ros/humble LD_LIBRARY_PATH=/home/rm_autoaim/suep2026/dev_ws/install/auto_aim_interfaces/lib:/home/rm_autoaim/suep2026/dev_ws/install/rm_serial_driver/lib:/home/rm_autoaim/suep2026/dev_ws/install/hik_camera/lib:/home/rm_autoaim/suep2026/dev_ws/install/armor_tracker/lib:/home/rm_autoaim/suep2026/dev_ws/install/armor_detector/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/opt/MVS/lib/64:/opt/MVS/lib/32 /usr/bin/cmake --build /home/rm_autoaim/suep2026/dev_ws/build/rm_serial_driver -- -j8 -l8
+[0.130s] -- Found ament_cmake_auto: 1.3.12 (/opt/ros/humble/share/ament_cmake_auto/cmake)
+[0.487s] -- Found rosidl_generator_c: 3.1.7 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.488s] -- Found rosidl_adapter: 3.1.7 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.497s] -- Found rosidl_generator_cpp: 3.1.7 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.510s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.525s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.563s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.564s] -- Found rmw_fastrtps_cpp: 6.2.8 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[0.681s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.779s] -- Found asio_cmake_module: 1.2.0 (/opt/ros/humble/share/asio_cmake_module/cmake)
+[0.907s] -- Found eigen3_cmake_module: 0.1.1 (/opt/ros/humble/share/eigen3_cmake_module/cmake)
+[0.909s] -- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+[1.008s] [0mIn this package, headers install destination is set to `include` by ament_auto_package. It is recommended to install `include/rm_serial_driver` instead and will be the default behavior of ament_auto_package from ROS 2 Kilted Kaiju. On distributions before Kilted, ament_auto_package behaves the same way when you use USE_SCOPED_HEADER_INSTALL_DIR option.[0m
+[1.015s] -- Configuring done
+[1.068s] -- Generating done
+[1.084s] -- Build files have been written to: /home/rm_autoaim/suep2026/dev_ws/build/rm_serial_driver
+[1.131s] [35m[1mConsolidate compiler generated dependencies of target rm_serial_driver[0m
+[1.171s] [ 20%] [32mBuilding CXX object CMakeFiles/rm_serial_driver.dir/src/rm_serial_driver.cpp.o[0m
+[26.197s] [ 40%] [32m[1mLinking CXX shared library librm_serial_driver.so[0m
+[28.815s] [ 60%] Built target rm_serial_driver
+[28.841s] [35m[1mConsolidate compiler generated dependencies of target rm_serial_driver_node[0m
+[28.882s] [ 80%] [32mBuilding CXX object CMakeFiles/rm_serial_driver_node.dir/rclcpp_components/node_main_rm_serial_driver_node.cpp.o[0m
+[33.677s] [100%] [32m[1mLinking CXX executable rm_serial_driver_node[0m
+[33.903s] [100%] Built target rm_serial_driver_node
+[33.919s] Invoked command in '/home/rm_autoaim/suep2026/dev_ws/build/rm_serial_driver' returned '0': CMAKE_PREFIX_PATH=/home/rm_autoaim/suep2026/dev_ws/install/auto_aim_interfaces:/home/rm_autoaim/suep2026/dev_ws/install/rm_vision_bringup:/home/rm_autoaim/suep2026/dev_ws/install/rm_serial_driver:/home/rm_autoaim/suep2026/dev_ws/install/rm_gimbal_description:/home/rm_autoaim/suep2026/dev_ws/install/hik_camera:/home/rm_autoaim/suep2026/dev_ws/install/armor_tracker:/home/rm_autoaim/suep2026/dev_ws/install/armor_detector:/opt/ros/humble LD_LIBRARY_PATH=/home/rm_autoaim/suep2026/dev_ws/install/auto_aim_interfaces/lib:/home/rm_autoaim/suep2026/dev_ws/install/rm_serial_driver/lib:/home/rm_autoaim/suep2026/dev_ws/install/hik_camera/lib:/home/rm_autoaim/suep2026/dev_ws/install/armor_tracker/lib:/home/rm_autoaim/suep2026/dev_ws/install/armor_detector/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/opt/MVS/lib/64:/opt/MVS/lib/32 /usr/bin/cmake --build /home/rm_autoaim/suep2026/dev_ws/build/rm_serial_driver -- -j8 -l8
+[33.921s] Invoking command in '/home/rm_autoaim/suep2026/dev_ws/build/rm_serial_driver': CMAKE_PREFIX_PATH=/home/rm_autoaim/suep2026/dev_ws/install/auto_aim_interfaces:/home/rm_autoaim/suep2026/dev_ws/install/rm_vision_bringup:/home/rm_autoaim/suep2026/dev_ws/install/rm_serial_driver:/home/rm_autoaim/suep2026/dev_ws/install/rm_gimbal_description:/home/rm_autoaim/suep2026/dev_ws/install/hik_camera:/home/rm_autoaim/suep2026/dev_ws/install/armor_tracker:/home/rm_autoaim/suep2026/dev_ws/install/armor_detector:/opt/ros/humble LD_LIBRARY_PATH=/home/rm_autoaim/suep2026/dev_ws/install/auto_aim_interfaces/lib:/home/rm_autoaim/suep2026/dev_ws/install/rm_serial_driver/lib:/home/rm_autoaim/suep2026/dev_ws/install/hik_camera/lib:/home/rm_autoaim/suep2026/dev_ws/install/armor_tracker/lib:/home/rm_autoaim/suep2026/dev_ws/install/armor_detector/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/opt/MVS/lib/64:/opt/MVS/lib/32 /usr/bin/cmake --install /home/rm_autoaim/suep2026/dev_ws/build/rm_serial_driver
+[33.930s] -- Install configuration: ""
+[33.932s] -- Installing: /home/rm_autoaim/suep2026/dev_ws/install/rm_serial_driver/lib/rm_serial_driver/rm_serial_driver_node
+[33.932s] -- Set runtime path of "/home/rm_autoaim/suep2026/dev_ws/install/rm_serial_driver/lib/rm_serial_driver/rm_serial_driver_node" to ""
+[33.932s] -- Up-to-date: /home/rm_autoaim/suep2026/dev_ws/install/rm_serial_driver/include
+[33.933s] -- Up-to-date: /home/rm_autoaim/suep2026/dev_ws/install/rm_serial_driver/include/rm_serial_driver
+[33.933s] -- Up-to-date: /home/rm_autoaim/suep2026/dev_ws/install/rm_serial_driver/include/rm_serial_driver/fake.hpp
+[33.933s] -- Up-to-date: /home/rm_autoaim/suep2026/dev_ws/install/rm_serial_driver/include/rm_serial_driver/rm_serial_driver.hpp
+[33.933s] -- Up-to-date: /home/rm_autoaim/suep2026/dev_ws/install/rm_serial_driver/include/rm_serial_driver/packet.hpp
+[33.933s] -- Up-to-date: /home/rm_autoaim/suep2026/dev_ws/install/rm_serial_driver/include/rm_serial_driver/crc.hpp
+[33.933s] -- Up-to-date: /home/rm_autoaim/suep2026/dev_ws/install/rm_serial_driver/share/rm_serial_driver/environment/library_path.sh
+[33.933s] -- Installing: /home/rm_autoaim/suep2026/dev_ws/install/rm_serial_driver/share/rm_serial_driver/environment/library_path.dsv
+[33.933s] -- Installing: /home/rm_autoaim/suep2026/dev_ws/install/rm_serial_driver/lib/librm_serial_driver.so
+[33.949s] -- Set runtime path of "/home/rm_autoaim/suep2026/dev_ws/install/rm_serial_driver/lib/librm_serial_driver.so" to ""
+[33.949s] -- Up-to-date: /home/rm_autoaim/suep2026/dev_ws/install/rm_serial_driver/share/rm_serial_driver/config
+[33.949s] -- Up-to-date: /home/rm_autoaim/suep2026/dev_ws/install/rm_serial_driver/share/rm_serial_driver/config/serial_driver.yaml
+[33.949s] -- Up-to-date: /home/rm_autoaim/suep2026/dev_ws/install/rm_serial_driver/share/rm_serial_driver/launch
+[33.949s] -- Up-to-date: /home/rm_autoaim/suep2026/dev_ws/install/rm_serial_driver/share/rm_serial_driver/launch/serial_driver.launch.py
+[33.949s] -- Up-to-date: /home/rm_autoaim/suep2026/dev_ws/install/rm_serial_driver/share/ament_index/resource_index/package_run_dependencies/rm_serial_driver
+[33.949s] -- Up-to-date: /home/rm_autoaim/suep2026/dev_ws/install/rm_serial_driver/share/ament_index/resource_index/parent_prefix_path/rm_serial_driver
+[33.949s] -- Up-to-date: /home/rm_autoaim/suep2026/dev_ws/install/rm_serial_driver/share/rm_serial_driver/environment/ament_prefix_path.sh
+[33.950s] -- Installing: /home/rm_autoaim/suep2026/dev_ws/install/rm_serial_driver/share/rm_serial_driver/environment/ament_prefix_path.dsv
+[33.950s] -- Up-to-date: /home/rm_autoaim/suep2026/dev_ws/install/rm_serial_driver/share/rm_serial_driver/environment/path.sh
+[33.950s] -- Installing: /home/rm_autoaim/suep2026/dev_ws/install/rm_serial_driver/share/rm_serial_driver/environment/path.dsv
+[33.950s] -- Up-to-date: /home/rm_autoaim/suep2026/dev_ws/install/rm_serial_driver/share/rm_serial_driver/local_setup.bash
+[33.950s] -- Up-to-date: /home/rm_autoaim/suep2026/dev_ws/install/rm_serial_driver/share/rm_serial_driver/local_setup.sh
+[33.950s] -- Up-to-date: /home/rm_autoaim/suep2026/dev_ws/install/rm_serial_driver/share/rm_serial_driver/local_setup.zsh
+[33.951s] -- Installing: /home/rm_autoaim/suep2026/dev_ws/install/rm_serial_driver/share/rm_serial_driver/local_setup.dsv
+[33.951s] -- Installing: /home/rm_autoaim/suep2026/dev_ws/install/rm_serial_driver/share/rm_serial_driver/package.dsv
+[33.951s] -- Up-to-date: /home/rm_autoaim/suep2026/dev_ws/install/rm_serial_driver/share/ament_index/resource_index/packages/rm_serial_driver
+[33.951s] -- Installing: /home/rm_autoaim/suep2026/dev_ws/install/rm_serial_driver/share/ament_index/resource_index/rclcpp_components/rm_serial_driver
+[33.951s] -- Up-to-date: /home/rm_autoaim/suep2026/dev_ws/install/rm_serial_driver/share/rm_serial_driver/cmake/ament_cmake_export_dependencies-extras.cmake
+[33.951s] -- Up-to-date: /home/rm_autoaim/suep2026/dev_ws/install/rm_serial_driver/share/rm_serial_driver/cmake/ament_cmake_export_include_directories-extras.cmake
+[33.951s] -- Up-to-date: /home/rm_autoaim/suep2026/dev_ws/install/rm_serial_driver/share/rm_serial_driver/cmake/ament_cmake_export_libraries-extras.cmake
+[33.951s] -- Up-to-date: /home/rm_autoaim/suep2026/dev_ws/install/rm_serial_driver/share/rm_serial_driver/cmake/rm_serial_driverConfig.cmake
+[33.951s] -- Up-to-date: /home/rm_autoaim/suep2026/dev_ws/install/rm_serial_driver/share/rm_serial_driver/cmake/rm_serial_driverConfig-version.cmake
+[33.952s] -- Up-to-date: /home/rm_autoaim/suep2026/dev_ws/install/rm_serial_driver/share/rm_serial_driver/package.xml
+[33.954s] Invoked command in '/home/rm_autoaim/suep2026/dev_ws/build/rm_serial_driver' returned '0': CMAKE_PREFIX_PATH=/home/rm_autoaim/suep2026/dev_ws/install/auto_aim_interfaces:/home/rm_autoaim/suep2026/dev_ws/install/rm_vision_bringup:/home/rm_autoaim/suep2026/dev_ws/install/rm_serial_driver:/home/rm_autoaim/suep2026/dev_ws/install/rm_gimbal_description:/home/rm_autoaim/suep2026/dev_ws/install/hik_camera:/home/rm_autoaim/suep2026/dev_ws/install/armor_tracker:/home/rm_autoaim/suep2026/dev_ws/install/armor_detector:/opt/ros/humble LD_LIBRARY_PATH=/home/rm_autoaim/suep2026/dev_ws/install/auto_aim_interfaces/lib:/home/rm_autoaim/suep2026/dev_ws/install/rm_serial_driver/lib:/home/rm_autoaim/suep2026/dev_ws/install/hik_camera/lib:/home/rm_autoaim/suep2026/dev_ws/install/armor_tracker/lib:/home/rm_autoaim/suep2026/dev_ws/install/armor_detector/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/opt/MVS/lib/64:/opt/MVS/lib/32 /usr/bin/cmake --install /home/rm_autoaim/suep2026/dev_ws/build/rm_serial_driver
