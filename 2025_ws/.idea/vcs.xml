@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="$PROJECT_DIR$/.." vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/src/rm_auto_aim" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/src/rm_auto_record" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/src/rm_buff" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/src/rm_gimbal_description" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/src/rm_serial_driver" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/src/rm_vision" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/src/ros2_hik_camera" vcs="Git" />
+  </component>
+</project>

@@ -1,0 +1,15 @@
+/home/rm_autoaim/下载/clion-2025.2.1/bin/cmake/linux/x64/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/home/rm_autoaim/下载/clion-2025.2.1/bin/ninja/linux/x64/ninja -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -DCMAKE_PREFIX_PATH=/home/rm_autoaim/suep2026/dev_ws/install -G Ninja -S /home/rm_autoaim/suep2026/dev_ws/src/rm_vision/rm_vision_bringup -B /home/rm_autoaim/suep2026/dev_ws/src/rm_vision/rm_vision_bringup/build
+CMake Deprecation Warning at CMakeLists.txt:1 (cmake_minimum_required):
+  Compatibility with CMake < 3.10 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+  to tell CMake that the project requires at least <min> but has been updated
+  to work with policies introduced by <max> or earlier.
+
+
+-- Found ament_cmake_auto: 1.3.12 (/opt/ros/humble/share/ament_cmake_auto/cmake)
+-- Found ament_lint_auto: 0.12.14 (/opt/ros/humble/share/ament_lint_auto/cmake)
+-- Configuring done (0.3s)
+-- Generating done (0.0s)
+-- Build files have been written to: /home/rm_autoaim/suep2026/dev_ws/src/rm_vision/rm_vision_bringup/build

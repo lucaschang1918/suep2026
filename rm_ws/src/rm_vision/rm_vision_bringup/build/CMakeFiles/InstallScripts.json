@@ -1,0 +1,7 @@
+{
+	"InstallScripts" : 
+	[
+		"/home/rm_autoaim/suep2026/dev_ws/src/rm_vision/rm_vision_bringup/build/cmake_install.cmake"
+	],
+	"Parallel" : false
+}
