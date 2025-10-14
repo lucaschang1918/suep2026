@@ -6,7 +6,7 @@
   <component name="CMakePythonSetting">
     <option name="pythonIntegrationState" value="NO" />
   </component>
-  <component name="CMakeWorkspace" PROJECT_DIR="$PROJECT_DIR$/src/rm_serial_driver">
+  <component name="CMakeWorkspace" PROJECT_DIR="$PROJECT_DIR$/src/rm_auto_aim/armor_detector">
     <contentRoot DIR="$PROJECT_DIR$" />
   </component>
   <component name="PyPackaging">

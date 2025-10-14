@@ -13,6 +13,8 @@ namespace rm_auto_aim {
 
         detector_ = initDetector();
 
+        processing_thread_ = std::thread(&ArmorDetectorNode::processingLoop, this);
+
         armors_pub_ = this->create_publisher<auto_aim_interfaces::msg::Armors>(
             "/detector/armors", rclcpp::SensorDataQoS());
 
@@ -66,6 +68,8 @@ namespace rm_auto_aim {
                 camera_info.reset();
             });
 
+
+
         img_sub_ = this->create_subscription<sensor_msgs::msg::Image>(
             "image_raw", rclcpp::SensorDataQoS(),
             std::bind(&ArmorDetectorNode::imageCallback, this, std::placeholders::_1));
@@ -87,6 +91,12 @@ namespace rm_auto_aim {
         //     std::bind(&ArmorDetectorNode::processFrameTestVideo, this));
     }
 
+    ArmorDetectorNode::~ArmorDetectorNode() {
+        running_ = false;
+        if (processing_thread_.joinable()) processing_thread_.join();
+    }
+
+
 
     void ArmorDetectorNode::taskCallback(const std_msgs::msg::String::SharedPtr task_msg) {
         std::string task_mode = task_msg->data;
@@ -94,76 +104,32 @@ namespace rm_auto_aim {
     }
 
     void ArmorDetectorNode::imageCallback(const sensor_msgs::msg::Image::ConstSharedPtr img_msg) {
-        auto armors = detectArmors(img_msg);
-        // if (pnp_solver_ != nullptr && is_aim_task_)
+            // std::lock_guard<std::mutex> lock(mutex_);
+            // // 直接保存 shared_ptr（header 等信息会被保留）
+            // latest_img_ = img_msg;
+
+
+        {
+            std::lock_guard<std::mutex> lock(mutex_);
+            latest_img_ = img_msg;
+        }
+
+        // 如果检测线程有新结果，就发布
         if (is_aim_task_) {
-            armors_msg_.header = armor_marker_.header = text_marker_.header = img_msg->header;
-            armors_msg_.armors.clear();
-            marker_array_.markers.clear();
-            armor_marker_.id = 0;
-            text_marker_.id = 0;
-
-            auto_aim_interfaces::msg::Armor armor_msg;
-            for (const auto &armor: armors) {
-                cv::Mat rvec, tvec;
-                bool sucess = pnp_solver_->solvePnP(armor, rvec, tvec);
-
-                if (sucess) {
-                    armor_msg.type = armor.classfication_result == "1" ? "large" : "small";
-
-                    armor_msg.number = armor.number;
-
-                    armor_msg.pose.position.x = tvec.at<double>(0);
-                    armor_msg.pose.position.y = tvec.at<double>(1);
-                    armor_msg.pose.position.z = tvec.at<double>(2);
-
-                    cv::Mat rotation_matrix;
-                    cv::Rodrigues(rvec, rotation_matrix);
-                    tf2::Matrix3x3 tf2_rotation_matrix(
-                        rotation_matrix.at<double>(0, 0), rotation_matrix.at<double>(0, 1),
-                        rotation_matrix.at<double>(0, 2), rotation_matrix.at<double>(1, 0),
-                        rotation_matrix.at<double>(1, 1), rotation_matrix.at<double>(1, 2),
-                        rotation_matrix.at<double>(2, 0), rotation_matrix.at<double>(2, 1),
-                        rotation_matrix.at<double>(2, 2));
-
-                    tf2::Quaternion tf2_q;
-                    tf2_rotation_matrix.getRotation(tf2_q);
-                    armor_msg.pose.orientation = tf2::toMsg(tf2_q);
-
-                    armor_msg.distance_to_image_center = pnp_solver_->calculateDistanceToCenter(armor.center);
-
-                    armor_msg.kpts.clear();
-                    for (const auto &pt:
-                         {
-                             armor.objects_keypoints[1], armor.objects_keypoints[0],
-                             armor.objects_keypoints[3], armor.objects_keypoints[2]
-                         }) {
-                        geometry_msgs::msg::Point point;
-                        point.x = pt.x;
-                        point.y = pt.y;
-                        armor_msg.kpts.emplace_back(point);
-                    }
-
-                    // Fill the markers
-                    armor_marker_.id++;
-                    armor_marker_.scale.y = armor.classfication_result == "1" ? 0.23 : 0.135;
-                    armor_marker_.pose = armor_msg.pose;
-                    text_marker_.id++;
-                    text_marker_.pose.position = armor_msg.pose.position;
-                    text_marker_.pose.position.y -= 0.1;
-                    text_marker_.text = armor.classfication_result;
-                    armors_msg_.armors.emplace_back(armor_msg);
-                    marker_array_.markers.emplace_back(armor_marker_);
-                    marker_array_.markers.emplace_back(text_marker_);
-                } else {
-                    RCLCPP_WARN(get_logger(), "pnp failed");
+            std::vector<Armor> armors_copy;
+            bool has_new = false;
+            {
+                std::lock_guard<std::mutex> lock(mutex_);
+                if (new_detection_available_) {
+                    armors_copy = latest_armors_;
+                    new_detection_available_ = false;
+                    has_new = true;
                 }
             }
 
-            armors_pub_->publish(armors_msg_);
-
-
-            publishMarkers();
+            if (has_new && !armors_copy.empty()) {
+                publishArmorsAndMarkers(img_msg, armors_copy);
+            }
         }
     }
 
@@ -280,6 +246,116 @@ namespace rm_auto_aim {
         return armors;
     }
 
+    //  void ArmorDetectorNode::processingLoop() {
+    //     while (rclcpp::ok() && running_) {
+    //         //  RCLCPP_INFO(this->get_logger(), "thread=======================");
+    //
+    //         sensor_msgs::msg::Image::ConstSharedPtr img_msg;
+    //         {
+    //             std::lock_guard<std::mutex> lock(mutex_);
+    //             img_msg = latest_img_;
+    //         }
+    //
+    //         if (img_msg) {
+    //             auto armors = detectArmors(img_msg);
+    //
+    //              if (is_aim_task_) {
+    //         armors_msg_.header = armor_marker_.header = text_marker_.header = img_msg->header;
+    //         armors_msg_.armors.clear();
+    //         marker_array_.markers.clear();
+    //         armor_marker_.id = 0;
+    //         text_marker_.id = 0;
+    //
+    //         auto_aim_interfaces::msg::Armor armor_msg;
+    //         for (const auto &armor: armors) {
+    //             cv::Mat rvec, tvec;
+    //             bool sucess = pnp_solver_->solvePnP(armor, rvec, tvec);
+    //
+    //             if (sucess) {
+    //                 armor_msg.type = armor.classfication_result == "1" ? "large" : "small";
+    //
+    //                 armor_msg.number = armor.number;
+    //
+    //                 armor_msg.pose.position.x = tvec.at<double>(0);
+    //                 armor_msg.pose.position.y = tvec.at<double>(1);
+    //                 armor_msg.pose.position.z = tvec.at<double>(2);
+    //
+    //                 cv::Mat rotation_matrix;
+    //                 cv::Rodrigues(rvec, rotation_matrix);
+    //                 tf2::Matrix3x3 tf2_rotation_matrix(
+    //                     rotation_matrix.at<double>(0, 0), rotation_matrix.at<double>(0, 1),
+    //                     rotation_matrix.at<double>(0, 2), rotation_matrix.at<double>(1, 0),
+    //                     rotation_matrix.at<double>(1, 1), rotation_matrix.at<double>(1, 2),
+    //                     rotation_matrix.at<double>(2, 0), rotation_matrix.at<double>(2, 1),
+    //                     rotation_matrix.at<double>(2, 2));
+    //
+    //                 tf2::Quaternion tf2_q;
+    //                 tf2_rotation_matrix.getRotation(tf2_q);
+    //                 armor_msg.pose.orientation = tf2::toMsg(tf2_q);
+    //
+    //                 armor_msg.distance_to_image_center = pnp_solver_->calculateDistanceToCenter(armor.center);
+    //
+    //                 armor_msg.kpts.clear();
+    //                 for (const auto &pt:
+    //                      {
+    //                          armor.objects_keypoints[1], armor.objects_keypoints[0],
+    //                          armor.objects_keypoints[3], armor.objects_keypoints[2]
+    //                      }) {
+    //                     geometry_msgs::msg::Point point;
+    //                     point.x = pt.x;
+    //                     point.y = pt.y;
+    //                     armor_msg.kpts.emplace_back(point);
+    //                 }
+    //
+    //                 // Fill the markers
+    //                 armor_marker_.id++;
+    //                 armor_marker_.scale.y = armor.classfication_result == "1" ? 0.23 : 0.135;
+    //                 armor_marker_.pose = armor_msg.pose;
+    //                 text_marker_.id++;
+    //                 text_marker_.pose.position = armor_msg.pose.position;
+    //                 text_marker_.pose.position.y -= 0.1;
+    //                 text_marker_.text = armor.classfication_result;
+    //                 armors_msg_.armors.emplace_back(armor_msg);
+    //                 marker_array_.markers.emplace_back(armor_marker_);
+    //                 marker_array_.markers.emplace_back(text_marker_);
+    //             } else {
+    //                 RCLCPP_WARN(get_logger(), "pnp failed");
+    //             }
+    //         }
+    //
+    //         armors_pub_->publish(armors_msg_);
+    //
+    //
+    //         publishMarkers();
+    //     }
+    //         }
+    //         // rate.sleep();
+    //     }
+    // }
+
+
+    void ArmorDetectorNode::processingLoop() {
+        while (rclcpp::ok() && running_) {
+            sensor_msgs::msg::Image::ConstSharedPtr img_msg;
+            {
+                std::lock_guard<std::mutex> lock(mutex_);
+                img_msg = latest_img_;
+            }
+
+            if (img_msg) {
+                auto armors = detectArmors(img_msg);
+
+                // 存储结果，不发布（线程安全）
+                {
+                    std::lock_guard<std::mutex> lock(mutex_);
+                    latest_armors_ = armors;
+                    new_detection_available_ = true;
+                }
+            }
+
+        }
+    }
+
 
     void ArmorDetectorNode::processFrameTestVideo() {
         cv::namedWindow("test result", cv::WINDOW_NORMAL);
@@ -316,6 +392,75 @@ namespace rm_auto_aim {
         //
         // result_pub_->publish(*msg);
     }
+
+    // =======================
+// 发布逻辑抽离成函数
+// =======================
+void ArmorDetectorNode::publishArmorsAndMarkers(
+    const sensor_msgs::msg::Image::ConstSharedPtr &img_msg,
+    const std::vector<Armor> &armors)
+{
+    armors_msg_.header = armor_marker_.header = text_marker_.header = img_msg->header;
+    armors_msg_.armors.clear();
+    marker_array_.markers.clear();
+    armor_marker_.id = 0;
+    text_marker_.id = 0;
+
+    for (const auto &armor : armors) {
+        cv::Mat rvec, tvec;
+        if (pnp_solver_->solvePnP(armor, rvec, tvec)) {
+            auto_aim_interfaces::msg::Armor armor_msg;
+            armor_msg.type = armor.classfication_result == "1" ? "large" : "small";
+            armor_msg.number = armor.number;
+
+            armor_msg.pose.position.x = tvec.at<double>(0);
+            armor_msg.pose.position.y = tvec.at<double>(1);
+            armor_msg.pose.position.z = tvec.at<double>(2);
+
+            // 计算旋转
+            cv::Mat rotation_matrix;
+            cv::Rodrigues(rvec, rotation_matrix);
+            tf2::Matrix3x3 tf2_rotation_matrix(
+                rotation_matrix.at<double>(0, 0), rotation_matrix.at<double>(0, 1), rotation_matrix.at<double>(0, 2),
+                rotation_matrix.at<double>(1, 0), rotation_matrix.at<double>(1, 1), rotation_matrix.at<double>(1, 2),
+                rotation_matrix.at<double>(2, 0), rotation_matrix.at<double>(2, 1), rotation_matrix.at<double>(2, 2));
+
+            tf2::Quaternion tf2_q;
+            tf2_rotation_matrix.getRotation(tf2_q);
+            armor_msg.pose.orientation = tf2::toMsg(tf2_q);
+
+            armor_msg.distance_to_image_center = pnp_solver_->calculateDistanceToCenter(armor.center);
+
+            // keypoints
+            armor_msg.kpts.clear();
+            for (const auto &pt : {armor.objects_keypoints[1], armor.objects_keypoints[0],
+                                   armor.objects_keypoints[3], armor.objects_keypoints[2]}) {
+                geometry_msgs::msg::Point point;
+                point.x = pt.x;
+                point.y = pt.y;
+                armor_msg.kpts.emplace_back(point);
+            }
+
+            // marker
+            armor_marker_.id++;
+            armor_marker_.scale.y = armor.classfication_result == "1" ? 0.23 : 0.135;
+            armor_marker_.pose = armor_msg.pose;
+            text_marker_.id++;
+            text_marker_.pose.position = armor_msg.pose.position;
+            text_marker_.pose.position.y -= 0.1;
+            text_marker_.text = armor.classfication_result;
+
+            armors_msg_.armors.emplace_back(armor_msg);
+            marker_array_.markers.emplace_back(armor_marker_);
+            marker_array_.markers.emplace_back(text_marker_);
+        } else {
+            RCLCPP_WARN(get_logger(), "PnP failed");
+        }
+    }
+
+    armors_pub_->publish(armors_msg_);
+    publishMarkers();
+}
 } // namespace rm_auto_aim
 
 

@@ -1,0 +1,99 @@
+[0.013s] Invoking command in '/home/rm_autoaim/suep2026/dev_ws/build/hik_camera': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/rm_autoaim/suep2026/dev_ws/src/hik_camera -DCMAKE_INSTALL_PREFIX=/home/rm_autoaim/suep2026/dev_ws/install/hik_camera
+[0.061s] -- The C compiler identification is GNU 11.4.0
+[0.110s] -- The CXX compiler identification is GNU 11.4.0
+[0.116s] -- Detecting C compiler ABI info
+[0.174s] -- Detecting C compiler ABI info - done
+[0.180s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.180s] -- Detecting C compile features
+[0.180s] -- Detecting C compile features - done
+[0.183s] -- Detecting CXX compiler ABI info
+[0.260s] -- Detecting CXX compiler ABI info - done
+[0.266s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.266s] -- Detecting CXX compile features
+[0.267s] -- Detecting CXX compile features - done
+[0.268s] -- Found cv_bridge: 3.2.1 (/opt/ros/humble/share/cv_bridge/cmake)
+[0.394s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.495s] -- Found rosidl_generator_c: 3.1.7 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.498s] -- Found rosidl_adapter: 3.1.7 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.504s] -- Found rosidl_generator_cpp: 3.1.7 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.513s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.530s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.594s] -- Found OpenCV: /usr (found version "4.5.4") 
+[0.595s] -- Found ament_cmake_auto: 1.3.12 (/opt/ros/humble/share/ament_cmake_auto/cmake)
+[0.674s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.676s] -- Found rmw_fastrtps_cpp: 6.2.8 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[0.763s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[0.783s] -- Found FastRTPS: /opt/ros/humble/include  
+[0.814s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.819s] -- Looking for pthread.h
+[0.881s] -- Looking for pthread.h - found
+[0.881s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[0.943s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[0.944s] -- Found Threads: TRUE  
+[1.027s] -- Found ament_lint_auto: 0.12.14 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[1.042s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[1.042s] -- Configured cppcheck include dirs: $<BUILD_INTERFACE:/home/rm_autoaim/suep2026/dev_ws/src/hik_camera/hikSDK/include>
+[1.042s] -- Configured cppcheck exclude dirs and/or files: 
+[1.043s] -- Added test 'flake8' to check Python code syntax and style conventions
+[1.044s] -- Added test 'lint_cmake' to check CMake code style
+[1.045s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[1.046s] -- Added test 'xmllint' to check XML markup files
+[1.047s] -- Configuring done
+[1.056s] [33mCMake Warning (dev):
+[1.056s]   The library that is being linked to, yaml-cpp, is marked as being
+[1.056s]   deprecated by the owner.  The message provided by the developer is:
+[1.056s] 
+[1.056s]   The target yaml-cpp is deprecated and will be removed in version 0.10.0.
+[1.056s]   Use the yaml-cpp::yaml-cpp target instead.
+[1.056s] 
+[1.056s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[1.056s] [0m
+[1.062s] -- Generating done
+[1.066s] -- Build files have been written to: /home/rm_autoaim/suep2026/dev_ws/build/hik_camera
+[1.076s] Invoked command in '/home/rm_autoaim/suep2026/dev_ws/build/hik_camera' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/rm_autoaim/suep2026/dev_ws/src/hik_camera -DCMAKE_INSTALL_PREFIX=/home/rm_autoaim/suep2026/dev_ws/install/hik_camera
+[1.077s] Invoking command in '/home/rm_autoaim/suep2026/dev_ws/build/hik_camera': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/rm_autoaim/suep2026/dev_ws/build/hik_camera -- -j8 -l8
+[1.124s] [ 25%] [32mBuilding CXX object CMakeFiles/hik_camera_node.dir/rclcpp_components/node_main_hik_camera_node.cpp.o[0m
+[1.124s] [ 50%] [32mBuilding CXX object CMakeFiles/hik_camera.dir/src/hik_camera_node.cpp.o[0m
+[6.462s] [ 75%] [32m[1mLinking CXX executable hik_camera_node[0m
+[6.595s] [ 75%] Built target hik_camera_node
+[7.386s] [100%] [32m[1mLinking CXX shared library libhik_camera.so[0m
+[7.517s] [100%] Built target hik_camera
+[7.529s] Invoked command in '/home/rm_autoaim/suep2026/dev_ws/build/hik_camera' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/rm_autoaim/suep2026/dev_ws/build/hik_camera -- -j8 -l8
+[7.531s] Invoking command in '/home/rm_autoaim/suep2026/dev_ws/build/hik_camera': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/rm_autoaim/suep2026/dev_ws/build/hik_camera
+[7.536s] -- Install configuration: ""
+[7.537s] -- Installing: /home/rm_autoaim/suep2026/dev_ws/install/hik_camera/lib
+[7.537s] -- Installing: /home/rm_autoaim/suep2026/dev_ws/install/hik_camera/lib/libMvUsb3vTL.so
+[7.541s] -- Installing: /home/rm_autoaim/suep2026/dev_ws/install/hik_camera/lib/libFormatConversion.so
+[7.541s] -- Installing: /home/rm_autoaim/suep2026/dev_ws/install/hik_camera/lib/libMVRender.so
+[7.542s] -- Installing: /home/rm_autoaim/suep2026/dev_ws/install/hik_camera/lib/libMvCameraControl.so
+[7.546s] -- Installing: /home/rm_autoaim/suep2026/dev_ws/install/hik_camera/lib/libMediaProcess.so
+[7.548s] -- Installing: /home/rm_autoaim/suep2026/dev_ws/install/hik_camera/lib/hik_camera/hik_camera_node
+[7.548s] -- Set runtime path of "/home/rm_autoaim/suep2026/dev_ws/install/hik_camera/lib/hik_camera/hik_camera_node" to ""
+[7.548s] -- Installing: /home/rm_autoaim/suep2026/dev_ws/install/hik_camera/share/hik_camera/environment/library_path.sh
+[7.548s] -- Installing: /home/rm_autoaim/suep2026/dev_ws/install/hik_camera/share/hik_camera/environment/library_path.dsv
+[7.548s] -- Installing: /home/rm_autoaim/suep2026/dev_ws/install/hik_camera/lib/libhik_camera.so
+[7.549s] -- Set runtime path of "/home/rm_autoaim/suep2026/dev_ws/install/hik_camera/lib/libhik_camera.so" to ""
+[7.549s] -- Installing: /home/rm_autoaim/suep2026/dev_ws/install/hik_camera/share/hik_camera/config
+[7.549s] -- Installing: /home/rm_autoaim/suep2026/dev_ws/install/hik_camera/share/hik_camera/config/camera_params.yaml
+[7.549s] -- Installing: /home/rm_autoaim/suep2026/dev_ws/install/hik_camera/share/hik_camera/config/camera_info.yaml
+[7.549s] -- Installing: /home/rm_autoaim/suep2026/dev_ws/install/hik_camera/share/hik_camera/launch
+[7.549s] -- Installing: /home/rm_autoaim/suep2026/dev_ws/install/hik_camera/share/hik_camera/launch/hik_camera.launch.py
+[7.549s] -- Installing: /home/rm_autoaim/suep2026/dev_ws/install/hik_camera/share/ament_index/resource_index/package_run_dependencies/hik_camera
+[7.549s] -- Installing: /home/rm_autoaim/suep2026/dev_ws/install/hik_camera/share/ament_index/resource_index/parent_prefix_path/hik_camera
+[7.550s] -- Installing: /home/rm_autoaim/suep2026/dev_ws/install/hik_camera/share/hik_camera/environment/ament_prefix_path.sh
+[7.550s] -- Installing: /home/rm_autoaim/suep2026/dev_ws/install/hik_camera/share/hik_camera/environment/ament_prefix_path.dsv
+[7.550s] -- Installing: /home/rm_autoaim/suep2026/dev_ws/install/hik_camera/share/hik_camera/environment/path.sh
+[7.550s] -- Installing: /home/rm_autoaim/suep2026/dev_ws/install/hik_camera/share/hik_camera/environment/path.dsv
+[7.550s] -- Installing: /home/rm_autoaim/suep2026/dev_ws/install/hik_camera/share/hik_camera/local_setup.bash
+[7.550s] -- Installing: /home/rm_autoaim/suep2026/dev_ws/install/hik_camera/share/hik_camera/local_setup.sh
+[7.550s] -- Installing: /home/rm_autoaim/suep2026/dev_ws/install/hik_camera/share/hik_camera/local_setup.zsh
+[7.550s] -- Installing: /home/rm_autoaim/suep2026/dev_ws/install/hik_camera/share/hik_camera/local_setup.dsv
+[7.550s] -- Installing: /home/rm_autoaim/suep2026/dev_ws/install/hik_camera/share/hik_camera/package.dsv
+[7.550s] -- Installing: /home/rm_autoaim/suep2026/dev_ws/install/hik_camera/share/ament_index/resource_index/packages/hik_camera
+[7.550s] -- Installing: /home/rm_autoaim/suep2026/dev_ws/install/hik_camera/share/ament_index/resource_index/rclcpp_components/hik_camera
+[7.550s] -- Installing: /home/rm_autoaim/suep2026/dev_ws/install/hik_camera/share/hik_camera/cmake/ament_cmake_export_dependencies-extras.cmake
+[7.551s] -- Installing: /home/rm_autoaim/suep2026/dev_ws/install/hik_camera/share/hik_camera/cmake/ament_cmake_export_libraries-extras.cmake
+[7.551s] -- Installing: /home/rm_autoaim/suep2026/dev_ws/install/hik_camera/share/hik_camera/cmake/hik_cameraConfig.cmake
+[7.551s] -- Installing: /home/rm_autoaim/suep2026/dev_ws/install/hik_camera/share/hik_camera/cmake/hik_cameraConfig-version.cmake
+[7.551s] -- Installing: /home/rm_autoaim/suep2026/dev_ws/install/hik_camera/share/hik_camera/package.xml
+[7.557s] Invoked command in '/home/rm_autoaim/suep2026/dev_ws/build/hik_camera' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/rm_autoaim/suep2026/dev_ws/build/hik_camera

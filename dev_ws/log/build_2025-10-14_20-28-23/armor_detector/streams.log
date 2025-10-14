@@ -1,0 +1,43 @@
+[0.015s] Invoking command in '/home/rm_autoaim/suep2026/dev_ws/build/armor_detector': CMAKE_PREFIX_PATH=/home/rm_autoaim/suep2026/dev_ws/install/auto_aim_interfaces:/home/rm_autoaim/suep2026/dev_ws/install/rm_vision_bringup:/home/rm_autoaim/suep2026/dev_ws/install/rm_serial_driver:/home/rm_autoaim/suep2026/dev_ws/install/rm_gimbal_description:/home/rm_autoaim/suep2026/dev_ws/install/hik_camera:/home/rm_autoaim/suep2026/dev_ws/install/armor_tracker:/home/rm_autoaim/suep2026/dev_ws/install/armor_detector:/opt/ros/humble LD_LIBRARY_PATH=/home/rm_autoaim/suep2026/dev_ws/install/auto_aim_interfaces/lib:/home/rm_autoaim/suep2026/dev_ws/install/rm_serial_driver/lib:/home/rm_autoaim/suep2026/dev_ws/install/hik_camera/lib:/home/rm_autoaim/suep2026/dev_ws/install/armor_tracker/lib:/home/rm_autoaim/suep2026/dev_ws/install/armor_detector/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/opt/MVS/lib/64:/opt/MVS/lib/32 /usr/bin/cmake --build /home/rm_autoaim/suep2026/dev_ws/build/armor_detector -- -j8 -l8
+[0.060s] [35m[1mConsolidate compiler generated dependencies of target armor_detector[0m
+[0.073s] [ 28%] Built target armor_detector_node
+[0.087s] [ 42%] [32mBuilding CXX object CMakeFiles/armor_detector.dir/src/detector_node.cpp.o[0m
+[4.185s] [01m[K/home/rm_autoaim/suep2026/dev_ws/src/rm_auto_aim/armor_detector/src/detector_node.cpp:[m[K In constructor ‘[01m[Krm_auto_aim::ArmorDetectorNode::ArmorDetectorNode(const rclcpp::NodeOptions&)[m[K’:
+[4.185s] [01m[K/home/rm_autoaim/suep2026/dev_ws/src/rm_auto_aim/armor_detector/src/detector_node.cpp:16:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kprocessing_thread_[m[K’ was not declared in this scope
+[4.185s]    16 |         [01;31m[Kprocessing_thread_[m[K = std::thread(&ArmorDetectorNode::processingLoop, this);
+[4.185s]       |         [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+[4.212s] [01m[K/home/rm_autoaim/suep2026/dev_ws/src/rm_auto_aim/armor_detector/src/detector_node.cpp:[m[K In destructor ‘[01m[Kvirtual rm_auto_aim::ArmorDetectorNode::~ArmorDetectorNode()[m[K’:
+[4.212s] [01m[K/home/rm_autoaim/suep2026/dev_ws/src/rm_auto_aim/armor_detector/src/detector_node.cpp:95:9:[m[K [01;31m[Kerror: [m[K‘[01m[Krunning_[m[K’ was not declared in this scope
+[4.212s]    95 |         [01;31m[Krunning_[m[K = false;
+[4.212s]       |         [01;31m[K^~~~~~~~[m[K
+[4.240s] [01m[K/home/rm_autoaim/suep2026/dev_ws/src/rm_auto_aim/armor_detector/src/detector_node.cpp:96:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kprocessing_thread_[m[K’ was not declared in this scope
+[4.240s]    96 |         if ([01;31m[Kprocessing_thread_[m[K.joinable()) processing_thread_.join();
+[4.240s]       |             [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+[4.245s] [01m[K/home/rm_autoaim/suep2026/dev_ws/src/rm_auto_aim/armor_detector/src/detector_node.cpp:[m[K In member function ‘[01m[Kvoid rm_auto_aim::ArmorDetectorNode::imageCallback(sensor_msgs::msg::Image_<std::allocator<void> >::ConstSharedPtr)[m[K’:
+[4.245s] [01m[K/home/rm_autoaim/suep2026/dev_ws/src/rm_auto_aim/armor_detector/src/detector_node.cpp:131:40:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Krm_auto_aim::ArmorDetectorNode::publishArmorsAndMarkers(const ConstSharedPtr&, std::vector<rm_auto_aim::Armor>&)[m[K’
+[4.245s]   131 |                 [01;31m[KpublishArmorsAndMarkers(img_msg, armors_copy)[m[K;
+[4.245s]       |                 [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~[m[K
+[4.245s] In file included from [01m[K/home/rm_autoaim/suep2026/dev_ws/src/rm_auto_aim/armor_detector/src/detector_node.cpp:2[m[K:
+[4.245s] [01m[K/home/rm_autoaim/suep2026/dev_ws/src/rm_auto_aim/armor_detector/include/detector_node.hpp:51:8:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kvoid rm_auto_aim::ArmorDetectorNode::publishArmorsAndMarkers()[m[K’
+[4.245s]    51 |   void [01;36m[KpublishArmorsAndMarkers[m[K();
+[4.246s]       |        [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~[m[K
+[4.246s] [01m[K/home/rm_autoaim/suep2026/dev_ws/src/rm_auto_aim/armor_detector/include/detector_node.hpp:51:8:[m[K [01;36m[Knote: [m[K  candidate expects 0 arguments, 2 provided
+[4.271s] [01m[K/home/rm_autoaim/suep2026/dev_ws/src/rm_auto_aim/armor_detector/src/detector_node.cpp:[m[K In member function ‘[01m[Kvoid rm_auto_aim::ArmorDetectorNode::processingLoop()[m[K’:
+[4.271s] [01m[K/home/rm_autoaim/suep2026/dev_ws/src/rm_auto_aim/armor_detector/src/detector_node.cpp:338:32:[m[K [01;31m[Kerror: [m[K‘[01m[Krunning_[m[K’ was not declared in this scope
+[4.271s]   338 |         while (rclcpp::ok() && [01;31m[Krunning_[m[K) {
+[4.271s]       |                                [01;31m[K^~~~~~~~[m[K
+[4.275s] [01m[K/home/rm_autoaim/suep2026/dev_ws/src/rm_auto_aim/armor_detector/src/detector_node.cpp:[m[K At global scope:
+[4.275s] [01m[K/home/rm_autoaim/suep2026/dev_ws/src/rm_auto_aim/armor_detector/src/detector_node.cpp:400:6:[m[K [01;31m[Kerror: [m[Kno declaration matches ‘[01m[Kvoid rm_auto_aim::ArmorDetectorNode::publishArmorsAndMarkers(const ConstSharedPtr&, const std::vector<rm_auto_aim::Armor>&)[m[K’
+[4.275s]   400 | void [01;31m[KArmorDetectorNode[m[K::publishArmorsAndMarkers(
+[4.275s]       |      [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+[4.275s] In file included from [01m[K/home/rm_autoaim/suep2026/dev_ws/src/rm_auto_aim/armor_detector/src/detector_node.cpp:2[m[K:
+[4.275s] [01m[K/home/rm_autoaim/suep2026/dev_ws/src/rm_auto_aim/armor_detector/include/detector_node.hpp:51:8:[m[K [01;36m[Knote: [m[Kcandidate is: ‘[01m[Kvoid rm_auto_aim::ArmorDetectorNode::publishArmorsAndMarkers()[m[K’
+[4.275s]    51 |   void [01;36m[KpublishArmorsAndMarkers[m[K();
+[4.275s]       |        [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~[m[K
+[4.275s] [01m[K/home/rm_autoaim/suep2026/dev_ws/src/rm_auto_aim/armor_detector/include/detector_node.hpp:41:7:[m[K [01;36m[Knote: [m[K‘[01m[Kclass rm_auto_aim::ArmorDetectorNode[m[K’ defined here
+[4.275s]    41 | class [01;36m[KArmorDetectorNode[m[K: public rclcpp::Node
+[4.275s]       |       [01;36m[K^~~~~~~~~~~~~~~~~[m[K
+[11.379s] gmake[2]: *** [CMakeFiles/armor_detector.dir/build.make:90：CMakeFiles/armor_detector.dir/src/detector_node.cpp.o] 错误 1
+[11.379s] gmake[1]: *** [CMakeFiles/Makefile2:139：CMakeFiles/armor_detector.dir/all] 错误 2
+[11.379s] gmake: *** [Makefile:146：all] 错误 2
+[11.382s] Invoked command in '/home/rm_autoaim/suep2026/dev_ws/build/armor_detector' returned '2': CMAKE_PREFIX_PATH=/home/rm_autoaim/suep2026/dev_ws/install/auto_aim_interfaces:/home/rm_autoaim/suep2026/dev_ws/install/rm_vision_bringup:/home/rm_autoaim/suep2026/dev_ws/install/rm_serial_driver:/home/rm_autoaim/suep2026/dev_ws/install/rm_gimbal_description:/home/rm_autoaim/suep2026/dev_ws/install/hik_camera:/home/rm_autoaim/suep2026/dev_ws/install/armor_tracker:/home/rm_autoaim/suep2026/dev_ws/install/armor_detector:/opt/ros/humble LD_LIBRARY_PATH=/home/rm_autoaim/suep2026/dev_ws/install/auto_aim_interfaces/lib:/home/rm_autoaim/suep2026/dev_ws/install/rm_serial_driver/lib:/home/rm_autoaim/suep2026/dev_ws/install/hik_camera/lib:/home/rm_autoaim/suep2026/dev_ws/install/armor_tracker/lib:/home/rm_autoaim/suep2026/dev_ws/install/armor_detector/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/opt/MVS/lib/64:/opt/MVS/lib/32 /usr/bin/cmake --build /home/rm_autoaim/suep2026/dev_ws/build/armor_detector -- -j8 -l8

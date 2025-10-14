@@ -1,0 +1,26 @@
+[35m[1mConsolidate compiler generated dependencies of target armor_detector[0m
+[ 28%] Built target armor_detector_node
+[ 42%] [32mBuilding CXX object CMakeFiles/armor_detector.dir/src/detector_node.cpp.o[0m
+[01m[K/home/rm_autoaim/suep2026/dev_ws/src/rm_auto_aim/armor_detector/src/detector_node.cpp:[m[K In member function ‘[01m[Kvoid rm_auto_aim::ArmorDetectorNode::imageCallback(sensor_msgs::msg::Image_<std::allocator<void> >::ConstSharedPtr)[m[K’:
+[01m[K/home/rm_autoaim/suep2026/dev_ws/src/rm_auto_aim/armor_detector/src/detector_node.cpp:131:40:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Krm_auto_aim::ArmorDetectorNode::publishArmorsAndMarkers(const ConstSharedPtr&, std::vector<rm_auto_aim::Armor>&)[m[K’
+  131 |                 [01;31m[KpublishArmorsAndMarkers(img_msg, armors_copy)[m[K;
+      |                 [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/home/rm_autoaim/suep2026/dev_ws/src/rm_auto_aim/armor_detector/src/detector_node.cpp:2[m[K:
+[01m[K/home/rm_autoaim/suep2026/dev_ws/src/rm_auto_aim/armor_detector/include/detector_node.hpp:51:8:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kvoid rm_auto_aim::ArmorDetectorNode::publishArmorsAndMarkers()[m[K’
+   51 |   void [01;36m[KpublishArmorsAndMarkers[m[K();
+      |        [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/rm_autoaim/suep2026/dev_ws/src/rm_auto_aim/armor_detector/include/detector_node.hpp:51:8:[m[K [01;36m[Knote: [m[K  candidate expects 0 arguments, 2 provided
+[01m[K/home/rm_autoaim/suep2026/dev_ws/src/rm_auto_aim/armor_detector/src/detector_node.cpp:[m[K At global scope:
+[01m[K/home/rm_autoaim/suep2026/dev_ws/src/rm_auto_aim/armor_detector/src/detector_node.cpp:400:6:[m[K [01;31m[Kerror: [m[Kno declaration matches ‘[01m[Kvoid rm_auto_aim::ArmorDetectorNode::publishArmorsAndMarkers(const ConstSharedPtr&, const std::vector<rm_auto_aim::Armor>&)[m[K’
+  400 | void [01;31m[KArmorDetectorNode[m[K::publishArmorsAndMarkers(
+      |      [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/home/rm_autoaim/suep2026/dev_ws/src/rm_auto_aim/armor_detector/src/detector_node.cpp:2[m[K:
+[01m[K/home/rm_autoaim/suep2026/dev_ws/src/rm_auto_aim/armor_detector/include/detector_node.hpp:51:8:[m[K [01;36m[Knote: [m[Kcandidate is: ‘[01m[Kvoid rm_auto_aim::ArmorDetectorNode::publishArmorsAndMarkers()[m[K’
+   51 |   void [01;36m[KpublishArmorsAndMarkers[m[K();
+      |        [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/rm_autoaim/suep2026/dev_ws/src/rm_auto_aim/armor_detector/include/detector_node.hpp:41:7:[m[K [01;36m[Knote: [m[K‘[01m[Kclass rm_auto_aim::ArmorDetectorNode[m[K’ defined here
+   41 | class [01;36m[KArmorDetectorNode[m[K: public rclcpp::Node
+      |       [01;36m[K^~~~~~~~~~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/armor_detector.dir/build.make:90：CMakeFiles/armor_detector.dir/src/detector_node.cpp.o] 错误 1
+gmake[1]: *** [CMakeFiles/Makefile2:139：CMakeFiles/armor_detector.dir/all] 错误 2
+gmake: *** [Makefile:146：all] 错误 2

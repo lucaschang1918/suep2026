@@ -1,0 +1,4 @@
+Invoking command in '/home/rm_autoaim/suep2026/dev_ws/build/hik_camera': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/rm_autoaim/suep2026/dev_ws/build/hik_camera -- -j8 -l8
+Invoked command in '/home/rm_autoaim/suep2026/dev_ws/build/hik_camera' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/rm_autoaim/suep2026/dev_ws/build/hik_camera -- -j8 -l8
+Invoking command in '/home/rm_autoaim/suep2026/dev_ws/build/hik_camera': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/rm_autoaim/suep2026/dev_ws/build/hik_camera
+Invoked command in '/home/rm_autoaim/suep2026/dev_ws/build/hik_camera' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/rm_autoaim/suep2026/dev_ws/build/hik_camera

@@ -42,9 +42,15 @@ class ArmorDetectorNode: public rclcpp::Node
 {
 public:
    explicit ArmorDetectorNode(const rclcpp::NodeOptions & options);
+  ~ArmorDetectorNode();
   std::unique_ptr<Detector> detector_;
 private:
   void imageCallback(const sensor_msgs::msg::Image::ConstSharedPtr img_msg);
+
+    void processingLoop() ;
+  void publishArmorsAndMarkers(
+    const sensor_msgs::msg::Image::ConstSharedPtr &img_msg,
+    const std::vector<Armor> &armors);
 
 
   // rclcpp::Publisher<sensor_msgs::msg::Image>::SharedPtr result_pub_;
@@ -101,6 +107,19 @@ private:
   // image_transport::Publisher binary_img_pub_;
   image_transport::Publisher number_img_pub_;
   image_transport::Publisher result_img_pub_;
+
+    std::thread processing_thread_;
+    // std::mutex mutex_;
+    // sensor_msgs::msg::Image::ConstSharedPtr latest_img_;
+    std::atomic<bool> running_ = true;
+
+
+
+  std::mutex mutex_;
+  sensor_msgs::msg::Image::ConstSharedPtr latest_img_;
+  std::vector<Armor> latest_armors_;  // 存储检测结果
+  bool new_detection_available_ = false;
+
 };
 
 }  // namespace rm_auto_aim

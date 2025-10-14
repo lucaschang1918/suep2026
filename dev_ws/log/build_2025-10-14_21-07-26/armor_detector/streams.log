@@ -1,0 +1,48 @@
+[0.014s] Invoking command in '/home/rm_autoaim/suep2026/dev_ws/build/armor_detector': CMAKE_PREFIX_PATH=/home/rm_autoaim/suep2026/dev_ws/install/auto_aim_interfaces:/home/rm_autoaim/suep2026/dev_ws/install/rm_vision_bringup:/home/rm_autoaim/suep2026/dev_ws/install/rm_serial_driver:/home/rm_autoaim/suep2026/dev_ws/install/rm_gimbal_description:/home/rm_autoaim/suep2026/dev_ws/install/hik_camera:/home/rm_autoaim/suep2026/dev_ws/install/armor_tracker:/home/rm_autoaim/suep2026/dev_ws/install/armor_detector:/opt/ros/humble LD_LIBRARY_PATH=/home/rm_autoaim/suep2026/dev_ws/install/auto_aim_interfaces/lib:/home/rm_autoaim/suep2026/dev_ws/install/rm_serial_driver/lib:/home/rm_autoaim/suep2026/dev_ws/install/hik_camera/lib:/home/rm_autoaim/suep2026/dev_ws/install/armor_tracker/lib:/home/rm_autoaim/suep2026/dev_ws/install/armor_detector/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/opt/MVS/lib/64:/opt/MVS/lib/32 /usr/bin/cmake --build /home/rm_autoaim/suep2026/dev_ws/build/armor_detector -- -j8 -l8
+[0.073s] [ 28%] Built target armor_detector_node
+[0.079s] [ 42%] [32mBuilding CXX object CMakeFiles/armor_detector.dir/src/detector_node.cpp.o[0m
+[19.518s] [ 57%] [32m[1mLinking CXX shared library libarmor_detector.so[0m
+[21.204s] [100%] Built target armor_detector
+[21.216s] Invoked command in '/home/rm_autoaim/suep2026/dev_ws/build/armor_detector' returned '0': CMAKE_PREFIX_PATH=/home/rm_autoaim/suep2026/dev_ws/install/auto_aim_interfaces:/home/rm_autoaim/suep2026/dev_ws/install/rm_vision_bringup:/home/rm_autoaim/suep2026/dev_ws/install/rm_serial_driver:/home/rm_autoaim/suep2026/dev_ws/install/rm_gimbal_description:/home/rm_autoaim/suep2026/dev_ws/install/hik_camera:/home/rm_autoaim/suep2026/dev_ws/install/armor_tracker:/home/rm_autoaim/suep2026/dev_ws/install/armor_detector:/opt/ros/humble LD_LIBRARY_PATH=/home/rm_autoaim/suep2026/dev_ws/install/auto_aim_interfaces/lib:/home/rm_autoaim/suep2026/dev_ws/install/rm_serial_driver/lib:/home/rm_autoaim/suep2026/dev_ws/install/hik_camera/lib:/home/rm_autoaim/suep2026/dev_ws/install/armor_tracker/lib:/home/rm_autoaim/suep2026/dev_ws/install/armor_detector/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/opt/MVS/lib/64:/opt/MVS/lib/32 /usr/bin/cmake --build /home/rm_autoaim/suep2026/dev_ws/build/armor_detector -- -j8 -l8
+[21.218s] Invoking command in '/home/rm_autoaim/suep2026/dev_ws/build/armor_detector': CMAKE_PREFIX_PATH=/home/rm_autoaim/suep2026/dev_ws/install/auto_aim_interfaces:/home/rm_autoaim/suep2026/dev_ws/install/rm_vision_bringup:/home/rm_autoaim/suep2026/dev_ws/install/rm_serial_driver:/home/rm_autoaim/suep2026/dev_ws/install/rm_gimbal_description:/home/rm_autoaim/suep2026/dev_ws/install/hik_camera:/home/rm_autoaim/suep2026/dev_ws/install/armor_tracker:/home/rm_autoaim/suep2026/dev_ws/install/armor_detector:/opt/ros/humble LD_LIBRARY_PATH=/home/rm_autoaim/suep2026/dev_ws/install/auto_aim_interfaces/lib:/home/rm_autoaim/suep2026/dev_ws/install/rm_serial_driver/lib:/home/rm_autoaim/suep2026/dev_ws/install/hik_camera/lib:/home/rm_autoaim/suep2026/dev_ws/install/armor_tracker/lib:/home/rm_autoaim/suep2026/dev_ws/install/armor_detector/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/opt/MVS/lib/64:/opt/MVS/lib/32 /usr/bin/cmake --install /home/rm_autoaim/suep2026/dev_ws/build/armor_detector
+[21.224s] -- Install configuration: ""
+[21.224s] -- Up-to-date: /home/rm_autoaim/suep2026/dev_ws/install/armor_detector/lib/armor_detector/armor_detector_node
+[21.224s] -- Up-to-date: /home/rm_autoaim/suep2026/dev_ws/install/armor_detector/include
+[21.224s] -- Up-to-date: /home/rm_autoaim/suep2026/dev_ws/install/armor_detector/include/armor.hpp
+[21.224s] -- Up-to-date: /home/rm_autoaim/suep2026/dev_ws/install/armor_detector/include/detector_node.hpp
+[21.224s] -- Up-to-date: /home/rm_autoaim/suep2026/dev_ws/install/armor_detector/include/pnp_solver.hpp
+[21.224s] -- Up-to-date: /home/rm_autoaim/suep2026/dev_ws/install/armor_detector/include/detector.hpp
+[21.225s] -- Up-to-date: /home/rm_autoaim/suep2026/dev_ws/install/armor_detector/include/number_classifier.hpp
+[21.225s] -- Up-to-date: /home/rm_autoaim/suep2026/dev_ws/install/armor_detector/share/armor_detector/environment/library_path.sh
+[21.225s] -- Up-to-date: /home/rm_autoaim/suep2026/dev_ws/install/armor_detector/share/armor_detector/environment/library_path.dsv
+[21.225s] -- Installing: /home/rm_autoaim/suep2026/dev_ws/install/armor_detector/lib/libarmor_detector.so
+[21.237s] -- Set runtime path of "/home/rm_autoaim/suep2026/dev_ws/install/armor_detector/lib/libarmor_detector.so" to ""
+[21.237s] -- Up-to-date: /home/rm_autoaim/suep2026/dev_ws/install/armor_detector/share/armor_detector/model
+[21.237s] -- Up-to-date: /home/rm_autoaim/suep2026/dev_ws/install/armor_detector/share/armor_detector/model/mobilenetv3_last_int_all_new
+[21.237s] -- Up-to-date: /home/rm_autoaim/suep2026/dev_ws/install/armor_detector/share/armor_detector/model/mobilenetv3_last_int_all_new/last.xml
+[21.237s] -- Up-to-date: /home/rm_autoaim/suep2026/dev_ws/install/armor_detector/share/armor_detector/model/mobilenetv3_last_int_all_new/last.bin
+[21.237s] -- Up-to-date: /home/rm_autoaim/suep2026/dev_ws/install/armor_detector/share/armor_detector/model/label.txt
+[21.237s] -- Up-to-date: /home/rm_autoaim/suep2026/dev_ws/install/armor_detector/share/armor_detector/model/mlp.onnx
+[21.238s] -- Up-to-date: /home/rm_autoaim/suep2026/dev_ws/install/armor_detector/share/armor_detector/model/number_classifier.onnx
+[21.238s] -- Up-to-date: /home/rm_autoaim/suep2026/dev_ws/install/armor_detector/share/armor_detector/test
+[21.238s] -- Up-to-date: /home/rm_autoaim/suep2026/dev_ws/install/armor_detector/share/armor_detector/test/test.mp4
+[21.238s] -- Up-to-date: /home/rm_autoaim/suep2026/dev_ws/install/armor_detector/share/ament_index/resource_index/package_run_dependencies/armor_detector
+[21.238s] -- Up-to-date: /home/rm_autoaim/suep2026/dev_ws/install/armor_detector/share/ament_index/resource_index/parent_prefix_path/armor_detector
+[21.238s] -- Up-to-date: /home/rm_autoaim/suep2026/dev_ws/install/armor_detector/share/armor_detector/environment/ament_prefix_path.sh
+[21.238s] -- Up-to-date: /home/rm_autoaim/suep2026/dev_ws/install/armor_detector/share/armor_detector/environment/ament_prefix_path.dsv
+[21.238s] -- Up-to-date: /home/rm_autoaim/suep2026/dev_ws/install/armor_detector/share/armor_detector/environment/path.sh
+[21.238s] -- Up-to-date: /home/rm_autoaim/suep2026/dev_ws/install/armor_detector/share/armor_detector/environment/path.dsv
+[21.238s] -- Up-to-date: /home/rm_autoaim/suep2026/dev_ws/install/armor_detector/share/armor_detector/local_setup.bash
+[21.238s] -- Up-to-date: /home/rm_autoaim/suep2026/dev_ws/install/armor_detector/share/armor_detector/local_setup.sh
+[21.238s] -- Up-to-date: /home/rm_autoaim/suep2026/dev_ws/install/armor_detector/share/armor_detector/local_setup.zsh
+[21.238s] -- Up-to-date: /home/rm_autoaim/suep2026/dev_ws/install/armor_detector/share/armor_detector/local_setup.dsv
+[21.238s] -- Installing: /home/rm_autoaim/suep2026/dev_ws/install/armor_detector/share/armor_detector/package.dsv
+[21.238s] -- Up-to-date: /home/rm_autoaim/suep2026/dev_ws/install/armor_detector/share/ament_index/resource_index/packages/armor_detector
+[21.238s] -- Up-to-date: /home/rm_autoaim/suep2026/dev_ws/install/armor_detector/share/ament_index/resource_index/rclcpp_components/armor_detector
+[21.238s] -- Up-to-date: /home/rm_autoaim/suep2026/dev_ws/install/armor_detector/share/armor_detector/cmake/ament_cmake_export_dependencies-extras.cmake
+[21.238s] -- Up-to-date: /home/rm_autoaim/suep2026/dev_ws/install/armor_detector/share/armor_detector/cmake/ament_cmake_export_include_directories-extras.cmake
+[21.238s] -- Up-to-date: /home/rm_autoaim/suep2026/dev_ws/install/armor_detector/share/armor_detector/cmake/ament_cmake_export_libraries-extras.cmake
+[21.238s] -- Up-to-date: /home/rm_autoaim/suep2026/dev_ws/install/armor_detector/share/armor_detector/cmake/armor_detectorConfig.cmake
+[21.238s] -- Up-to-date: /home/rm_autoaim/suep2026/dev_ws/install/armor_detector/share/armor_detector/cmake/armor_detectorConfig-version.cmake
+[21.238s] -- Up-to-date: /home/rm_autoaim/suep2026/dev_ws/install/armor_detector/share/armor_detector/package.xml
+[21.239s] Invoked command in '/home/rm_autoaim/suep2026/dev_ws/build/armor_detector' returned '0': CMAKE_PREFIX_PATH=/home/rm_autoaim/suep2026/dev_ws/install/auto_aim_interfaces:/home/rm_autoaim/suep2026/dev_ws/install/rm_vision_bringup:/home/rm_autoaim/suep2026/dev_ws/install/rm_serial_driver:/home/rm_autoaim/suep2026/dev_ws/install/rm_gimbal_description:/home/rm_autoaim/suep2026/dev_ws/install/hik_camera:/home/rm_autoaim/suep2026/dev_ws/install/armor_tracker:/home/rm_autoaim/suep2026/dev_ws/install/armor_detector:/opt/ros/humble LD_LIBRARY_PATH=/home/rm_autoaim/suep2026/dev_ws/install/auto_aim_interfaces/lib:/home/rm_autoaim/suep2026/dev_ws/install/rm_serial_driver/lib:/home/rm_autoaim/suep2026/dev_ws/install/hik_camera/lib:/home/rm_autoaim/suep2026/dev_ws/install/armor_tracker/lib:/home/rm_autoaim/suep2026/dev_ws/install/armor_detector/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/opt/MVS/lib/64:/opt/MVS/lib/32 /usr/bin/cmake --install /home/rm_autoaim/suep2026/dev_ws/build/armor_detector

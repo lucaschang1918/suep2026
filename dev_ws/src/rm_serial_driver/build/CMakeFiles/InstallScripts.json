@@ -1,0 +1,7 @@
+{
+	"InstallScripts" : 
+	[
+		"/home/rm_autoaim/suep2026/dev_ws/src/rm_serial_driver/build/cmake_install.cmake"
+	],
+	"Parallel" : false
+}
