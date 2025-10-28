@@ -76,12 +76,12 @@ def generate_launch_description():
     )
 
     delay_serial_node = TimerAction(
-        period=1.5,
+        period=2.0,
         actions=[serial_driver_node],
     )
 
     delay_armor_tracker_node = TimerAction(
-        period=2.0,
+        period=2.5,
         actions=[armor_tracker_node],
     )
 

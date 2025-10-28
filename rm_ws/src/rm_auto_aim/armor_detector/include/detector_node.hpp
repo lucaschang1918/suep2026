@@ -49,8 +49,13 @@ private:
 
    void processingLoop() ;
 
+    std::atomic<bool> initialized_;       // 初始化完成标志
+    std::atomic<bool> running_;           // 线程运行标志
+    rclcpp::TimerBase::SharedPtr init_timer_;  // 延迟初始化定时器
+    void initialize();                    // 延迟初始化函数
 
-  // rclcpp::Publisher<sensor_msgs::msg::Image>::SharedPtr result_pub_;
+
+
 
   cv::VideoCapture cap_;
 
@@ -109,10 +114,12 @@ private:
   std::thread processing_thread_;
     std::mutex mutex_;
     sensor_msgs::msg::Image::ConstSharedPtr latest_img_;
-    std::atomic<bool> running_ = true;
+
 
 
      std::thread yolo_thread_;
+
+
 };
 
 }  // namespace rm_auto_aim

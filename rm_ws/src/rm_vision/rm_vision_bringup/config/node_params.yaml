@@ -17,7 +17,7 @@
   ros__parameters:
     debug: false
 
-    detect_color: 1
+    detect_color: 0
     binary_thres: 78
 
 

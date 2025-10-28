@@ -4,11 +4,13 @@
 
 namespace rm_serial_driver {
     FakeSerialDriver::FakeSerialDriver(const rclcpp::NodeOptions &options)
-        : Node("fake_serial_driver", options), owned_ctx_{new IoContext(2)},
-          serial_driver_{new drivers::serial_driver::SerialDriver(*owned_ctx_)} {
+        : Node("fake_serial_driver", options),
+        owned_ctx_{new IoContext(2)},
+    serial_driver_{new drivers::serial_driver::SerialDriver(*owned_ctx_)}
+    {
         RCLCPP_INFO(this->get_logger(), "Fake serial driver start");
 
-        getParams();
+        // getParams();
 
         //TF broadcaster
         timestamp_offset_ = this->declare_parameter("timestamp_offset", 0.0);
@@ -33,17 +35,17 @@ namespace rm_serial_driver {
 
         change_target_client_ = this->create_client<std_srvs::srv::Trigger>("/tracker/change");
 
-        try {
-            serial_driver_->init_port(device_name_, *device_config_);
-            if (!serial_driver_->port()->is_open()) {
-                serial_driver_->port()->open();
-                receive_thread_ = std::thread(&FakeSerialDriver::receiveData, this);
-            }
-        } catch (const std::exception &ex) {
-            RCLCPP_ERROR(
-                get_logger(), "Error creating serial port : %s - %s", device_name_.c_str(), ex.what());
-            throw ex;
-        }
+        // try {
+        //     serial_driver_->init_port(device_name_, *device_config_);
+        //     if (!serial_driver_->port()->is_open()) {
+        //         serial_driver_->port()->open();
+        receive_thread_ = std::thread(&FakeSerialDriver::receiveData, this);
+        //     }
+        // } catch (const std::exception &ex) {
+        //     RCLCPP_ERROR(
+        //         get_logger(), "Error creating serial port : %s - %s", device_name_.c_str(), ex.what());
+        //     throw ex;
+        // }
 
         // Marker 初始化
         aiming_point_.header.frame_id = "odom";
@@ -148,6 +150,8 @@ namespace rm_serial_driver {
     void FakeSerialDriver::receiveData() {
         rclcpp::Rate loop_rate(25); // 示例：限制为 100 Hz
         while (rclcpp::ok()) {
+
+            // RCLCPP_INFO(this->get_logger(), "okokok");
             //模拟接受数据
             rm_serial_driver::ReceiverPacket packet;
             set_fake_receiver_packet_random(packet, rm_auto_aim::RED);
@@ -378,4 +382,3 @@ namespace rm_serial_driver {
 #include "rclcpp_components/register_node_macro.hpp"
 
 RCLCPP_COMPONENTS_REGISTER_NODE(rm_serial_driver::FakeSerialDriver)
-

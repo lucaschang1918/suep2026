@@ -267,15 +267,13 @@ namespace rm_serial_driver {
 
             std::vector<uint8_t> data = toVector(packet);
 
-            // serial_driver_->port()->send(data);
+            serial_driver_->port()->send(data);
 
             std_msgs::msg::Float64 latency;
             latency.data = (this->now() - msg->header.stamp).seconds() * 1000.0;
             RCLCPP_DEBUG_STREAM(get_logger(), "Total latency: " + std::to_string(latency.data) + "ms");
 
             RCLCPP_INFO(get_logger(), "\n\nDEBUG Total latency: %f ms \n\n", latency.data);
-
-            RCLCPP_ERROR(get_logger(), "send ====================");
 
             latency_pub_->publish(latency);
         } catch (const std::exception &ex) {
