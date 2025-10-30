@@ -64,10 +64,10 @@ namespace rm_serial_driver {
 
 
         //将数据回传mcu
-        aim_sync_ = std::make_unique<AimSync>(aim_syncpolicy(500), aim_sub_, aim_time_info_sub_);
-        aim_sync_->registerCallback(
-            std::bind(&FakeSerialDriver::sendArmorData, this,
-                      std::placeholders::_1, std::placeholders::_2));
+        // aim_sync_ = std::make_unique<AimSync>(aim_syncpolicy(500), aim_sub_, aim_time_info_sub_);
+        // aim_sync_->registerCallback(
+        //     std::bind(&FakeSerialDriver::sendArmorData, this,
+        //               std::placeholders::_1, std::placeholders::_2));
     }
 
     void FakeSerialDriver::getParams() {

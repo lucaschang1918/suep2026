@@ -14,8 +14,8 @@ find_package(ament_cmake_auto REQUIRED)
 ament_auto_find_build_dependencies()
 
 ament_auto_add_library(${PROJECT_NAME} SHARED
-        src/rm_serial_driver.cpp
-#        src/fake.cpp
+#        src/rm_serial_driver.cpp
+        src/fake.cpp
         src/crc.cpp
 )
 
@@ -32,9 +32,9 @@ target_link_libraries(${PROJECT_NAME}
 
 rclcpp_components_register_node(${PROJECT_NAME}
 
-        PLUGIN rm_serial_driver::RMSerialDriver
+#        PLUGIN rm_serial_driver::RMSerialDriver
 
-#        PLUGIN rm_serial_driver::FakeSerialDriver  # 测试使用
+        PLUGIN rm_serial_driver::FakeSerialDriver  # 测试使用
 
         EXECUTABLE ${PROJECT_NAME}_node
 )
