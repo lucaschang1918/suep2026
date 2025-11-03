@@ -1,0 +1,17 @@
+description: Ultralytics YOLOv8_large_MobileNetV3-pose model trained on C:\Users\ssq13\Desktop\yolov8_pose_mobilenetv3\ultralytics\ultralytics\cfg\datasets\coco8-pose.yaml
+author: Ultralytics
+license: AGPL-3.0 https://ultralytics.com/license
+date: '2024-05-16T18:55:36.552941'
+version: 8.1.5
+stride: 32
+task: pose
+batch: 1
+imgsz:
+- 416
+- 416
+names:
+  0: B
+  1: R
+kpt_shape:
+- 4
+- 2

@@ -1,0 +1,88 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-13f881eea8a9bdd88488.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "buff_detector",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "buff_detector::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-buff_detector-50d6bae93a5c98fd3b77.json",
+					"name" : "buff_detector",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "buff_detector_node::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-buff_detector_node-bfae08036eb458d81b0c.json",
+					"name" : "buff_detector_node",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "buff_detector_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-buff_detector_uninstall-fac8f923a0c233f72421.json",
+					"name" : "buff_detector_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-b58599bb0b2895edfac5.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/rm_autoaim/suep2026/dev_ws/build/buff_detector",
+		"source" : "/home/rm_autoaim/suep2026/dev_ws/src/rm_buff/buff_detector"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}

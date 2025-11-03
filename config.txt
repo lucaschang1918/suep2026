@@ -1,0 +1,5 @@
+-DCMAKE_EXPORT_COMPILE_COMMANDS=ON
+-DCMAKE_PREFIX_PATH=/home/rm_autoaim/suep2026/dev_ws/install:/opt/ros/humble
+
+
+sudo udevadm trigger

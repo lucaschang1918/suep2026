@@ -1,0 +1,21 @@
+[0.007s] Invoking command in '/home/rm_autoaim/suep2026/rm_ws/build/auto_aim_interfaces': /usr/bin/cmake /home/rm_autoaim/suep2026/rm_ws/src/rm_auto_aim/auto_aim_interfaces -DCMAKE_INSTALL_PREFIX=/home/rm_autoaim/suep2026/rm_ws/install/auto_aim_interfaces
+[0.022s] [31mCMake Error at CMakeLists.txt:9 (find_package):
+[0.022s]   By not providing "Findament_cmake.cmake" in CMAKE_MODULE_PATH this project
+[0.022s]   has asked CMake to find a package configuration file provided by
+[0.022s]   "ament_cmake", but CMake did not find one.
+[0.022s] 
+[0.022s]   Could not find a package configuration file provided by "ament_cmake" with
+[0.022s]   any of the following names:
+[0.023s] 
+[0.023s]     ament_cmakeConfig.cmake
+[0.023s]     ament_cmake-config.cmake
+[0.023s] 
+[0.023s]   Add the installation prefix of "ament_cmake" to CMAKE_PREFIX_PATH or set
+[0.023s]   "ament_cmake_DIR" to a directory containing one of the above files.  If
+[0.023s]   "ament_cmake" provides a separate development package or SDK, be sure it
+[0.023s]   has been installed.
+[0.024s] 
+[0.024s] [0m
+[0.024s] -- Configuring incomplete, errors occurred!
+[0.025s] See also "/home/rm_autoaim/suep2026/rm_ws/build/auto_aim_interfaces/CMakeFiles/CMakeOutput.log".
+[0.025s] Invoked command in '/home/rm_autoaim/suep2026/rm_ws/build/auto_aim_interfaces' returned '1': /usr/bin/cmake /home/rm_autoaim/suep2026/rm_ws/src/rm_auto_aim/auto_aim_interfaces -DCMAKE_INSTALL_PREFIX=/home/rm_autoaim/suep2026/rm_ws/install/auto_aim_interfaces

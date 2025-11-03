@@ -1,0 +1,233 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-d09684027190d742e287.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17
+					]
+				},
+				{
+					"build" : "buff_interfaces__py",
+					"jsonFile" : "directory-buff_interfaces__py-6f457a2d91f049605772.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "/home/rm_autoaim/suep2026/dev_ws/build/buff_interfaces/buff_interfaces__py",
+					"targetIndexes" : 
+					[
+						4
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1
+					],
+					"name" : "buff_interfaces",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "ament_cmake_python_build_buff_interfaces_egg::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ament_cmake_python_build_buff_interfaces_egg-63218943ac512697ce24.json",
+					"name" : "ament_cmake_python_build_buff_interfaces_egg",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ament_cmake_python_copy_buff_interfaces::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ament_cmake_python_copy_buff_interfaces-19734a2791677333cc1c.json",
+					"name" : "ament_cmake_python_copy_buff_interfaces",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "buff_interfaces::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-buff_interfaces-8541b3984d2398073c50.json",
+					"name" : "buff_interfaces",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "buff_interfaces__cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-buff_interfaces__cpp-95261576eaa1a66c7c11.json",
+					"name" : "buff_interfaces__cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "buff_interfaces__py::@212c79a34fe5a92121f3",
+					"jsonFile" : "target-buff_interfaces__py-96a0d8471f5146a13409.json",
+					"name" : "buff_interfaces__py",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "buff_interfaces__rosidl_generator_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-buff_interfaces__rosidl_generator_c-b814dd2361ac8e2c2f24.json",
+					"name" : "buff_interfaces__rosidl_generator_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "buff_interfaces__rosidl_generator_py::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-buff_interfaces__rosidl_generator_py-1c36c0f261522d20f823.json",
+					"name" : "buff_interfaces__rosidl_generator_py",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "buff_interfaces__rosidl_typesupport_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-buff_interfaces__rosidl_typesupport_c-9d8194beb4cfac3a16c5.json",
+					"name" : "buff_interfaces__rosidl_typesupport_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "buff_interfaces__rosidl_typesupport_c__pyext::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-buff_interfaces__rosidl_typesupport_c__pyext-c5c63b2d4bce0da9f104.json",
+					"name" : "buff_interfaces__rosidl_typesupport_c__pyext",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "buff_interfaces__rosidl_typesupport_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-buff_interfaces__rosidl_typesupport_cpp-0c21ceb197afdaf1015c.json",
+					"name" : "buff_interfaces__rosidl_typesupport_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "buff_interfaces__rosidl_typesupport_fastrtps_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-buff_interfaces__rosidl_typesupport_fastrtps_c-bf567384e23dcabfbafc.json",
+					"name" : "buff_interfaces__rosidl_typesupport_fastrtps_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "buff_interfaces__rosidl_typesupport_fastrtps_c__pyext::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-buff_interfaces__rosidl_typesupport_fastrtps_c__pyext-67b25d3785a7fb4b9552.json",
+					"name" : "buff_interfaces__rosidl_typesupport_fastrtps_c__pyext",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "buff_interfaces__rosidl_typesupport_fastrtps_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-buff_interfaces__rosidl_typesupport_fastrtps_cpp-d1453af56268e275ca25.json",
+					"name" : "buff_interfaces__rosidl_typesupport_fastrtps_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "buff_interfaces__rosidl_typesupport_introspection_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-buff_interfaces__rosidl_typesupport_introspection_c-318c84cd5adedbcda965.json",
+					"name" : "buff_interfaces__rosidl_typesupport_introspection_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "buff_interfaces__rosidl_typesupport_introspection_c__pyext::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-buff_interfaces__rosidl_typesupport_introspection_c__pyext-7317fae20431ba9458fa.json",
+					"name" : "buff_interfaces__rosidl_typesupport_introspection_c__pyext",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "buff_interfaces__rosidl_typesupport_introspection_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-buff_interfaces__rosidl_typesupport_introspection_cpp-2e55f9d3085f27d60912.json",
+					"name" : "buff_interfaces__rosidl_typesupport_introspection_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "buff_interfaces_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-buff_interfaces_uninstall-4df0825e9e7b4d249899.json",
+					"name" : "buff_interfaces_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-ad3769b7f80d6fcf72e3.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/rm_autoaim/suep2026/dev_ws/build/buff_interfaces",
+		"source" : "/home/rm_autoaim/suep2026/dev_ws/src/rm_buff/buff_interfaces"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}

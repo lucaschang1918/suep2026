@@ -1,0 +1,106 @@
+[0.020s] Invoking command in '/home/rm_autoaim/suep2026/2025_ws/build/rm_auto_record': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/rm_autoaim/suep2026/2025_ws/src/rm_auto_record -DCMAKE_INSTALL_PREFIX=/home/rm_autoaim/suep2026/2025_ws/install/rm_auto_record
+[0.089s] -- The C compiler identification is GNU 11.4.0
+[0.146s] -- The CXX compiler identification is GNU 11.4.0
+[0.153s] -- Detecting C compiler ABI info
+[0.227s] -- Detecting C compiler ABI info - done
+[0.233s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.233s] -- Detecting C compile features
+[0.234s] -- Detecting C compile features - done
+[0.237s] -- Detecting CXX compiler ABI info
+[0.329s] -- Detecting CXX compiler ABI info - done
+[0.339s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.340s] -- Detecting CXX compile features
+[0.340s] -- Detecting CXX compile features - done
+[0.341s] -- Found ament_cmake_auto: 1.3.12 (/opt/ros/humble/share/ament_cmake_auto/cmake)
+[0.514s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.696s] -- Found rosidl_generator_c: 3.1.7 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.701s] -- Found rosidl_adapter: 3.1.7 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.710s] -- Found rosidl_generator_cpp: 3.1.7 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.720s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.737s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.778s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.781s] -- Found rmw_fastrtps_cpp: 6.2.8 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[0.887s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[0.911s] -- Found FastRTPS: /opt/ros/humble/include  
+[0.946s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.969s] -- Looking for pthread.h
+[1.088s] -- Looking for pthread.h - found
+[1.088s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[1.159s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[1.160s] -- Found Threads: TRUE  
+[1.318s] -- Found ament_lint_auto: 0.12.14 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[1.330s] [0mIn this package, headers install destination is set to `include` by ament_auto_package. It is recommended to install `include/rm_auto_record` instead and will be the default behavior of ament_auto_package from ROS 2 Kilted Kaiju. On distributions before Kilted, ament_auto_package behaves the same way when you use USE_SCOPED_HEADER_INSTALL_DIR option.[0m
+[1.335s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[1.335s] -- Configured cppcheck include dirs: /home/rm_autoaim/suep2026/2025_ws/src/rm_auto_record/include
+[1.335s] -- Configured cppcheck exclude dirs and/or files: 
+[1.337s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[1.337s] -- Configured cpplint exclude dirs and/or files: 
+[1.338s] -- Added test 'flake8' to check Python code syntax and style conventions
+[1.339s] -- Added test 'lint_cmake' to check CMake code style
+[1.339s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[1.340s] -- Added test 'xmllint' to check XML markup files
+[1.343s] -- Configuring done
+[1.347s] [33mCMake Warning (dev):
+[1.347s]   The library that is being linked to, yaml-cpp, is marked as being
+[1.347s]   deprecated by the owner.  The message provided by the developer is:
+[1.347s] 
+[1.347s]   The target yaml-cpp is deprecated and will be removed in version 0.10.0.
+[1.347s]   Use the yaml-cpp::yaml-cpp target instead.
+[1.347s] 
+[1.347s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[1.347s] [0m
+[1.348s] [33mCMake Warning (dev):
+[1.348s]   The library that is being linked to, yaml-cpp, is marked as being
+[1.348s]   deprecated by the owner.  The message provided by the developer is:
+[1.348s] 
+[1.348s]   The target yaml-cpp is deprecated and will be removed in version 0.10.0.
+[1.348s]   Use the yaml-cpp::yaml-cpp target instead.
+[1.348s] 
+[1.348s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[1.348s] [0m
+[1.359s] -- Generating done
+[1.366s] -- Build files have been written to: /home/rm_autoaim/suep2026/2025_ws/build/rm_auto_record
+[1.379s] Invoked command in '/home/rm_autoaim/suep2026/2025_ws/build/rm_auto_record' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/rm_autoaim/suep2026/2025_ws/src/rm_auto_record -DCMAKE_INSTALL_PREFIX=/home/rm_autoaim/suep2026/2025_ws/install/rm_auto_record
+[1.381s] Invoking command in '/home/rm_autoaim/suep2026/2025_ws/build/rm_auto_record': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/rm_autoaim/suep2026/2025_ws/build/rm_auto_record -- -j8 -l8
+[1.438s] [ 25%] [32mBuilding CXX object CMakeFiles/rm_auto_record_node.dir/rclcpp_components/node_main_rm_auto_record_node.cpp.o[0m
+[1.438s] [ 50%] [32mBuilding CXX object CMakeFiles/rm_auto_record.dir/src/record_node.cpp.o[0m
+[12.439s] [ 75%] [32m[1mLinking CXX executable rm_auto_record_node[0m
+[12.640s] [ 75%] Built target rm_auto_record_node
+[36.939s] [100%] [32m[1mLinking CXX shared library librm_auto_record.so[0m
+[38.136s] [100%] Built target rm_auto_record
+[38.154s] Invoked command in '/home/rm_autoaim/suep2026/2025_ws/build/rm_auto_record' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/rm_autoaim/suep2026/2025_ws/build/rm_auto_record -- -j8 -l8
+[38.157s] Invoking command in '/home/rm_autoaim/suep2026/2025_ws/build/rm_auto_record': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/rm_autoaim/suep2026/2025_ws/build/rm_auto_record
+[38.169s] -- Install configuration: ""
+[38.169s] -- Installing: /home/rm_autoaim/suep2026/2025_ws/install/rm_auto_record/lib/rm_auto_record/rm_auto_record_node
+[38.170s] -- Set runtime path of "/home/rm_autoaim/suep2026/2025_ws/install/rm_auto_record/lib/rm_auto_record/rm_auto_record_node" to ""
+[38.170s] -- Installing: /home/rm_autoaim/suep2026/2025_ws/install/rm_auto_record/include
+[38.170s] -- Installing: /home/rm_autoaim/suep2026/2025_ws/install/rm_auto_record/include/rm_auto_record
+[38.170s] -- Installing: /home/rm_autoaim/suep2026/2025_ws/install/rm_auto_record/include/rm_auto_record/record_node.hpp
+[38.171s] -- Installing: /home/rm_autoaim/suep2026/2025_ws/install/rm_auto_record/share/rm_auto_record/environment/library_path.sh
+[38.171s] -- Installing: /home/rm_autoaim/suep2026/2025_ws/install/rm_auto_record/share/rm_auto_record/environment/library_path.dsv
+[38.171s] -- Installing: /home/rm_autoaim/suep2026/2025_ws/install/rm_auto_record/lib/librm_auto_record.so
+[38.181s] -- Set runtime path of "/home/rm_autoaim/suep2026/2025_ws/install/rm_auto_record/lib/librm_auto_record.so" to ""
+[38.182s] -- Installing: /home/rm_autoaim/suep2026/2025_ws/install/rm_auto_record/share/rm_auto_record/config
+[38.182s] -- Installing: /home/rm_autoaim/suep2026/2025_ws/install/rm_auto_record/share/rm_auto_record/config/node_params.yaml
+[38.182s] -- Installing: /home/rm_autoaim/suep2026/2025_ws/install/rm_auto_record/share/rm_auto_record/launch
+[38.182s] -- Installing: /home/rm_autoaim/suep2026/2025_ws/install/rm_auto_record/share/rm_auto_record/launch/auto_record.launch.py
+[38.182s] -- Installing: /home/rm_autoaim/suep2026/2025_ws/install/rm_auto_record/share/ament_index/resource_index/package_run_dependencies/rm_auto_record
+[38.184s] -- Installing: /home/rm_autoaim/suep2026/2025_ws/install/rm_auto_record/share/ament_index/resource_index/parent_prefix_path/rm_auto_record
+[38.184s] -- Installing: /home/rm_autoaim/suep2026/2025_ws/install/rm_auto_record/share/rm_auto_record/environment/ament_prefix_path.sh
+[38.184s] -- Installing: /home/rm_autoaim/suep2026/2025_ws/install/rm_auto_record/share/rm_auto_record/environment/ament_prefix_path.dsv
+[38.184s] -- Installing: /home/rm_autoaim/suep2026/2025_ws/install/rm_auto_record/share/rm_auto_record/environment/path.sh
+[38.184s] -- Installing: /home/rm_autoaim/suep2026/2025_ws/install/rm_auto_record/share/rm_auto_record/environment/path.dsv
+[38.184s] -- Installing: /home/rm_autoaim/suep2026/2025_ws/install/rm_auto_record/share/rm_auto_record/local_setup.bash
+[38.184s] -- Installing: /home/rm_autoaim/suep2026/2025_ws/install/rm_auto_record/share/rm_auto_record/local_setup.sh
+[38.184s] -- Installing: /home/rm_autoaim/suep2026/2025_ws/install/rm_auto_record/share/rm_auto_record/local_setup.zsh
+[38.184s] -- Installing: /home/rm_autoaim/suep2026/2025_ws/install/rm_auto_record/share/rm_auto_record/local_setup.dsv
+[38.185s] -- Installing: /home/rm_autoaim/suep2026/2025_ws/install/rm_auto_record/share/rm_auto_record/package.dsv
+[38.185s] -- Installing: /home/rm_autoaim/suep2026/2025_ws/install/rm_auto_record/share/ament_index/resource_index/packages/rm_auto_record
+[38.185s] -- Installing: /home/rm_autoaim/suep2026/2025_ws/install/rm_auto_record/share/ament_index/resource_index/rclcpp_components/rm_auto_record
+[38.185s] -- Installing: /home/rm_autoaim/suep2026/2025_ws/install/rm_auto_record/share/rm_auto_record/cmake/ament_cmake_export_dependencies-extras.cmake
+[38.185s] -- Installing: /home/rm_autoaim/suep2026/2025_ws/install/rm_auto_record/share/rm_auto_record/cmake/ament_cmake_export_include_directories-extras.cmake
+[38.185s] -- Installing: /home/rm_autoaim/suep2026/2025_ws/install/rm_auto_record/share/rm_auto_record/cmake/ament_cmake_export_libraries-extras.cmake
+[38.186s] -- Installing: /home/rm_autoaim/suep2026/2025_ws/install/rm_auto_record/share/rm_auto_record/cmake/rm_auto_recordConfig.cmake
+[38.186s] -- Installing: /home/rm_autoaim/suep2026/2025_ws/install/rm_auto_record/share/rm_auto_record/cmake/rm_auto_recordConfig-version.cmake
+[38.186s] -- Installing: /home/rm_autoaim/suep2026/2025_ws/install/rm_auto_record/share/rm_auto_record/package.xml
+[38.191s] Invoked command in '/home/rm_autoaim/suep2026/2025_ws/build/rm_auto_record' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/rm_autoaim/suep2026/2025_ws/build/rm_auto_record

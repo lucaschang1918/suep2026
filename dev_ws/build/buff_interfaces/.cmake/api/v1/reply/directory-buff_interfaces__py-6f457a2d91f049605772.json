@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "buff_interfaces__py",
+		"source" : "/home/rm_autoaim/suep2026/dev_ws/build/buff_interfaces/buff_interfaces__py"
+	}
+}

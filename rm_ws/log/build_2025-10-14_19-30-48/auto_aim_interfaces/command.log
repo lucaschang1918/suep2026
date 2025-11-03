@@ -1,0 +1,2 @@
+Invoking command in '/home/rm_autoaim/suep2026/rm_ws/build/auto_aim_interfaces': /usr/bin/cmake /home/rm_autoaim/suep2026/rm_ws/src/rm_auto_aim/auto_aim_interfaces -DCMAKE_INSTALL_PREFIX=/home/rm_autoaim/suep2026/rm_ws/install/auto_aim_interfaces
+Invoked command in '/home/rm_autoaim/suep2026/rm_ws/build/auto_aim_interfaces' returned '1': /usr/bin/cmake /home/rm_autoaim/suep2026/rm_ws/src/rm_auto_aim/auto_aim_interfaces -DCMAKE_INSTALL_PREFIX=/home/rm_autoaim/suep2026/rm_ws/install/auto_aim_interfaces

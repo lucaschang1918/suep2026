@@ -1,0 +1,88 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-f6dec5d13e8c9194286a.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "rm_auto_record",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "rm_auto_record::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-rm_auto_record-066a98eb32355fb67ea1.json",
+					"name" : "rm_auto_record",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "rm_auto_record_node::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-rm_auto_record_node-3ae2d82b21ec4e8373ea.json",
+					"name" : "rm_auto_record_node",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "rm_auto_record_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-rm_auto_record_uninstall-e0e261e4dd316fc943be.json",
+					"name" : "rm_auto_record_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-6ad3a3e9380bdfd5f81b.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/rm_autoaim/suep2026/2025_ws/build/rm_auto_record",
+		"source" : "/home/rm_autoaim/suep2026/2025_ws/src/rm_auto_record"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}

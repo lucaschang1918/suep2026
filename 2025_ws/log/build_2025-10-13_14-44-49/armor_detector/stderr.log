@@ -1,0 +1,13 @@
+[0mIn this package, headers install destination is set to `include` by ament_auto_package. It is recommended to install `include/armor_detector` instead and will be the default behavior of ament_auto_package from ROS 2 Kilted Kaiju. On distributions before Kilted, ament_auto_package behaves the same way when you use USE_SCOPED_HEADER_INSTALL_DIR option.[0m
+In file included from [01m[K/home/rm_autoaim/suep2026/2025_ws/src/rm_auto_aim/armor_detector/src/inference.cpp:1[m[K:
+[01m[K/opt/intel/openvino_2023.3.0/runtime/include/ie/ie_core.hpp:18:10:[m[K [01;35m[Kwarning: [m[K#warning ("The Inference Engine API is deprecated and will be removed in the 2024.0 release. For instructions on transitioning to the new API, please refer to https://docs.openvino.ai/latest/openvino_2_0_transition_guide.html") [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wcpp-Wcpp]8;;[m[K]
+   18 | #        [01;35m[Kwarning[m[K("The Inference Engine API is deprecated and will be removed in the 2024.0 release. For instructions on transitioning to the new API, please refer to https://docs.openvino.ai/latest/openvino_2_0_transition_guide.html")
+      |          [01;35m[K^~~~~~~[m[K
+In file included from [01m[K/opt/intel/openvino_2023.3.0/runtime/include/ie/ie_icnn_network.hpp:30[m[K,
+                 from [01m[K/opt/intel/openvino_2023.3.0/runtime/include/ie/cpp/ie_cnn_network.h:31[m[K,
+                 from [01m[K/opt/intel/openvino_2023.3.0/runtime/include/ie/cpp/ie_executable_network.hpp:29[m[K,
+                 from [01m[K/opt/intel/openvino_2023.3.0/runtime/include/ie/ie_core.hpp:28[m[K,
+                 from [01m[K/home/rm_autoaim/suep2026/2025_ws/src/rm_auto_aim/armor_detector/src/inference.cpp:1[m[K:
+[01m[K/opt/intel/openvino_2023.3.0/runtime/include/ngraph/function.hpp:13:10:[m[K [01;35m[Kwarning: [m[K#warning ("The nGraph API is deprecated and will be removed in the 2024.0 release. For instructions on transitioning to the new API, please refer to https://docs.openvino.ai/latest/openvino_2_0_transition_guide.html") [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wcpp-Wcpp]8;;[m[K]
+   13 | #        [01;35m[Kwarning[m[K("The nGraph API is deprecated and will be removed in the 2024.0 release. For instructions on transitioning to the new API, please refer to https://docs.openvino.ai/latest/openvino_2_0_transition_guide.html")
+      |          [01;35m[K^~~~~~~[m[K

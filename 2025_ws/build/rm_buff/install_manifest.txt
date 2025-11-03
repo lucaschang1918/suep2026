@@ -1,0 +1,15 @@
+/home/rm_autoaim/suep2026/2025_ws/install/rm_buff/share/ament_index/resource_index/package_run_dependencies/rm_buff
+/home/rm_autoaim/suep2026/2025_ws/install/rm_buff/share/ament_index/resource_index/parent_prefix_path/rm_buff
+/home/rm_autoaim/suep2026/2025_ws/install/rm_buff/share/rm_buff/environment/ament_prefix_path.sh
+/home/rm_autoaim/suep2026/2025_ws/install/rm_buff/share/rm_buff/environment/ament_prefix_path.dsv
+/home/rm_autoaim/suep2026/2025_ws/install/rm_buff/share/rm_buff/environment/path.sh
+/home/rm_autoaim/suep2026/2025_ws/install/rm_buff/share/rm_buff/environment/path.dsv
+/home/rm_autoaim/suep2026/2025_ws/install/rm_buff/share/rm_buff/local_setup.bash
+/home/rm_autoaim/suep2026/2025_ws/install/rm_buff/share/rm_buff/local_setup.sh
+/home/rm_autoaim/suep2026/2025_ws/install/rm_buff/share/rm_buff/local_setup.zsh
+/home/rm_autoaim/suep2026/2025_ws/install/rm_buff/share/rm_buff/local_setup.dsv
+/home/rm_autoaim/suep2026/2025_ws/install/rm_buff/share/rm_buff/package.dsv
+/home/rm_autoaim/suep2026/2025_ws/install/rm_buff/share/ament_index/resource_index/packages/rm_buff
+/home/rm_autoaim/suep2026/2025_ws/install/rm_buff/share/rm_buff/cmake/rm_buffConfig.cmake
+/home/rm_autoaim/suep2026/2025_ws/install/rm_buff/share/rm_buff/cmake/rm_buffConfig-version.cmake
+/home/rm_autoaim/suep2026/2025_ws/install/rm_buff/share/rm_buff/package.xml

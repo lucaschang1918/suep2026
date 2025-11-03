@@ -1,0 +1,11 @@
+/home/rm_autoaim/suep2026/2025_ws/build/rm_auto_record/CMakeFiles/uninstall.dir
+/home/rm_autoaim/suep2026/2025_ws/build/rm_auto_record/CMakeFiles/rm_auto_record_uninstall.dir
+/home/rm_autoaim/suep2026/2025_ws/build/rm_auto_record/CMakeFiles/rm_auto_record.dir
+/home/rm_autoaim/suep2026/2025_ws/build/rm_auto_record/CMakeFiles/rm_auto_record_node.dir
+/home/rm_autoaim/suep2026/2025_ws/build/rm_auto_record/CMakeFiles/test.dir
+/home/rm_autoaim/suep2026/2025_ws/build/rm_auto_record/CMakeFiles/edit_cache.dir
+/home/rm_autoaim/suep2026/2025_ws/build/rm_auto_record/CMakeFiles/rebuild_cache.dir
+/home/rm_autoaim/suep2026/2025_ws/build/rm_auto_record/CMakeFiles/list_install_components.dir
+/home/rm_autoaim/suep2026/2025_ws/build/rm_auto_record/CMakeFiles/install.dir
+/home/rm_autoaim/suep2026/2025_ws/build/rm_auto_record/CMakeFiles/install/local.dir
+/home/rm_autoaim/suep2026/2025_ws/build/rm_auto_record/CMakeFiles/install/strip.dir

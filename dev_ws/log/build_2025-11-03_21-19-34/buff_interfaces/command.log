@@ -1,0 +1,6 @@
+Invoking command in '/home/rm_autoaim/suep2026/dev_ws/build/buff_interfaces': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/rm_autoaim/suep2026/dev_ws/src/rm_buff/buff_interfaces -DCMAKE_INSTALL_PREFIX=/home/rm_autoaim/suep2026/dev_ws/install/buff_interfaces
+Invoked command in '/home/rm_autoaim/suep2026/dev_ws/build/buff_interfaces' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/rm_autoaim/suep2026/dev_ws/src/rm_buff/buff_interfaces -DCMAKE_INSTALL_PREFIX=/home/rm_autoaim/suep2026/dev_ws/install/buff_interfaces
+Invoking command in '/home/rm_autoaim/suep2026/dev_ws/build/buff_interfaces': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/rm_autoaim/suep2026/dev_ws/build/buff_interfaces -- -j8 -l8
+Invoked command in '/home/rm_autoaim/suep2026/dev_ws/build/buff_interfaces' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/rm_autoaim/suep2026/dev_ws/build/buff_interfaces -- -j8 -l8
+Invoking command in '/home/rm_autoaim/suep2026/dev_ws/build/buff_interfaces': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/rm_autoaim/suep2026/dev_ws/build/buff_interfaces
+Invoked command in '/home/rm_autoaim/suep2026/dev_ws/build/buff_interfaces' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/rm_autoaim/suep2026/dev_ws/build/buff_interfaces

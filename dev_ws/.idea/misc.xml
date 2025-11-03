@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Black">
+    <option name="sdkName" value="Python 3.10" />
+  </component>
+  <component name="CMakePythonSetting">
+    <option name="pythonIntegrationState" value="YES" />
+  </component>
+  <component name="CMakeWorkspace" PROJECT_DIR="$PROJECT_DIR$/src/rm_serial_driver">
+    <contentRoot DIR="$PROJECT_DIR$" />
+  </component>
+  <component name="CidrRootsConfiguration">
+    <sourceRoots>
+      <file path="$PROJECT_DIR$/src/hik_camera" />
+      <file path="$PROJECT_DIR$/src/rm_auto_aim" />
+      <file path="$PROJECT_DIR$/src/rm_gimbal_description" />
+      <file path="$PROJECT_DIR$/src/rm_serial_driver" />
+      <file path="$PROJECT_DIR$/src/rm_vision" />
+    </sourceRoots>
+  </component>
+</project>

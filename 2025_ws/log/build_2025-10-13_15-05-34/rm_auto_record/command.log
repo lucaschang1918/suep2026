@@ -1,0 +1,4 @@
+Invoking command in '/home/rm_autoaim/suep2026/2025_ws/build/rm_auto_record': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/rm_autoaim/suep2026/2025_ws/build/rm_auto_record -- -j8 -l8
+Invoked command in '/home/rm_autoaim/suep2026/2025_ws/build/rm_auto_record' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/rm_autoaim/suep2026/2025_ws/build/rm_auto_record -- -j8 -l8
+Invoking command in '/home/rm_autoaim/suep2026/2025_ws/build/rm_auto_record': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/rm_autoaim/suep2026/2025_ws/build/rm_auto_record
+Invoked command in '/home/rm_autoaim/suep2026/2025_ws/build/rm_auto_record' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/rm_autoaim/suep2026/2025_ws/build/rm_auto_record

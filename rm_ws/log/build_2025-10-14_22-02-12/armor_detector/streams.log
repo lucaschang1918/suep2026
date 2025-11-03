@@ -1,0 +1,35 @@
+[0.022s] Invoking command in '/home/rm_autoaim/suep2026/rm_ws/build/armor_detector': CMAKE_PREFIX_PATH=/home/rm_autoaim/suep2026/rm_ws/install/auto_aim_interfaces:/home/rm_autoaim/suep2026/rm_ws/install/rm_vision_bringup:/home/rm_autoaim/suep2026/rm_ws/install/rm_serial_driver:/home/rm_autoaim/suep2026/rm_ws/install/rm_gimbal_description:/home/rm_autoaim/suep2026/rm_ws/install/hik_camera:/home/rm_autoaim/suep2026/rm_ws/install/armor_tracker:/home/rm_autoaim/suep2026/rm_ws/install/armor_detector:/opt/ros/humble LD_LIBRARY_PATH=/home/rm_autoaim/suep2026/rm_ws/install/auto_aim_interfaces/lib:/home/rm_autoaim/suep2026/rm_ws/install/rm_serial_driver/lib:/home/rm_autoaim/suep2026/rm_ws/install/hik_camera/lib:/home/rm_autoaim/suep2026/rm_ws/install/armor_tracker/lib:/home/rm_autoaim/suep2026/rm_ws/install/armor_detector/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/opt/MVS/lib/64:/opt/MVS/lib/32 /usr/bin/cmake --build /home/rm_autoaim/suep2026/rm_ws/build/armor_detector -- -j8 -l8
+[0.087s] [35m[1mConsolidate compiler generated dependencies of target armor_detector[0m
+[0.097s] [ 28%] Built target armor_detector_node
+[0.122s] [ 42%] [32mBuilding CXX object CMakeFiles/armor_detector.dir/src/detector_node.cpp.o[0m
+[3.915s] In file included from [01m[K/home/rm_autoaim/suep2026/rm_ws/src/rm_auto_aim/armor_detector/src/detector_node.cpp:1[m[K:
+[3.915s] [01m[K/home/rm_autoaim/suep2026/rm_ws/src/rm_auto_aim/armor_detector/include/detector_node.hpp:60:41:[m[K [01;31m[Kerror: [m[Kredeclaration of ‘[01m[Kstd::atomic<bool> rm_auto_aim::ArmorDetectorNode::initialized_[m[K’
+[3.915s]    60 |     std::atomic<bool> initialized_{false[01;31m[K}[m[K;  // 新增:初始化标志
+[3.915s]       |                                         [01;31m[K^[m[K
+[3.915s] [01m[K/home/rm_autoaim/suep2026/rm_ws/src/rm_auto_aim/armor_detector/include/detector_node.hpp:52:23:[m[K [01;36m[Knote: [m[Kprevious declaration ‘[01m[Kstd::atomic<bool> rm_auto_aim::ArmorDetectorNode::initialized_[m[K’
+[3.915s]    52 |     std::atomic<bool> [01;36m[Kinitialized_[m[K;       // 初始化完成标志
+[3.915s]       |                       [01;36m[K^~~~~~~~~~~~[m[K
+[4.089s] [01m[K/home/rm_autoaim/suep2026/rm_ws/src/rm_auto_aim/armor_detector/include/detector_node.hpp:119:34:[m[K [01;31m[Kerror: [m[Kredeclaration of ‘[01m[Kstd::atomic<bool> rm_auto_aim::ArmorDetectorNode::running_[m[K’
+[4.089s]   119 |     std::atomic<bool> running_ = [01;31m[Ktrue[m[K;
+[4.089s]       |                                  [01;31m[K^~~~[m[K
+[4.089s] [01m[K/home/rm_autoaim/suep2026/rm_ws/src/rm_auto_aim/armor_detector/include/detector_node.hpp:53:23:[m[K [01;36m[Knote: [m[Kprevious declaration ‘[01m[Kstd::atomic<bool> rm_auto_aim::ArmorDetectorNode::running_[m[K’
+[4.089s]    53 |     std::atomic<bool> [01;36m[Krunning_[m[K;           // 线程运行标志
+[4.089s]       |                       [01;36m[K^~~~~~~~[m[K
+[4.262s] [01m[K/home/rm_autoaim/suep2026/rm_ws/src/rm_auto_aim/armor_detector/src/detector_node.cpp:[m[K In member function ‘[01m[Kvoid rm_auto_aim::ArmorDetectorNode::processingLoop()[m[K’:
+[4.262s] [01m[K/home/rm_autoaim/suep2026/rm_ws/src/rm_auto_aim/armor_detector/src/detector_node.cpp:182:53:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[Ksize[m[K’ in ‘[01m[Karmor.rm_auto_aim::Armor::objects_keypoints[m[K’, which is of non-class type ‘[01m[Kconst Point2f [4][m[K’ {aka ‘[01m[Kconst cv::Point_<float> [4][m[K’}
+[4.262s]   182 |                         if (armor.objects_keypoints.[01;31m[Ksize[m[K() < 4) {
+[4.262s]       |                                                     [01;31m[K^~~~[m[K
+[4.262s] In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+[4.262s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+[4.262s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+[4.262s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/node.hpp:40[m[K,
+[4.262s]                  from [01m[K/opt/ros/humble/include/image_transport/image_transport/image_transport.hpp:37[m[K,
+[4.262s]                  from [01m[K/home/rm_autoaim/suep2026/rm_ws/src/rm_auto_aim/armor_detector/include/detector_node.hpp:10[m[K,
+[4.262s]                  from [01m[K/home/rm_autoaim/suep2026/rm_ws/src/rm_auto_aim/armor_detector/src/detector_node.cpp:1[m[K:
+[4.262s] [01m[K/home/rm_autoaim/suep2026/rm_ws/src/rm_auto_aim/armor_detector/src/detector_node.cpp:184:64:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[Ksize[m[K’ in ‘[01m[Karmor.rm_auto_aim::Armor::objects_keypoints[m[K’, which is of non-class type ‘[01m[Kconst Point2f [4][m[K’ {aka ‘[01m[Kconst cv::Point_<float> [4][m[K’}
+[4.262s]   184 |                                        armor.objects_keypoints.[01;31m[Ksize[m[K());
+[4.262s]       |                                                                [01;31m[K^~~~[m[K
+[10.254s] gmake[2]: *** [CMakeFiles/armor_detector.dir/build.make:90：CMakeFiles/armor_detector.dir/src/detector_node.cpp.o] 错误 1
+[10.254s] gmake[1]: *** [CMakeFiles/Makefile2:139：CMakeFiles/armor_detector.dir/all] 错误 2
+[10.254s] gmake: *** [Makefile:146：all] 错误 2
+[10.256s] Invoked command in '/home/rm_autoaim/suep2026/rm_ws/build/armor_detector' returned '2': CMAKE_PREFIX_PATH=/home/rm_autoaim/suep2026/rm_ws/install/auto_aim_interfaces:/home/rm_autoaim/suep2026/rm_ws/install/rm_vision_bringup:/home/rm_autoaim/suep2026/rm_ws/install/rm_serial_driver:/home/rm_autoaim/suep2026/rm_ws/install/rm_gimbal_description:/home/rm_autoaim/suep2026/rm_ws/install/hik_camera:/home/rm_autoaim/suep2026/rm_ws/install/armor_tracker:/home/rm_autoaim/suep2026/rm_ws/install/armor_detector:/opt/ros/humble LD_LIBRARY_PATH=/home/rm_autoaim/suep2026/rm_ws/install/auto_aim_interfaces/lib:/home/rm_autoaim/suep2026/rm_ws/install/rm_serial_driver/lib:/home/rm_autoaim/suep2026/rm_ws/install/hik_camera/lib:/home/rm_autoaim/suep2026/rm_ws/install/armor_tracker/lib:/home/rm_autoaim/suep2026/rm_ws/install/armor_detector/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/opt/MVS/lib/64:/opt/MVS/lib/32 /usr/bin/cmake --build /home/rm_autoaim/suep2026/rm_ws/build/armor_detector -- -j8 -l8

@@ -1,0 +1,81 @@
+[0.029s] Invoking command in '/home/rm_autoaim/suep2026/dev_ws/build/armor_tracker': AMENT_PREFIX_PATH=/home/rm_autoaim/suep2026/dev_ws/install/auto_aim_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/rm_autoaim/suep2026/dev_ws/install/auto_aim_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/rm_autoaim/suep2026/dev_ws/install/auto_aim_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/rm_autoaim/suep2026/dev_ws/install/auto_aim_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake /home/rm_autoaim/suep2026/dev_ws/src/rm_auto_aim/armor_tracker -DCMAKE_INSTALL_PREFIX=/home/rm_autoaim/suep2026/dev_ws/install/armor_tracker
+[0.136s] -- The C compiler identification is GNU 11.4.0
+[0.216s] -- The CXX compiler identification is GNU 11.4.0
+[0.229s] -- Detecting C compiler ABI info
+[0.355s] -- Detecting C compiler ABI info - done
+[0.387s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.387s] -- Detecting C compile features
+[0.387s] -- Detecting C compile features - done
+[0.397s] -- Detecting CXX compiler ABI info
+[0.639s] -- Detecting CXX compiler ABI info - done
+[0.656s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.656s] -- Detecting CXX compile features
+[0.659s] -- Detecting CXX compile features - done
+[0.662s] -- Found ament_cmake_auto: 1.3.12 (/opt/ros/humble/share/ament_cmake_auto/cmake)
+[1.012s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[1.394s] -- Found rosidl_generator_c: 3.1.7 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[1.403s] -- Found rosidl_adapter: 3.1.7 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[1.421s] -- Found rosidl_generator_cpp: 3.1.7 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[1.456s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.510s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.648s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[1.658s] -- Found rmw_fastrtps_cpp: 6.2.8 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[1.931s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[2.003s] -- Found FastRTPS: /opt/ros/humble/include  
+[2.119s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[2.141s] -- Looking for pthread.h
+[2.350s] -- Looking for pthread.h - found
+[2.350s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[2.708s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[2.709s] -- Found Threads: TRUE  
+[3.358s] -- Found eigen3_cmake_module: 0.1.1 (/opt/ros/humble/share/eigen3_cmake_module/cmake)
+[3.362s] -- Found Eigen3: TRUE (found version "3.4.0") 
+[3.362s] -- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+[3.632s] [0mIn this package, headers install destination is set to `include` by ament_auto_package. It is recommended to install `include/armor_tracker` instead and will be the default behavior of ament_auto_package from ROS 2 Kilted Kaiju. On distributions before Kilted, ament_auto_package behaves the same way when you use USE_SCOPED_HEADER_INSTALL_DIR option.[0m
+[3.652s] -- Configuring done
+[3.710s] -- Generating done
+[3.732s] -- Build files have been written to: /home/rm_autoaim/suep2026/dev_ws/build/armor_tracker
+[3.783s] Invoked command in '/home/rm_autoaim/suep2026/dev_ws/build/armor_tracker' returned '0': AMENT_PREFIX_PATH=/home/rm_autoaim/suep2026/dev_ws/install/auto_aim_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/rm_autoaim/suep2026/dev_ws/install/auto_aim_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/rm_autoaim/suep2026/dev_ws/install/auto_aim_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/rm_autoaim/suep2026/dev_ws/install/auto_aim_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake /home/rm_autoaim/suep2026/dev_ws/src/rm_auto_aim/armor_tracker -DCMAKE_INSTALL_PREFIX=/home/rm_autoaim/suep2026/dev_ws/install/armor_tracker
+[3.788s] Invoking command in '/home/rm_autoaim/suep2026/dev_ws/build/armor_tracker': AMENT_PREFIX_PATH=/home/rm_autoaim/suep2026/dev_ws/install/auto_aim_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/rm_autoaim/suep2026/dev_ws/install/auto_aim_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/rm_autoaim/suep2026/dev_ws/install/auto_aim_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/rm_autoaim/suep2026/dev_ws/install/auto_aim_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/rm_autoaim/suep2026/dev_ws/build/armor_tracker -- -j8 -l8
+[3.971s] [ 16%] [32mBuilding CXX object CMakeFiles/armor_tracker.dir/src/extended_kalman_filter.cpp.o[0m
+[3.976s] [ 33%] [32mBuilding CXX object CMakeFiles/armor_tracker.dir/src/tracker_node.cpp.o[0m
+[3.977s] [ 50%] [32mBuilding CXX object CMakeFiles/armor_tracker_node.dir/rclcpp_components/node_main_armor_tracker_node.cpp.o[0m
+[3.987s] [ 66%] [32mBuilding CXX object CMakeFiles/armor_tracker.dir/src/tracker.cpp.o[0m
+[17.463s] [ 83%] [32m[1mLinking CXX executable armor_tracker_node[0m
+[18.007s] [ 83%] Built target armor_tracker_node
+[27.982s] [100%] [32m[1mLinking CXX shared library libarmor_tracker.so[0m
+[29.535s] [100%] Built target armor_tracker
+[29.549s] Invoked command in '/home/rm_autoaim/suep2026/dev_ws/build/armor_tracker' returned '0': AMENT_PREFIX_PATH=/home/rm_autoaim/suep2026/dev_ws/install/auto_aim_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/rm_autoaim/suep2026/dev_ws/install/auto_aim_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/rm_autoaim/suep2026/dev_ws/install/auto_aim_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/rm_autoaim/suep2026/dev_ws/install/auto_aim_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/rm_autoaim/suep2026/dev_ws/build/armor_tracker -- -j8 -l8
+[29.551s] Invoking command in '/home/rm_autoaim/suep2026/dev_ws/build/armor_tracker': AMENT_PREFIX_PATH=/home/rm_autoaim/suep2026/dev_ws/install/auto_aim_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/rm_autoaim/suep2026/dev_ws/install/auto_aim_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/rm_autoaim/suep2026/dev_ws/install/auto_aim_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/rm_autoaim/suep2026/dev_ws/install/auto_aim_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/rm_autoaim/suep2026/dev_ws/build/armor_tracker
+[29.560s] -- Install configuration: ""
+[29.560s] -- Installing: /home/rm_autoaim/suep2026/dev_ws/install/armor_tracker/lib/armor_tracker/armor_tracker_node
+[29.560s] -- Set runtime path of "/home/rm_autoaim/suep2026/dev_ws/install/armor_tracker/lib/armor_tracker/armor_tracker_node" to ""
+[29.561s] -- Installing: /home/rm_autoaim/suep2026/dev_ws/install/armor_tracker/include
+[29.561s] -- Installing: /home/rm_autoaim/suep2026/dev_ws/install/armor_tracker/include/armor_tracker
+[29.561s] -- Installing: /home/rm_autoaim/suep2026/dev_ws/install/armor_tracker/include/armor_tracker/tracker.hpp
+[29.561s] -- Installing: /home/rm_autoaim/suep2026/dev_ws/install/armor_tracker/include/armor_tracker/tracker_node.hpp
+[29.561s] -- Installing: /home/rm_autoaim/suep2026/dev_ws/install/armor_tracker/include/armor_tracker/extended_kalman_filter.hpp
+[29.561s] -- Installing: /home/rm_autoaim/suep2026/dev_ws/install/armor_tracker/share/armor_tracker/environment/library_path.sh
+[29.561s] -- Installing: /home/rm_autoaim/suep2026/dev_ws/install/armor_tracker/share/armor_tracker/environment/library_path.dsv
+[29.563s] -- Installing: /home/rm_autoaim/suep2026/dev_ws/install/armor_tracker/lib/libarmor_tracker.so
+[29.571s] -- Set runtime path of "/home/rm_autoaim/suep2026/dev_ws/install/armor_tracker/lib/libarmor_tracker.so" to ""
+[29.571s] -- Installing: /home/rm_autoaim/suep2026/dev_ws/install/armor_tracker/share/ament_index/resource_index/package_run_dependencies/armor_tracker
+[29.572s] -- Installing: /home/rm_autoaim/suep2026/dev_ws/install/armor_tracker/share/ament_index/resource_index/parent_prefix_path/armor_tracker
+[29.572s] -- Installing: /home/rm_autoaim/suep2026/dev_ws/install/armor_tracker/share/armor_tracker/environment/ament_prefix_path.sh
+[29.572s] -- Installing: /home/rm_autoaim/suep2026/dev_ws/install/armor_tracker/share/armor_tracker/environment/ament_prefix_path.dsv
+[29.572s] -- Installing: /home/rm_autoaim/suep2026/dev_ws/install/armor_tracker/share/armor_tracker/environment/path.sh
+[29.572s] -- Installing: /home/rm_autoaim/suep2026/dev_ws/install/armor_tracker/share/armor_tracker/environment/path.dsv
+[29.572s] -- Installing: /home/rm_autoaim/suep2026/dev_ws/install/armor_tracker/share/armor_tracker/local_setup.bash
+[29.572s] -- Installing: /home/rm_autoaim/suep2026/dev_ws/install/armor_tracker/share/armor_tracker/local_setup.sh
+[29.572s] -- Installing: /home/rm_autoaim/suep2026/dev_ws/install/armor_tracker/share/armor_tracker/local_setup.zsh
+[29.572s] -- Installing: /home/rm_autoaim/suep2026/dev_ws/install/armor_tracker/share/armor_tracker/local_setup.dsv
+[29.572s] -- Installing: /home/rm_autoaim/suep2026/dev_ws/install/armor_tracker/share/armor_tracker/package.dsv
+[29.572s] -- Installing: /home/rm_autoaim/suep2026/dev_ws/install/armor_tracker/share/ament_index/resource_index/packages/armor_tracker
+[29.574s] -- Installing: /home/rm_autoaim/suep2026/dev_ws/install/armor_tracker/share/ament_index/resource_index/rclcpp_components/armor_tracker
+[29.574s] -- Installing: /home/rm_autoaim/suep2026/dev_ws/install/armor_tracker/share/armor_tracker/cmake/ament_cmake_export_dependencies-extras.cmake
+[29.574s] -- Installing: /home/rm_autoaim/suep2026/dev_ws/install/armor_tracker/share/armor_tracker/cmake/ament_cmake_export_include_directories-extras.cmake
+[29.574s] -- Installing: /home/rm_autoaim/suep2026/dev_ws/install/armor_tracker/share/armor_tracker/cmake/ament_cmake_export_libraries-extras.cmake
+[29.574s] -- Installing: /home/rm_autoaim/suep2026/dev_ws/install/armor_tracker/share/armor_tracker/cmake/armor_trackerConfig.cmake
+[29.574s] -- Installing: /home/rm_autoaim/suep2026/dev_ws/install/armor_tracker/share/armor_tracker/cmake/armor_trackerConfig-version.cmake
+[29.574s] -- Installing: /home/rm_autoaim/suep2026/dev_ws/install/armor_tracker/share/armor_tracker/package.xml
+[29.576s] Invoked command in '/home/rm_autoaim/suep2026/dev_ws/build/armor_tracker' returned '0': AMENT_PREFIX_PATH=/home/rm_autoaim/suep2026/dev_ws/install/auto_aim_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/rm_autoaim/suep2026/dev_ws/install/auto_aim_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/rm_autoaim/suep2026/dev_ws/install/auto_aim_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/rm_autoaim/suep2026/dev_ws/install/auto_aim_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/rm_autoaim/suep2026/dev_ws/build/armor_tracker

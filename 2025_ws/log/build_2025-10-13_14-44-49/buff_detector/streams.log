@@ -1,0 +1,96 @@
+[0.012s] Invoking command in '/home/rm_autoaim/suep2026/2025_ws/build/buff_detector': CMAKE_PREFIX_PATH=/home/rm_autoaim/suep2026/2025_ws/install/buff_interfaces:/home/rm_autoaim/suep2026/2025_ws/install/rm_vision_bringup:/home/rm_autoaim/suep2026/2025_ws/install/rm_buff_bringup:/home/rm_autoaim/suep2026/2025_ws/install/rm_serial_driver:/home/rm_autoaim/suep2026/2025_ws/install/rm_gimbal_description:/home/rm_autoaim/suep2026/2025_ws/install/rm_buff:/home/rm_autoaim/suep2026/2025_ws/install/rm_auto_record:/home/rm_autoaim/suep2026/2025_ws/install/rm_auto_aim:/home/rm_autoaim/suep2026/2025_ws/install/hik_camera:/home/rm_autoaim/suep2026/2025_ws/install/buff_tracker:/home/rm_autoaim/suep2026/2025_ws/install/buff_detector:/home/rm_autoaim/suep2026/2025_ws/install/armor_tracker:/home/rm_autoaim/suep2026/2025_ws/install/armor_detector:/home/rm_autoaim/suep2026/2025_ws/install/auto_aim_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/rm_autoaim/suep2026/2025_ws/install/buff_interfaces/lib:/home/rm_autoaim/suep2026/2025_ws/install/rm_serial_driver/lib:/home/rm_autoaim/suep2026/2025_ws/install/rm_auto_record/lib:/home/rm_autoaim/suep2026/2025_ws/install/hik_camera/lib:/home/rm_autoaim/suep2026/2025_ws/install/buff_tracker/lib:/home/rm_autoaim/suep2026/2025_ws/install/buff_detector/lib:/home/rm_autoaim/suep2026/2025_ws/install/armor_tracker/lib:/home/rm_autoaim/suep2026/2025_ws/install/armor_detector/lib:/home/rm_autoaim/suep2026/2025_ws/install/auto_aim_interfaces/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/opt/MVS/lib/64:/opt/MVS/lib/32 /usr/bin/cmake /home/rm_autoaim/suep2026/2025_ws/src/rm_buff/buff_detector -DCMAKE_INSTALL_PREFIX=/home/rm_autoaim/suep2026/2025_ws/install/buff_detector
+[0.092s] -- The C compiler identification is GNU 11.4.0
+[0.158s] -- The CXX compiler identification is GNU 11.4.0
+[0.165s] -- Detecting C compiler ABI info
+[0.237s] -- Detecting C compiler ABI info - done
+[0.245s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.246s] -- Detecting C compile features
+[0.246s] -- Detecting C compile features - done
+[0.249s] -- Detecting CXX compiler ABI info
+[0.357s] -- Detecting CXX compiler ABI info - done
+[0.364s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.364s] -- Detecting CXX compile features
+[0.365s] -- Detecting CXX compile features - done
+[0.374s] -- Found ament_cmake_auto: 1.3.12 (/opt/ros/humble/share/ament_cmake_auto/cmake)
+[0.647s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.789s] -- Found OpenCV: /usr (found version "4.5.4") 
+[0.808s] -- Looking for pthread.h
+[0.963s] -- Looking for pthread.h - found
+[0.963s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[1.073s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[1.074s] -- Found Threads: TRUE  
+[1.193s] -- Found rosidl_generator_c: 3.1.7 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[1.199s] -- Found rosidl_adapter: 3.1.7 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[1.208s] -- Found rosidl_generator_cpp: 3.1.7 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[1.219s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.235s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.290s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[1.292s] -- Found rmw_fastrtps_cpp: 6.2.8 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[1.423s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[1.461s] -- Found FastRTPS: /opt/ros/humble/include  
+[1.519s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.762s] -- Found eigen3_cmake_module: 0.1.1 (/opt/ros/humble/share/eigen3_cmake_module/cmake)
+[1.764s] -- Found Eigen3: TRUE (found version "3.4.0") 
+[1.764s] -- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+[1.908s] -- Found ament_lint_auto: 0.12.14 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[1.926s] [0mIn this package, headers install destination is set to `include` by ament_auto_package. It is recommended to install `include/buff_detector` instead and will be the default behavior of ament_auto_package from ROS 2 Kilted Kaiju. On distributions before Kilted, ament_auto_package behaves the same way when you use USE_SCOPED_HEADER_INSTALL_DIR option.[0m
+[1.931s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[1.932s] -- Configured cppcheck include dirs: /home/rm_autoaim/suep2026/2025_ws/src/rm_buff/buff_detector/include
+[1.932s] -- Configured cppcheck exclude dirs and/or files: 
+[1.933s] -- Added test 'flake8' to check Python code syntax and style conventions
+[1.934s] -- Added test 'lint_cmake' to check CMake code style
+[1.936s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[1.937s] -- Added test 'xmllint' to check XML markup files
+[1.942s] -- Configuring done
+[1.975s] -- Generating done
+[1.987s] -- Build files have been written to: /home/rm_autoaim/suep2026/2025_ws/build/buff_detector
+[2.006s] Invoked command in '/home/rm_autoaim/suep2026/2025_ws/build/buff_detector' returned '0': CMAKE_PREFIX_PATH=/home/rm_autoaim/suep2026/2025_ws/install/buff_interfaces:/home/rm_autoaim/suep2026/2025_ws/install/rm_vision_bringup:/home/rm_autoaim/suep2026/2025_ws/install/rm_buff_bringup:/home/rm_autoaim/suep2026/2025_ws/install/rm_serial_driver:/home/rm_autoaim/suep2026/2025_ws/install/rm_gimbal_description:/home/rm_autoaim/suep2026/2025_ws/install/rm_buff:/home/rm_autoaim/suep2026/2025_ws/install/rm_auto_record:/home/rm_autoaim/suep2026/2025_ws/install/rm_auto_aim:/home/rm_autoaim/suep2026/2025_ws/install/hik_camera:/home/rm_autoaim/suep2026/2025_ws/install/buff_tracker:/home/rm_autoaim/suep2026/2025_ws/install/buff_detector:/home/rm_autoaim/suep2026/2025_ws/install/armor_tracker:/home/rm_autoaim/suep2026/2025_ws/install/armor_detector:/home/rm_autoaim/suep2026/2025_ws/install/auto_aim_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/rm_autoaim/suep2026/2025_ws/install/buff_interfaces/lib:/home/rm_autoaim/suep2026/2025_ws/install/rm_serial_driver/lib:/home/rm_autoaim/suep2026/2025_ws/install/rm_auto_record/lib:/home/rm_autoaim/suep2026/2025_ws/install/hik_camera/lib:/home/rm_autoaim/suep2026/2025_ws/install/buff_tracker/lib:/home/rm_autoaim/suep2026/2025_ws/install/buff_detector/lib:/home/rm_autoaim/suep2026/2025_ws/install/armor_tracker/lib:/home/rm_autoaim/suep2026/2025_ws/install/armor_detector/lib:/home/rm_autoaim/suep2026/2025_ws/install/auto_aim_interfaces/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/opt/MVS/lib/64:/opt/MVS/lib/32 /usr/bin/cmake /home/rm_autoaim/suep2026/2025_ws/src/rm_buff/buff_detector -DCMAKE_INSTALL_PREFIX=/home/rm_autoaim/suep2026/2025_ws/install/buff_detector
+[2.008s] Invoking command in '/home/rm_autoaim/suep2026/2025_ws/build/buff_detector': CMAKE_PREFIX_PATH=/home/rm_autoaim/suep2026/2025_ws/install/buff_interfaces:/home/rm_autoaim/suep2026/2025_ws/install/rm_vision_bringup:/home/rm_autoaim/suep2026/2025_ws/install/rm_buff_bringup:/home/rm_autoaim/suep2026/2025_ws/install/rm_serial_driver:/home/rm_autoaim/suep2026/2025_ws/install/rm_gimbal_description:/home/rm_autoaim/suep2026/2025_ws/install/rm_buff:/home/rm_autoaim/suep2026/2025_ws/install/rm_auto_record:/home/rm_autoaim/suep2026/2025_ws/install/rm_auto_aim:/home/rm_autoaim/suep2026/2025_ws/install/hik_camera:/home/rm_autoaim/suep2026/2025_ws/install/buff_tracker:/home/rm_autoaim/suep2026/2025_ws/install/buff_detector:/home/rm_autoaim/suep2026/2025_ws/install/armor_tracker:/home/rm_autoaim/suep2026/2025_ws/install/armor_detector:/home/rm_autoaim/suep2026/2025_ws/install/auto_aim_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/rm_autoaim/suep2026/2025_ws/install/buff_interfaces/lib:/home/rm_autoaim/suep2026/2025_ws/install/rm_serial_driver/lib:/home/rm_autoaim/suep2026/2025_ws/install/rm_auto_record/lib:/home/rm_autoaim/suep2026/2025_ws/install/hik_camera/lib:/home/rm_autoaim/suep2026/2025_ws/install/buff_tracker/lib:/home/rm_autoaim/suep2026/2025_ws/install/buff_detector/lib:/home/rm_autoaim/suep2026/2025_ws/install/armor_tracker/lib:/home/rm_autoaim/suep2026/2025_ws/install/armor_detector/lib:/home/rm_autoaim/suep2026/2025_ws/install/auto_aim_interfaces/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/opt/MVS/lib/64:/opt/MVS/lib/32 /usr/bin/cmake --build /home/rm_autoaim/suep2026/2025_ws/build/buff_detector -- -j8 -l8
+[2.083s] [ 16%] [32mBuilding CXX object CMakeFiles/buff_detector.dir/src/detector.cpp.o[0m
+[2.084s] [ 33%] [32mBuilding CXX object CMakeFiles/buff_detector_node.dir/rclcpp_components/node_main_buff_detector_node.cpp.o[0m
+[2.088s] [ 50%] [32mBuilding CXX object CMakeFiles/buff_detector.dir/src/pnp_solver.cpp.o[0m
+[2.096s] [ 66%] [32mBuilding CXX object CMakeFiles/buff_detector.dir/src/detector_node.cpp.o[0m
+[11.292s] [ 83%] [32m[1mLinking CXX executable buff_detector_node[0m
+[11.888s] [ 83%] Built target buff_detector_node
+[31.994s] [100%] [32m[1mLinking CXX shared library libbuff_detector.so[0m
+[33.395s] [100%] Built target buff_detector
+[33.408s] Invoked command in '/home/rm_autoaim/suep2026/2025_ws/build/buff_detector' returned '0': CMAKE_PREFIX_PATH=/home/rm_autoaim/suep2026/2025_ws/install/buff_interfaces:/home/rm_autoaim/suep2026/2025_ws/install/rm_vision_bringup:/home/rm_autoaim/suep2026/2025_ws/install/rm_buff_bringup:/home/rm_autoaim/suep2026/2025_ws/install/rm_serial_driver:/home/rm_autoaim/suep2026/2025_ws/install/rm_gimbal_description:/home/rm_autoaim/suep2026/2025_ws/install/rm_buff:/home/rm_autoaim/suep2026/2025_ws/install/rm_auto_record:/home/rm_autoaim/suep2026/2025_ws/install/rm_auto_aim:/home/rm_autoaim/suep2026/2025_ws/install/hik_camera:/home/rm_autoaim/suep2026/2025_ws/install/buff_tracker:/home/rm_autoaim/suep2026/2025_ws/install/buff_detector:/home/rm_autoaim/suep2026/2025_ws/install/armor_tracker:/home/rm_autoaim/suep2026/2025_ws/install/armor_detector:/home/rm_autoaim/suep2026/2025_ws/install/auto_aim_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/rm_autoaim/suep2026/2025_ws/install/buff_interfaces/lib:/home/rm_autoaim/suep2026/2025_ws/install/rm_serial_driver/lib:/home/rm_autoaim/suep2026/2025_ws/install/rm_auto_record/lib:/home/rm_autoaim/suep2026/2025_ws/install/hik_camera/lib:/home/rm_autoaim/suep2026/2025_ws/install/buff_tracker/lib:/home/rm_autoaim/suep2026/2025_ws/install/buff_detector/lib:/home/rm_autoaim/suep2026/2025_ws/install/armor_tracker/lib:/home/rm_autoaim/suep2026/2025_ws/install/armor_detector/lib:/home/rm_autoaim/suep2026/2025_ws/install/auto_aim_interfaces/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/opt/MVS/lib/64:/opt/MVS/lib/32 /usr/bin/cmake --build /home/rm_autoaim/suep2026/2025_ws/build/buff_detector -- -j8 -l8
+[33.409s] Invoking command in '/home/rm_autoaim/suep2026/2025_ws/build/buff_detector': CMAKE_PREFIX_PATH=/home/rm_autoaim/suep2026/2025_ws/install/buff_interfaces:/home/rm_autoaim/suep2026/2025_ws/install/rm_vision_bringup:/home/rm_autoaim/suep2026/2025_ws/install/rm_buff_bringup:/home/rm_autoaim/suep2026/2025_ws/install/rm_serial_driver:/home/rm_autoaim/suep2026/2025_ws/install/rm_gimbal_description:/home/rm_autoaim/suep2026/2025_ws/install/rm_buff:/home/rm_autoaim/suep2026/2025_ws/install/rm_auto_record:/home/rm_autoaim/suep2026/2025_ws/install/rm_auto_aim:/home/rm_autoaim/suep2026/2025_ws/install/hik_camera:/home/rm_autoaim/suep2026/2025_ws/install/buff_tracker:/home/rm_autoaim/suep2026/2025_ws/install/buff_detector:/home/rm_autoaim/suep2026/2025_ws/install/armor_tracker:/home/rm_autoaim/suep2026/2025_ws/install/armor_detector:/home/rm_autoaim/suep2026/2025_ws/install/auto_aim_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/rm_autoaim/suep2026/2025_ws/install/buff_interfaces/lib:/home/rm_autoaim/suep2026/2025_ws/install/rm_serial_driver/lib:/home/rm_autoaim/suep2026/2025_ws/install/rm_auto_record/lib:/home/rm_autoaim/suep2026/2025_ws/install/hik_camera/lib:/home/rm_autoaim/suep2026/2025_ws/install/buff_tracker/lib:/home/rm_autoaim/suep2026/2025_ws/install/buff_detector/lib:/home/rm_autoaim/suep2026/2025_ws/install/armor_tracker/lib:/home/rm_autoaim/suep2026/2025_ws/install/armor_detector/lib:/home/rm_autoaim/suep2026/2025_ws/install/auto_aim_interfaces/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/opt/MVS/lib/64:/opt/MVS/lib/32 /usr/bin/cmake --install /home/rm_autoaim/suep2026/2025_ws/build/buff_detector
+[33.416s] -- Install configuration: ""
+[33.416s] -- Installing: /home/rm_autoaim/suep2026/2025_ws/install/buff_detector/lib/buff_detector/buff_detector_node
+[33.417s] -- Set runtime path of "/home/rm_autoaim/suep2026/2025_ws/install/buff_detector/lib/buff_detector/buff_detector_node" to ""
+[33.417s] -- Installing: /home/rm_autoaim/suep2026/2025_ws/install/buff_detector/include
+[33.417s] -- Installing: /home/rm_autoaim/suep2026/2025_ws/install/buff_detector/include/buff_detector
+[33.417s] -- Installing: /home/rm_autoaim/suep2026/2025_ws/install/buff_detector/include/buff_detector/detector_node.hpp
+[33.417s] -- Installing: /home/rm_autoaim/suep2026/2025_ws/install/buff_detector/include/buff_detector/pnp_solver.hpp
+[33.418s] -- Installing: /home/rm_autoaim/suep2026/2025_ws/install/buff_detector/include/buff_detector/blade.hpp
+[33.418s] -- Installing: /home/rm_autoaim/suep2026/2025_ws/install/buff_detector/include/buff_detector/detector.hpp
+[33.418s] -- Installing: /home/rm_autoaim/suep2026/2025_ws/install/buff_detector/share/buff_detector/environment/library_path.sh
+[33.418s] -- Installing: /home/rm_autoaim/suep2026/2025_ws/install/buff_detector/share/buff_detector/environment/library_path.dsv
+[33.418s] -- Installing: /home/rm_autoaim/suep2026/2025_ws/install/buff_detector/lib/libbuff_detector.so
+[33.427s] -- Set runtime path of "/home/rm_autoaim/suep2026/2025_ws/install/buff_detector/lib/libbuff_detector.so" to ""
+[33.427s] -- Installing: /home/rm_autoaim/suep2026/2025_ws/install/buff_detector/share/buff_detector/models
+[33.427s] -- Installing: /home/rm_autoaim/suep2026/2025_ws/install/buff_detector/share/buff_detector/models/buff_quantized.bin
+[33.431s] -- Installing: /home/rm_autoaim/suep2026/2025_ws/install/buff_detector/share/buff_detector/models/buff_quantized.xml
+[33.432s] -- Installing: /home/rm_autoaim/suep2026/2025_ws/install/buff_detector/share/buff_detector/launch
+[33.432s] -- Installing: /home/rm_autoaim/suep2026/2025_ws/install/buff_detector/share/buff_detector/launch/buff_detector.launch.py
+[33.433s] -- Installing: /home/rm_autoaim/suep2026/2025_ws/install/buff_detector/share/ament_index/resource_index/package_run_dependencies/buff_detector
+[33.433s] -- Installing: /home/rm_autoaim/suep2026/2025_ws/install/buff_detector/share/ament_index/resource_index/parent_prefix_path/buff_detector
+[33.433s] -- Installing: /home/rm_autoaim/suep2026/2025_ws/install/buff_detector/share/buff_detector/environment/ament_prefix_path.sh
+[33.433s] -- Installing: /home/rm_autoaim/suep2026/2025_ws/install/buff_detector/share/buff_detector/environment/ament_prefix_path.dsv
+[33.433s] -- Installing: /home/rm_autoaim/suep2026/2025_ws/install/buff_detector/share/buff_detector/environment/path.sh
+[33.433s] -- Installing: /home/rm_autoaim/suep2026/2025_ws/install/buff_detector/share/buff_detector/environment/path.dsv
+[33.433s] -- Installing: /home/rm_autoaim/suep2026/2025_ws/install/buff_detector/share/buff_detector/local_setup.bash
+[33.433s] -- Installing: /home/rm_autoaim/suep2026/2025_ws/install/buff_detector/share/buff_detector/local_setup.sh
+[33.433s] -- Installing: /home/rm_autoaim/suep2026/2025_ws/install/buff_detector/share/buff_detector/local_setup.zsh
+[33.433s] -- Installing: /home/rm_autoaim/suep2026/2025_ws/install/buff_detector/share/buff_detector/local_setup.dsv
+[33.433s] -- Installing: /home/rm_autoaim/suep2026/2025_ws/install/buff_detector/share/buff_detector/package.dsv
+[33.434s] -- Installing: /home/rm_autoaim/suep2026/2025_ws/install/buff_detector/share/ament_index/resource_index/packages/buff_detector
+[33.434s] -- Installing: /home/rm_autoaim/suep2026/2025_ws/install/buff_detector/share/ament_index/resource_index/rclcpp_components/buff_detector
+[33.434s] -- Installing: /home/rm_autoaim/suep2026/2025_ws/install/buff_detector/share/buff_detector/cmake/ament_cmake_export_dependencies-extras.cmake
+[33.434s] -- Installing: /home/rm_autoaim/suep2026/2025_ws/install/buff_detector/share/buff_detector/cmake/ament_cmake_export_include_directories-extras.cmake
+[33.434s] -- Installing: /home/rm_autoaim/suep2026/2025_ws/install/buff_detector/share/buff_detector/cmake/ament_cmake_export_libraries-extras.cmake
+[33.434s] -- Installing: /home/rm_autoaim/suep2026/2025_ws/install/buff_detector/share/buff_detector/cmake/buff_detectorConfig.cmake
+[33.434s] -- Installing: /home/rm_autoaim/suep2026/2025_ws/install/buff_detector/share/buff_detector/cmake/buff_detectorConfig-version.cmake
+[33.434s] -- Installing: /home/rm_autoaim/suep2026/2025_ws/install/buff_detector/share/buff_detector/package.xml
+[33.436s] Invoked command in '/home/rm_autoaim/suep2026/2025_ws/build/buff_detector' returned '0': CMAKE_PREFIX_PATH=/home/rm_autoaim/suep2026/2025_ws/install/buff_interfaces:/home/rm_autoaim/suep2026/2025_ws/install/rm_vision_bringup:/home/rm_autoaim/suep2026/2025_ws/install/rm_buff_bringup:/home/rm_autoaim/suep2026/2025_ws/install/rm_serial_driver:/home/rm_autoaim/suep2026/2025_ws/install/rm_gimbal_description:/home/rm_autoaim/suep2026/2025_ws/install/rm_buff:/home/rm_autoaim/suep2026/2025_ws/install/rm_auto_record:/home/rm_autoaim/suep2026/2025_ws/install/rm_auto_aim:/home/rm_autoaim/suep2026/2025_ws/install/hik_camera:/home/rm_autoaim/suep2026/2025_ws/install/buff_tracker:/home/rm_autoaim/suep2026/2025_ws/install/buff_detector:/home/rm_autoaim/suep2026/2025_ws/install/armor_tracker:/home/rm_autoaim/suep2026/2025_ws/install/armor_detector:/home/rm_autoaim/suep2026/2025_ws/install/auto_aim_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/rm_autoaim/suep2026/2025_ws/install/buff_interfaces/lib:/home/rm_autoaim/suep2026/2025_ws/install/rm_serial_driver/lib:/home/rm_autoaim/suep2026/2025_ws/install/rm_auto_record/lib:/home/rm_autoaim/suep2026/2025_ws/install/hik_camera/lib:/home/rm_autoaim/suep2026/2025_ws/install/buff_tracker/lib:/home/rm_autoaim/suep2026/2025_ws/install/buff_detector/lib:/home/rm_autoaim/suep2026/2025_ws/install/armor_tracker/lib:/home/rm_autoaim/suep2026/2025_ws/install/armor_detector/lib:/home/rm_autoaim/suep2026/2025_ws/install/auto_aim_interfaces/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/opt/MVS/lib/64:/opt/MVS/lib/32 /usr/bin/cmake --install /home/rm_autoaim/suep2026/2025_ws/build/buff_detector

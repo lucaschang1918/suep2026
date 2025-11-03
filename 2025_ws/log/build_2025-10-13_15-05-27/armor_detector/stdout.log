@@ -1,0 +1,51 @@
+[35m[1mConsolidate compiler generated dependencies of target armor_detector[0m
+[ 11%] Built target gtest
+[ 23%] Built target gtest_main
+[ 35%] Built target armor_detector_node
+[ 41%] [32mBuilding CXX object CMakeFiles/armor_detector.dir/src/inference.cpp.o[0m
+[ 47%] [32m[1mLinking CXX shared library libarmor_detector.so[0m
+[ 76%] Built target armor_detector
+[ 82%] [32m[1mLinking CXX executable test_number_cls[0m
+[ 88%] [32m[1mLinking CXX executable test_node_startup[0m
+[ 94%] Built target test_number_cls
+[100%] Built target test_node_startup
+-- Install configuration: ""
+-- Up-to-date: /home/rm_autoaim/suep2026/2025_ws/install/armor_detector/lib/armor_detector/armor_detector_node
+-- Up-to-date: /home/rm_autoaim/suep2026/2025_ws/install/armor_detector/include
+-- Up-to-date: /home/rm_autoaim/suep2026/2025_ws/install/armor_detector/include/armor_detector
+-- Up-to-date: /home/rm_autoaim/suep2026/2025_ws/install/armor_detector/include/armor_detector/armor.hpp
+-- Up-to-date: /home/rm_autoaim/suep2026/2025_ws/install/armor_detector/include/armor_detector/tradition.hpp
+-- Up-to-date: /home/rm_autoaim/suep2026/2025_ws/install/armor_detector/include/armor_detector/detector_node.hpp
+-- Up-to-date: /home/rm_autoaim/suep2026/2025_ws/install/armor_detector/include/armor_detector/pnp_solver.hpp
+-- Up-to-date: /home/rm_autoaim/suep2026/2025_ws/install/armor_detector/include/armor_detector/detector.hpp
+-- Up-to-date: /home/rm_autoaim/suep2026/2025_ws/install/armor_detector/include/armor_detector/number_classifier.hpp
+-- Up-to-date: /home/rm_autoaim/suep2026/2025_ws/install/armor_detector/share/armor_detector/environment/library_path.sh
+-- Up-to-date: /home/rm_autoaim/suep2026/2025_ws/install/armor_detector/share/armor_detector/environment/library_path.dsv
+-- Installing: /home/rm_autoaim/suep2026/2025_ws/install/armor_detector/lib/libarmor_detector.so
+-- Set runtime path of "/home/rm_autoaim/suep2026/2025_ws/install/armor_detector/lib/libarmor_detector.so" to ""
+-- Up-to-date: /home/rm_autoaim/suep2026/2025_ws/install/armor_detector/share/armor_detector/model
+-- Up-to-date: /home/rm_autoaim/suep2026/2025_ws/install/armor_detector/share/armor_detector/model/mobilenetv3_last_int_all_new
+-- Up-to-date: /home/rm_autoaim/suep2026/2025_ws/install/armor_detector/share/armor_detector/model/mobilenetv3_last_int_all_new/last.xml
+-- Up-to-date: /home/rm_autoaim/suep2026/2025_ws/install/armor_detector/share/armor_detector/model/mobilenetv3_last_int_all_new/last.bin
+-- Up-to-date: /home/rm_autoaim/suep2026/2025_ws/install/armor_detector/share/armor_detector/model/mobilenetv3_last_int_all_new/metadata.yaml
+-- Up-to-date: /home/rm_autoaim/suep2026/2025_ws/install/armor_detector/share/armor_detector/model/label.txt
+-- Up-to-date: /home/rm_autoaim/suep2026/2025_ws/install/armor_detector/share/armor_detector/model/mlp.onnx
+-- Up-to-date: /home/rm_autoaim/suep2026/2025_ws/install/armor_detector/share/ament_index/resource_index/package_run_dependencies/armor_detector
+-- Up-to-date: /home/rm_autoaim/suep2026/2025_ws/install/armor_detector/share/ament_index/resource_index/parent_prefix_path/armor_detector
+-- Up-to-date: /home/rm_autoaim/suep2026/2025_ws/install/armor_detector/share/armor_detector/environment/ament_prefix_path.sh
+-- Up-to-date: /home/rm_autoaim/suep2026/2025_ws/install/armor_detector/share/armor_detector/environment/ament_prefix_path.dsv
+-- Up-to-date: /home/rm_autoaim/suep2026/2025_ws/install/armor_detector/share/armor_detector/environment/path.sh
+-- Up-to-date: /home/rm_autoaim/suep2026/2025_ws/install/armor_detector/share/armor_detector/environment/path.dsv
+-- Up-to-date: /home/rm_autoaim/suep2026/2025_ws/install/armor_detector/share/armor_detector/local_setup.bash
+-- Up-to-date: /home/rm_autoaim/suep2026/2025_ws/install/armor_detector/share/armor_detector/local_setup.sh
+-- Up-to-date: /home/rm_autoaim/suep2026/2025_ws/install/armor_detector/share/armor_detector/local_setup.zsh
+-- Up-to-date: /home/rm_autoaim/suep2026/2025_ws/install/armor_detector/share/armor_detector/local_setup.dsv
+-- Installing: /home/rm_autoaim/suep2026/2025_ws/install/armor_detector/share/armor_detector/package.dsv
+-- Up-to-date: /home/rm_autoaim/suep2026/2025_ws/install/armor_detector/share/ament_index/resource_index/packages/armor_detector
+-- Up-to-date: /home/rm_autoaim/suep2026/2025_ws/install/armor_detector/share/ament_index/resource_index/rclcpp_components/armor_detector
+-- Up-to-date: /home/rm_autoaim/suep2026/2025_ws/install/armor_detector/share/armor_detector/cmake/ament_cmake_export_dependencies-extras.cmake
+-- Up-to-date: /home/rm_autoaim/suep2026/2025_ws/install/armor_detector/share/armor_detector/cmake/ament_cmake_export_include_directories-extras.cmake
+-- Up-to-date: /home/rm_autoaim/suep2026/2025_ws/install/armor_detector/share/armor_detector/cmake/ament_cmake_export_libraries-extras.cmake
+-- Up-to-date: /home/rm_autoaim/suep2026/2025_ws/install/armor_detector/share/armor_detector/cmake/armor_detectorConfig.cmake
+-- Up-to-date: /home/rm_autoaim/suep2026/2025_ws/install/armor_detector/share/armor_detector/cmake/armor_detectorConfig-version.cmake
+-- Up-to-date: /home/rm_autoaim/suep2026/2025_ws/install/armor_detector/share/armor_detector/package.xml

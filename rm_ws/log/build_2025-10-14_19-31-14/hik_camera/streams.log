@@ -1,0 +1,21 @@
+[0.008s] Invoking command in '/home/rm_autoaim/suep2026/rm_ws/build/hik_camera': /usr/bin/cmake /home/rm_autoaim/suep2026/rm_ws/src/hik_camera -DCMAKE_INSTALL_PREFIX=/home/rm_autoaim/suep2026/rm_ws/install/hik_camera
+[0.023s] [31mCMake Error at CMakeLists.txt:11 (find_package):
+[0.023s]   By not providing "Findcv_bridge.cmake" in CMAKE_MODULE_PATH this project
+[0.023s]   has asked CMake to find a package configuration file provided by
+[0.023s]   "cv_bridge", but CMake did not find one.
+[0.023s] 
+[0.023s]   Could not find a package configuration file provided by "cv_bridge" with
+[0.023s]   any of the following names:
+[0.023s] 
+[0.024s]     cv_bridgeConfig.cmake
+[0.024s]     cv_bridge-config.cmake
+[0.024s] 
+[0.024s]   Add the installation prefix of "cv_bridge" to CMAKE_PREFIX_PATH or set
+[0.024s]   "cv_bridge_DIR" to a directory containing one of the above files.  If
+[0.024s]   "cv_bridge" provides a separate development package or SDK, be sure it has
+[0.024s]   been installed.
+[0.024s] 
+[0.024s] [0m
+[0.025s] -- Configuring incomplete, errors occurred!
+[0.025s] See also "/home/rm_autoaim/suep2026/rm_ws/build/hik_camera/CMakeFiles/CMakeOutput.log".
+[0.025s] Invoked command in '/home/rm_autoaim/suep2026/rm_ws/build/hik_camera' returned '1': /usr/bin/cmake /home/rm_autoaim/suep2026/rm_ws/src/hik_camera -DCMAKE_INSTALL_PREFIX=/home/rm_autoaim/suep2026/rm_ws/install/hik_camera

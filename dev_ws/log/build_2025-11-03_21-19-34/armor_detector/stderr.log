@@ -1,0 +1,5 @@
+[0mIn this package, headers install destination is set to `include` by ament_auto_package. It is recommended to install `include/armor_detector` instead and will be the default behavior of ament_auto_package from ROS 2 Kilted Kaiju. On distributions before Kilted, ament_auto_package behaves the same way when you use USE_SCOPED_HEADER_INSTALL_DIR option.[0m
+[01m[K/home/rm_autoaim/suep2026/dev_ws/src/rm_auto_aim/armor_detector/src/number_classifier.cpp:[m[K In lambda function:
+[01m[K/home/rm_autoaim/suep2026/dev_ws/src/rm_auto_aim/armor_detector/src/number_classifier.cpp:132:17:[m[K [01;35m[Kwarning: [m[Kcontrol reaches end of non-void function [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreturn-type-Wreturn-type]8;;[m[K]
+  132 |                 [01;35m[K}[m[K
+      |                 [01;35m[K^[m[K

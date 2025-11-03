@@ -1,0 +1,17 @@
+/home/rm_autoaim/suep2026/dev_ws/install/rm_gimbal_description/share/rm_gimbal_description/urdf/rm_gimbal.urdf.xacro
+/home/rm_autoaim/suep2026/dev_ws/install/rm_gimbal_description/share/rm_gimbal_description/launch/display.launch.py
+/home/rm_autoaim/suep2026/dev_ws/install/rm_gimbal_description/share/ament_index/resource_index/package_run_dependencies/rm_gimbal_description
+/home/rm_autoaim/suep2026/dev_ws/install/rm_gimbal_description/share/ament_index/resource_index/parent_prefix_path/rm_gimbal_description
+/home/rm_autoaim/suep2026/dev_ws/install/rm_gimbal_description/share/rm_gimbal_description/environment/ament_prefix_path.sh
+/home/rm_autoaim/suep2026/dev_ws/install/rm_gimbal_description/share/rm_gimbal_description/environment/ament_prefix_path.dsv
+/home/rm_autoaim/suep2026/dev_ws/install/rm_gimbal_description/share/rm_gimbal_description/environment/path.sh
+/home/rm_autoaim/suep2026/dev_ws/install/rm_gimbal_description/share/rm_gimbal_description/environment/path.dsv
+/home/rm_autoaim/suep2026/dev_ws/install/rm_gimbal_description/share/rm_gimbal_description/local_setup.bash
+/home/rm_autoaim/suep2026/dev_ws/install/rm_gimbal_description/share/rm_gimbal_description/local_setup.sh
+/home/rm_autoaim/suep2026/dev_ws/install/rm_gimbal_description/share/rm_gimbal_description/local_setup.zsh
+/home/rm_autoaim/suep2026/dev_ws/install/rm_gimbal_description/share/rm_gimbal_description/local_setup.dsv
+/home/rm_autoaim/suep2026/dev_ws/install/rm_gimbal_description/share/rm_gimbal_description/package.dsv
+/home/rm_autoaim/suep2026/dev_ws/install/rm_gimbal_description/share/ament_index/resource_index/packages/rm_gimbal_description
+/home/rm_autoaim/suep2026/dev_ws/install/rm_gimbal_description/share/rm_gimbal_description/cmake/rm_gimbal_descriptionConfig.cmake
+/home/rm_autoaim/suep2026/dev_ws/install/rm_gimbal_description/share/rm_gimbal_description/cmake/rm_gimbal_descriptionConfig-version.cmake
+/home/rm_autoaim/suep2026/dev_ws/install/rm_gimbal_description/share/rm_gimbal_description/package.xml

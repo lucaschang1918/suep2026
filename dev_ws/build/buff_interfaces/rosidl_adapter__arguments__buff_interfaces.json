@@ -1,0 +1,12 @@
+{
+  "package_name": "buff_interfaces",
+  "non_idl_tuples": [
+    "/home/rm_autoaim/suep2026/dev_ws/src/rm_buff/buff_interfaces:msg/Blade.msg",
+    "/home/rm_autoaim/suep2026/dev_ws/src/rm_buff/buff_interfaces:msg/BladeArray.msg",
+    "/home/rm_autoaim/suep2026/dev_ws/src/rm_buff/buff_interfaces:msg/DebugBlade.msg",
+    "/home/rm_autoaim/suep2026/dev_ws/src/rm_buff/buff_interfaces:msg/DebugBladeArray.msg",
+    "/home/rm_autoaim/suep2026/dev_ws/src/rm_buff/buff_interfaces:msg/Rune.msg",
+    "/home/rm_autoaim/suep2026/dev_ws/src/rm_buff/buff_interfaces:msg/RuneInfo.msg",
+    "/home/rm_autoaim/suep2026/dev_ws/src/rm_buff/buff_interfaces:msg/TimeInfo.msg"
+  ]
+}

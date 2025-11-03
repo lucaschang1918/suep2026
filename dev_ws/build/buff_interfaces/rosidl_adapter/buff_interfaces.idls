@@ -1,0 +1,7 @@
+/home/rm_autoaim/suep2026/dev_ws/build/buff_interfaces/rosidl_adapter/buff_interfaces:msg/Blade.idl
+/home/rm_autoaim/suep2026/dev_ws/build/buff_interfaces/rosidl_adapter/buff_interfaces:msg/BladeArray.idl
+/home/rm_autoaim/suep2026/dev_ws/build/buff_interfaces/rosidl_adapter/buff_interfaces:msg/DebugBlade.idl
+/home/rm_autoaim/suep2026/dev_ws/build/buff_interfaces/rosidl_adapter/buff_interfaces:msg/DebugBladeArray.idl
+/home/rm_autoaim/suep2026/dev_ws/build/buff_interfaces/rosidl_adapter/buff_interfaces:msg/Rune.idl
+/home/rm_autoaim/suep2026/dev_ws/build/buff_interfaces/rosidl_adapter/buff_interfaces:msg/RuneInfo.idl
+/home/rm_autoaim/suep2026/dev_ws/build/buff_interfaces/rosidl_adapter/buff_interfaces:msg/TimeInfo.idl
