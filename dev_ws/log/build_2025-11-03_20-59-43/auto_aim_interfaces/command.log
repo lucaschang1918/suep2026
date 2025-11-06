@@ -1,4 +1,0 @@
-Invoking command in '/home/rm_autoaim/suep2026/dev_ws/build/auto_aim_interfaces': /usr/bin/cmake --build /home/rm_autoaim/suep2026/dev_ws/build/auto_aim_interfaces -- -j8 -l8
-Invoked command in '/home/rm_autoaim/suep2026/dev_ws/build/auto_aim_interfaces' returned '0': /usr/bin/cmake --build /home/rm_autoaim/suep2026/dev_ws/build/auto_aim_interfaces -- -j8 -l8
-Invoking command in '/home/rm_autoaim/suep2026/dev_ws/build/auto_aim_interfaces': /usr/bin/cmake --install /home/rm_autoaim/suep2026/dev_ws/build/auto_aim_interfaces
-Invoked command in '/home/rm_autoaim/suep2026/dev_ws/build/auto_aim_interfaces' returned '0': /usr/bin/cmake --install /home/rm_autoaim/suep2026/dev_ws/build/auto_aim_interfaces
